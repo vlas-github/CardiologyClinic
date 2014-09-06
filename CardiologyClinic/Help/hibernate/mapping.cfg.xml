@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                    assembly="NHibernateSimple"
+                   namespace="NHibernateSimple">
+
+  <class name="CardiologyClinic.Bean.Patient" table="Patient" lazy="false">
+    <id name="Id" column="Id" type="string">
+      <generator class="System.Guid" />
+    </id>
+    <property name="Name" column="name" type="string" />
+    <property name="Password" column="pass" type="string" />
+    <many-to-one name="purposes" column="purposes" not-null="false" class="Purpose"/>
+    <property name="Room" column="room" type="string" />
+    <property name="Doctor" column="doctor" type="string" />
+    <property name="dateIn" column="dateIn" type="System.DateTime" />
+    <property name="dateOut" column="dateOut" type="System.DateTime" />
+    <property name="Disease" column="disease" type="string" />
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\CardiologyClinic.exe.config
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\CardiologyClinic.exe
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\CardiologyClinic.pdb
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.Properties.Resources.resources
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.csproj.GenerateResource.Cache
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.exe
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.pdb
