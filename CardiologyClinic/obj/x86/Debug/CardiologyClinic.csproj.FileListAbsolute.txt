@@ -5,3 +5,17 @@ D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\Ca
 D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.csproj.GenerateResource.Cache
 D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.exe
 D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.pdb
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\NHibernate.ByteCode.Castle.dll
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\NHibernate.dll
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\obj\x86\Debug\CardiologyClinic.csprojResolveAssemblyReference.cache
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\hibernate.cfg.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Castle.DynamicProxy.dll
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Iesi.Collections.dll
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\Disease.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\Doctor.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\MainDoctor.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\MedicalProcedure.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\Nurse.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\Patient.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\Purpose.hbm.xml
+D:\Workspace\CardiologyClinic\CardiologyClinic\CardiologyClinic\bin\Debug\Mapping\Room.hbm.xml

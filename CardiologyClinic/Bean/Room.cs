@@ -19,6 +19,10 @@ namespace CardiologyClinic.Bean
          */
         private IList<Patient> patients;
         /**
+         * Медсестра, ответственная за палатой
+         */
+        private Nurse nutse;
+        /**
          * Размер палаты (кол-во пациентов)
          */
         private int size;

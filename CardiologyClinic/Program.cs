@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using CardiologyClinic.Help;
 
 namespace CardiologyClinic
 {
@@ -13,6 +14,8 @@ namespace CardiologyClinic
         [STAThread]
         static void Main()
         {
+            MySqlConnector m = (MySqlConnector)MySqlConnector.GetInstance();
+            m.CreateTables();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

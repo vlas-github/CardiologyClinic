@@ -17,11 +17,11 @@ namespace CardiologyClinic.Bean
         /**
          * Комната в которой проживает пациент (ID)
          */
-        private string room;
+        private Room room;
         /**
          * Лечащий врач пациента (ID)
          */
-        private string doctor;
+        private Doctor doctor;
         /**
          * Дата заселения пациента
          */
@@ -33,7 +33,7 @@ namespace CardiologyClinic.Bean
         /**
          * Диагноз пациента (ID)
          */
-        private string disease;
+        private Disease disease;
 
         public IList<Purpose> Purposes
         {
@@ -41,13 +41,13 @@ namespace CardiologyClinic.Bean
             set { purposes = value; }
         }
 
-        public string Room
+        public Room Room
         {
             get { return room; }
             set { room = value; }
         }
 
-        public string Doctor
+        public Doctor Doctor
         {
             get { return doctor; }
             set { doctor = value; }
@@ -65,7 +65,7 @@ namespace CardiologyClinic.Bean
             set { dateOut = value; }
         }
 
-        public string Disease
+        public Disease Disease
         {
             get { return disease; }
             set { disease = value; }

@@ -18,14 +18,14 @@ namespace CardiologyClinic.Help
         private void Configure()
         {
             sessions = new Configuration().Configure()
-                .AddClass(typeof(Patient))
-                .AddClass(typeof(Doctor))
-                .AddClass(typeof(Nurse))
-                .AddClass(typeof(MainDoctor))
-                .AddClass(typeof(Room))
-                .AddClass(typeof(Purpose))
-                .AddClass(typeof(Disease))
-                .AddClass(typeof(MedicalProcedure))
+                .AddFile("Mapping\\Patient.hbm.xml")
+                .AddFile("Mapping\\Doctor.hbm.xml")
+                .AddFile("Mapping\\Nurse.hbm.xml")
+                .AddFile("Mapping\\MainDoctor.hbm.xml")
+                .AddFile("Mapping\\Room.hbm.xml")
+                .AddFile("Mapping\\Purpose.hbm.xml")
+                .AddFile("Mapping\\Disease.hbm.xml")
+                .AddFile("Mapping\\MedicalProcedure.hbm.xml")
                 .BuildSessionFactory();
         }
 
@@ -52,14 +52,14 @@ namespace CardiologyClinic.Help
             Configuration configuration = new Configuration();
             configuration.Configure();
 
-            configuration.AddClass(typeof(Patient));
-            configuration.AddClass(typeof(Doctor));
-            configuration.AddClass(typeof(Nurse));
-            configuration.AddClass(typeof(MainDoctor));
-            configuration.AddClass(typeof(Room));
-            configuration.AddClass(typeof(Purpose));
-            configuration.AddClass(typeof(Disease));
-            configuration.AddClass(typeof(MedicalProcedure));
+            configuration.AddFile("Mapping\\Patient.hbm.xml");
+            configuration.AddFile("Mapping\\Doctor.hbm.xml");
+            configuration.AddFile("Mapping\\Nurse.hbm.xml");
+            configuration.AddFile("Mapping\\MainDoctor.hbm.xml");
+            configuration.AddFile("Mapping\\Room.hbm.xml");
+            configuration.AddFile("Mapping\\Purpose.hbm.xml");
+            configuration.AddFile("Mapping\\Disease.hbm.xml");
+            configuration.AddFile("Mapping\\MedicalProcedure.hbm.xml");
 
             SchemaExport schemaExport = new SchemaExport(configuration);
 
