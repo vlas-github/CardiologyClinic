@@ -78,16 +78,6 @@
     <Compile Include="Bean\Purpose.cs" />
     <Compile Include="Bean\Room.cs" />
     <Compile Include="Bean\User.cs" />
-    <Compile Include="cardiology_clinicDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cardiology_clinicDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="cardiology_clinicDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cardiology_clinicDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Dao\DiseaseDao.cs" />
     <Compile Include="Dao\DiseaseDaoImpl.cs" />
     <Compile Include="Dao\DoctorDao.cs" />
@@ -124,29 +114,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="app.config" />
-    <None Include="cardiology_clinicDataSet.xsc">
-      <DependentUpon>cardiology_clinicDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cardiology_clinicDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cardiology_clinicDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cardiology_clinicDataSet.xss">
-      <DependentUpon>cardiology_clinicDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cardiology_clinicDataSet1.xsc">
-      <DependentUpon>cardiology_clinicDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="cardiology_clinicDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cardiology_clinicDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cardiology_clinicDataSet1.xss">
-      <DependentUpon>cardiology_clinicDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
