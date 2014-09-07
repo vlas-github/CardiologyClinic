@@ -7,6 +7,6 @@ namespace CardiologyClinic.Help
 {
     interface Connector
     {
-        ISessionFactory GetSessionFactory();
+        ISessionFactory GetSession();
     }
 }

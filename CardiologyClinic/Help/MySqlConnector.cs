@@ -11,11 +11,9 @@ namespace CardiologyClinic.Help
 {
     class MySqlConnector : Connector
     {
-        private static MySqlConnector instance;
-
         private ISessionFactory sessions;
 
-        private void Configure()
+        public void Configure()
         {
             sessions = new Configuration().Configure()
                 .AddFile("Mapping\\Patient.hbm.xml")
@@ -29,20 +27,9 @@ namespace CardiologyClinic.Help
                 .BuildSessionFactory();
         }
 
-        private MySqlConnector() { }
+        public MySqlConnector() { }
 
-        public static Connector GetInstance() 
-        {
-            if (instance == null)
-            {
-                instance = new MySqlConnector();
-                instance.Configure();
-            }
-
-            return instance;
-        }
-
-        public ISessionFactory GetSessionFactory()
+        public ISessionFactory GetSession()
         {
             return sessions;
         }

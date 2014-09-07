@@ -12,21 +12,21 @@ namespace CardiologyClinic.Help
     {
         private static BeanFactory instance;
 
-        private static SortedDictionary<string, Object> beans = new SortedDictionary<string, Object>();
+        private SortedDictionary<string, Object> beans = new SortedDictionary<string, Object>();
 
         private BeanFactory() { }        
 
         /**
          * Положить объект в хранилище
          */
-        public static void PutBean(String name, Object value)
+        public void PutBean(String name, Object value)
         {
             beans.Add(name, value);
         }
         /**
          * Взять объект из хранилища
          */
-        public static Object GetBean(String name)
+        public Object GetBean(String name)
         {
             return beans[name];
         }

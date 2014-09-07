@@ -14,7 +14,13 @@ namespace CardiologyClinic
         [STAThread]
         static void Main()
         {
-            MySqlConnector m = (MySqlConnector)MySqlConnector.GetInstance();
+            BeanFactory factory = BeanFactory.GetFactory();
+
+            MySqlConnector connector = new MySqlConnector();
+            connector.Configure();
+            // connector.CreateTables(); 
+            factory.PutBean("connector", connector);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
