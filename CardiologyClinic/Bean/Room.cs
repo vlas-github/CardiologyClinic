@@ -21,15 +21,11 @@ namespace CardiologyClinic.Bean
         /**
          * Медсестра, ответственная за палатой
          */
-        private Nurse nutse;
+        private Nurse nurse;
         /**
          * Размер палаты (кол-во пациентов)
          */
         private int size;
-        /**
-         * Ответственная медсестра
-         */
-        private Nurse nurse;
 
         public int Number
         {

@@ -15,7 +15,6 @@ namespace CardiologyClinic
         static void Main()
         {
             MySqlConnector m = (MySqlConnector)MySqlConnector.GetInstance();
-            m.CreateTables();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
