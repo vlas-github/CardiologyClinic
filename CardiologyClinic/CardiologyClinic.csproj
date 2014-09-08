@@ -100,14 +100,44 @@
     <Compile Include="Help\BeanFactory.cs" />
     <Compile Include="Help\Connector.cs" />
     <Compile Include="Help\MySqlConnector.cs" />
-    <Compile Include="View\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\MainDoctor\EditDisease\EditDiseaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditDisease\EditDiseaseForm.Designer.cs">
+      <DependentUpon>EditDiseaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditDoctor\EditDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditDoctor\EditDoctorForm.Designer.cs">
+      <DependentUpon>EditDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditMedicalProcedure\EditMedicalProcedureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditMedicalProcedure\EditMedicalProcedureForm.Designer.cs">
+      <DependentUpon>EditMedicalProcedureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditNurse\EditNurseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditNurse\EditNurseForm.Designer.cs">
+      <DependentUpon>EditNurseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditPatient\EditPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditPatient\EditPatientForm.Designer.cs">
+      <DependentUpon>EditPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditRoom\EditRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDoctor\EditRoom\EditRoomForm.Designer.cs">
+      <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainDoctor\MainDoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +153,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\MainDoctor\EditDisease\EditDiseaseForm.resx">
+      <DependentUpon>EditDiseaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainDoctor\EditDoctor\EditDoctorForm.resx">
+      <DependentUpon>EditDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainDoctor\EditMedicalProcedure\EditMedicalProcedureForm.resx">
+      <DependentUpon>EditMedicalProcedureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainDoctor\EditNurse\EditNurseForm.resx">
+      <DependentUpon>EditNurseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainDoctor\EditPatient\EditPatientForm.resx">
+      <DependentUpon>EditPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainDoctor\EditRoom\EditRoomForm.resx">
+      <DependentUpon>EditRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainDoctor\MainDoctorForm.resx">
       <DependentUpon>MainDoctorForm.cs</DependentUpon>
     </EmbeddedResource>

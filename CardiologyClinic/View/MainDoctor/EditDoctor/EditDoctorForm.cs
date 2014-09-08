@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CardiologyClinic
+namespace CardiologyClinic.View.MainDoctor.EditDoctor
 {
-    public partial class Form1 : Form
+    public partial class EditDoctorForm : Form
     {
-        public Form1()
+        public EditDoctorForm()
         {
             InitializeComponent();
         }

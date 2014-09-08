@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDoctorForm));
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.mainDoctorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purposeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diseaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -40,15 +39,16 @@
             this.patientMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.roomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tools = new System.Windows.Forms.ToolStrip();
             this.addButton = new System.Windows.Forms.ToolStripButton();
             this.editButton = new System.Windows.Forms.ToolStripButton();
             this.removeButton = new System.Windows.Forms.ToolStripButton();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.recordCountStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.contentGridView = new System.Windows.Forms.DataGridView();
             this.mainMenu.SuspendLayout();
             this.tools.SuspendLayout();
@@ -83,12 +83,6 @@
             this.mainDoctorMenuItem.Name = "mainDoctorMenuItem";
             this.mainDoctorMenuItem.Size = new System.Drawing.Size(75, 20);
             this.mainDoctorMenuItem.Text = "Глав-врач";
-            // 
-            // exitMenuItem
-            // 
-            this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.exitMenuItem.Text = "Выход";
             // 
             // purposeMenuItem
             // 
@@ -135,6 +129,12 @@
             this.roomMenuItem.Name = "roomMenuItem";
             this.roomMenuItem.Size = new System.Drawing.Size(228, 22);
             this.roomMenuItem.Text = "Список больничных палат";
+            // 
+            // exitMenuItem
+            // 
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.exitMenuItem.Text = "Выход";
             // 
             // tools
             // 
@@ -186,6 +186,18 @@
             this.headerPanel.Size = new System.Drawing.Size(687, 35);
             this.headerPanel.TabIndex = 2;
             // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Location = new System.Drawing.Point(0, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
+            this.titleLabel.Size = new System.Drawing.Size(236, 35);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Список лечебных процедур";
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -210,18 +222,6 @@
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(687, 298);
             this.contentPanel.TabIndex = 4;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleLabel.Location = new System.Drawing.Point(0, 0);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.titleLabel.Size = new System.Drawing.Size(236, 35);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Список лечебных процедур";
             // 
             // contentGridView
             // 
