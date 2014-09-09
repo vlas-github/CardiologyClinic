@@ -4,7 +4,7 @@
     <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
     <property name="dialect">NHibernate.Dialect.MySQL5Dialect</property>
     <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
-    <property name="connection.connection_string">Server=localhost;Database=cardiology_clinic;User ID=root;Password=12345678;</property>
+    <property name="connection.connection_string">Server=localhost;Database=cardiology_clinic;User ID=root;Password=miToen5t3b;</property>
     <property name="proxyfactory.factory_class">NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</property>
     <property name="show_sql">true</property>
   </session-factory>
