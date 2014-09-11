@@ -64,13 +64,13 @@
             // 
             // contentContainer.Panel1
             // 
-            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel1.Controls.Add(this.descriptionLabel);
             this.contentContainer.Panel1.Controls.Add(this.nameLabel);
             // 
             // contentContainer.Panel2
             // 
-            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel2.Controls.Add(this.editDescription);
             this.contentContainer.Panel2.Controls.Add(this.editName);
             this.contentContainer.Size = new System.Drawing.Size(484, 193);
@@ -80,26 +80,26 @@
             // descriptionLabel
             // 
             this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.descriptionLabel.Location = new System.Drawing.Point(12, 59);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(119, 16);
+            this.descriptionLabel.Size = new System.Drawing.Size(118, 15);
             this.descriptionLabel.TabIndex = 1;
             this.descriptionLabel.Text = "Описание болезни:";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.Location = new System.Drawing.Point(12, 26);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(116, 16);
+            this.nameLabel.Size = new System.Drawing.Size(118, 15);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Название болезни:";
             // 
             // editDescription
             // 
-            this.editDescription.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.editDescription.Location = new System.Drawing.Point(23, 59);
             this.editDescription.Multiline = true;
             this.editDescription.Name = "editDescription";
@@ -108,10 +108,10 @@
             // 
             // editName
             // 
-            this.editName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.editName.Location = new System.Drawing.Point(23, 23);
             this.editName.Name = "editName";
-            this.editName.Size = new System.Drawing.Size(281, 23);
+            this.editName.Size = new System.Drawing.Size(281, 21);
             this.editName.TabIndex = 1;
             // 
             // footer
@@ -126,7 +126,7 @@
             // footerFlowLayout
             // 
             this.footerFlowLayout.AutoSize = true;
-            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.Control;
             this.footerFlowLayout.Controls.Add(this.save);
             this.footerFlowLayout.Controls.Add(this.reset);
             this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,7 +137,7 @@
             // 
             // save
             // 
-            this.save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.save.Location = new System.Drawing.Point(10, 10);
             this.save.Margin = new System.Windows.Forms.Padding(10);
             this.save.Name = "save";
@@ -148,7 +148,7 @@
             // 
             // reset
             // 
-            this.reset.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reset.Location = new System.Drawing.Point(118, 10);
             this.reset.Margin = new System.Windows.Forms.Padding(10);
             this.reset.Name = "reset";

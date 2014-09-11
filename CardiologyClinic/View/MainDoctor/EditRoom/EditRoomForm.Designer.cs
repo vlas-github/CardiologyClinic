@@ -30,16 +30,16 @@
         {
             this.content = new System.Windows.Forms.Panel();
             this.contentContainer = new System.Windows.Forms.SplitContainer();
+            this.nurseLabel = new System.Windows.Forms.Label();
+            this.sizeLabel = new System.Windows.Forms.Label();
+            this.numberLabel = new System.Windows.Forms.Label();
+            this.editNurse = new System.Windows.Forms.ComboBox();
+            this.editSize = new System.Windows.Forms.TextBox();
+            this.editNumber = new System.Windows.Forms.TextBox();
             this.footer = new System.Windows.Forms.Panel();
             this.footerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.save = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
-            this.numberLabel = new System.Windows.Forms.Label();
-            this.sizeLabel = new System.Windows.Forms.Label();
-            this.nurseLabel = new System.Windows.Forms.Label();
-            this.editNumber = new System.Windows.Forms.TextBox();
-            this.editSize = new System.Windows.Forms.TextBox();
-            this.editNurse = new System.Windows.Forms.ComboBox();
             this.content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).BeginInit();
             this.contentContainer.Panel1.SuspendLayout();
@@ -66,21 +66,77 @@
             // 
             // contentContainer.Panel1
             // 
-            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel1.Controls.Add(this.nurseLabel);
             this.contentContainer.Panel1.Controls.Add(this.sizeLabel);
             this.contentContainer.Panel1.Controls.Add(this.numberLabel);
             // 
             // contentContainer.Panel2
             // 
-            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel2.Controls.Add(this.editNurse);
             this.contentContainer.Panel2.Controls.Add(this.editSize);
             this.contentContainer.Panel2.Controls.Add(this.editNumber);
             this.contentContainer.Size = new System.Drawing.Size(484, 190);
-            this.contentContainer.SplitterDistance = 169;
+            this.contentContainer.SplitterDistance = 177;
             this.contentContainer.TabIndex = 0;
             this.contentContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.contentContainer_SplitterMoved);
+            // 
+            // nurseLabel
+            // 
+            this.nurseLabel.AutoSize = true;
+            this.nurseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nurseLabel.Location = new System.Drawing.Point(7, 114);
+            this.nurseLabel.Name = "nurseLabel";
+            this.nurseLabel.Size = new System.Drawing.Size(168, 15);
+            this.nurseLabel.TabIndex = 2;
+            this.nurseLabel.Text = "Ответственная медсестра:";
+            // 
+            // sizeLabel
+            // 
+            this.sizeLabel.AutoSize = true;
+            this.sizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sizeLabel.Location = new System.Drawing.Point(7, 73);
+            this.sizeLabel.Name = "sizeLabel";
+            this.sizeLabel.Size = new System.Drawing.Size(101, 15);
+            this.sizeLabel.TabIndex = 1;
+            this.sizeLabel.Text = "Размер палаты:";
+            // 
+            // numberLabel
+            // 
+            this.numberLabel.AutoSize = true;
+            this.numberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberLabel.Location = new System.Drawing.Point(7, 31);
+            this.numberLabel.Name = "numberLabel";
+            this.numberLabel.Size = new System.Drawing.Size(96, 15);
+            this.numberLabel.TabIndex = 0;
+            this.numberLabel.Text = "Номер палаты:";
+            // 
+            // editNurse
+            // 
+            this.editNurse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editNurse.FormattingEnabled = true;
+            this.editNurse.Location = new System.Drawing.Point(12, 111);
+            this.editNurse.Name = "editNurse";
+            this.editNurse.Size = new System.Drawing.Size(277, 23);
+            this.editNurse.TabIndex = 2;
+            this.editNurse.Text = "Выберите медсестру";
+            // 
+            // editSize
+            // 
+            this.editSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editSize.Location = new System.Drawing.Point(12, 70);
+            this.editSize.Name = "editSize";
+            this.editSize.Size = new System.Drawing.Size(277, 21);
+            this.editSize.TabIndex = 1;
+            // 
+            // editNumber
+            // 
+            this.editNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editNumber.Location = new System.Drawing.Point(12, 28);
+            this.editNumber.Name = "editNumber";
+            this.editNumber.Size = new System.Drawing.Size(277, 21);
+            this.editNumber.TabIndex = 0;
             // 
             // footer
             // 
@@ -94,7 +150,7 @@
             // footerFlowLayout
             // 
             this.footerFlowLayout.AutoSize = true;
-            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.Control;
             this.footerFlowLayout.Controls.Add(this.save);
             this.footerFlowLayout.Controls.Add(this.reset);
             this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,7 +161,7 @@
             // 
             // save
             // 
-            this.save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.save.Location = new System.Drawing.Point(10, 10);
             this.save.Margin = new System.Windows.Forms.Padding(10);
             this.save.Name = "save";
@@ -116,7 +172,7 @@
             // 
             // reset
             // 
-            this.reset.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reset.Location = new System.Drawing.Point(118, 10);
             this.reset.Margin = new System.Windows.Forms.Padding(10);
             this.reset.Name = "reset";
@@ -124,62 +180,6 @@
             this.reset.TabIndex = 1;
             this.reset.Text = "Отменить";
             this.reset.UseVisualStyleBackColor = true;
-            // 
-            // numberLabel
-            // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberLabel.Location = new System.Drawing.Point(7, 31);
-            this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(93, 16);
-            this.numberLabel.TabIndex = 0;
-            this.numberLabel.Text = "Номер палаты:";
-            // 
-            // sizeLabel
-            // 
-            this.sizeLabel.AutoSize = true;
-            this.sizeLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sizeLabel.Location = new System.Drawing.Point(7, 73);
-            this.sizeLabel.Name = "sizeLabel";
-            this.sizeLabel.Size = new System.Drawing.Size(128, 16);
-            this.sizeLabel.TabIndex = 1;
-            this.sizeLabel.Text = "Объем палаты(чел.):";
-            // 
-            // nurseLabel
-            // 
-            this.nurseLabel.AutoSize = true;
-            this.nurseLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nurseLabel.Location = new System.Drawing.Point(7, 114);
-            this.nurseLabel.Name = "nurseLabel";
-            this.nurseLabel.Size = new System.Drawing.Size(159, 16);
-            this.nurseLabel.TabIndex = 2;
-            this.nurseLabel.Text = "Ответственная медсестра:";
-            // 
-            // editNumber
-            // 
-            this.editNumber.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editNumber.Location = new System.Drawing.Point(12, 28);
-            this.editNumber.Name = "editNumber";
-            this.editNumber.Size = new System.Drawing.Size(277, 23);
-            this.editNumber.TabIndex = 0;
-            // 
-            // editSize
-            // 
-            this.editSize.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editSize.Location = new System.Drawing.Point(12, 70);
-            this.editSize.Name = "editSize";
-            this.editSize.Size = new System.Drawing.Size(277, 23);
-            this.editSize.TabIndex = 1;
-            // 
-            // editNurse
-            // 
-            this.editNurse.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editNurse.FormattingEnabled = true;
-            this.editNurse.Location = new System.Drawing.Point(12, 111);
-            this.editNurse.Name = "editNurse";
-            this.editNurse.Size = new System.Drawing.Size(277, 23);
-            this.editNurse.TabIndex = 2;
-            this.editNurse.Text = "Выберите медсестру";
             // 
             // EditRoomForm
             // 
