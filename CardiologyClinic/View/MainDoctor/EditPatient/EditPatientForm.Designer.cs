@@ -30,45 +30,45 @@
         {
             this.content = new System.Windows.Forms.Panel();
             this.contentContainer = new System.Windows.Forms.SplitContainer();
-            this.footer = new System.Windows.Forms.Panel();
-            this.footerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.save = new System.Windows.Forms.Button();
-            this.reset = new System.Windows.Forms.Button();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.passLabel = new System.Windows.Forms.Label();
-            this.doctorLabel = new System.Windows.Forms.Label();
-            this.dataInLabel = new System.Windows.Forms.Label();
-            this.dataOutLabel = new System.Windows.Forms.Label();
+            this.numberLabel = new System.Windows.Forms.Label();
             this.diseaseLabel = new System.Windows.Forms.Label();
-            this.editName = new System.Windows.Forms.TextBox();
-            this.editPass = new System.Windows.Forms.TextBox();
-            this.editDoctor = new System.Windows.Forms.ComboBox();
-            this.editDisease = new System.Windows.Forms.ComboBox();
-            this.monthIn = new System.Windows.Forms.ComboBox();
-            this.dayIn = new System.Windows.Forms.NumericUpDown();
-            this.yearIn = new System.Windows.Forms.TextBox();
-            this.hourIn = new System.Windows.Forms.NumericUpDown();
-            this.minuteIt = new System.Windows.Forms.NumericUpDown();
+            this.dataOutLabel = new System.Windows.Forms.Label();
+            this.dataInLabel = new System.Windows.Forms.Label();
+            this.doctorLabel = new System.Windows.Forms.Label();
+            this.passLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.editNumber = new System.Windows.Forms.ComboBox();
             this.minuteOut = new System.Windows.Forms.NumericUpDown();
             this.hourOut = new System.Windows.Forms.NumericUpDown();
             this.yearOut = new System.Windows.Forms.TextBox();
             this.dayOut = new System.Windows.Forms.NumericUpDown();
             this.monthOut = new System.Windows.Forms.ComboBox();
-            this.numberLabel = new System.Windows.Forms.Label();
-            this.editNumber = new System.Windows.Forms.ComboBox();
+            this.minuteIt = new System.Windows.Forms.NumericUpDown();
+            this.hourIn = new System.Windows.Forms.NumericUpDown();
+            this.yearIn = new System.Windows.Forms.TextBox();
+            this.dayIn = new System.Windows.Forms.NumericUpDown();
+            this.monthIn = new System.Windows.Forms.ComboBox();
+            this.editDisease = new System.Windows.Forms.ComboBox();
+            this.editDoctor = new System.Windows.Forms.ComboBox();
+            this.editPass = new System.Windows.Forms.TextBox();
+            this.editName = new System.Windows.Forms.TextBox();
+            this.footer = new System.Windows.Forms.Panel();
+            this.footerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.save = new System.Windows.Forms.Button();
+            this.reset = new System.Windows.Forms.Button();
             this.content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).BeginInit();
             this.contentContainer.Panel1.SuspendLayout();
             this.contentContainer.Panel2.SuspendLayout();
             this.contentContainer.SuspendLayout();
-            this.footer.SuspendLayout();
-            this.footerFlowLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dayIn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourIn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minuteIt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minuteOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hourOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minuteIt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dayIn)).BeginInit();
+            this.footer.SuspendLayout();
+            this.footerFlowLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // content
@@ -88,7 +88,7 @@
             // 
             // contentContainer.Panel1
             // 
-            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel1.Controls.Add(this.numberLabel);
             this.contentContainer.Panel1.Controls.Add(this.diseaseLabel);
             this.contentContainer.Panel1.Controls.Add(this.dataOutLabel);
@@ -99,7 +99,7 @@
             // 
             // contentContainer.Panel2
             // 
-            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel2.Controls.Add(this.editNumber);
             this.contentContainer.Panel2.Controls.Add(this.minuteOut);
             this.contentContainer.Panel2.Controls.Add(this.hourOut);
@@ -119,237 +119,117 @@
             this.contentContainer.SplitterDistance = 187;
             this.contentContainer.TabIndex = 0;
             // 
-            // footer
+            // numberLabel
             // 
-            this.footer.Controls.Add(this.footerFlowLayout);
-            this.footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footer.Location = new System.Drawing.Point(0, 265);
-            this.footer.Name = "footer";
-            this.footer.Size = new System.Drawing.Size(513, 50);
-            this.footer.TabIndex = 2;
-            // 
-            // footerFlowLayout
-            // 
-            this.footerFlowLayout.AutoSize = true;
-            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.footerFlowLayout.Controls.Add(this.save);
-            this.footerFlowLayout.Controls.Add(this.reset);
-            this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.footerFlowLayout.Location = new System.Drawing.Point(0, 0);
-            this.footerFlowLayout.Name = "footerFlowLayout";
-            this.footerFlowLayout.Size = new System.Drawing.Size(513, 50);
-            this.footerFlowLayout.TabIndex = 0;
-            // 
-            // save
-            // 
-            this.save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.save.Location = new System.Drawing.Point(10, 10);
-            this.save.Margin = new System.Windows.Forms.Padding(10);
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(88, 30);
-            this.save.TabIndex = 0;
-            this.save.Text = "Сохранить";
-            this.save.UseVisualStyleBackColor = true;
-            // 
-            // reset
-            // 
-            this.reset.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reset.Location = new System.Drawing.Point(118, 10);
-            this.reset.Margin = new System.Windows.Forms.Padding(10);
-            this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(88, 30);
-            this.reset.TabIndex = 1;
-            this.reset.Text = "Отменить";
-            this.reset.UseVisualStyleBackColor = true;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(12, 19);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(101, 15);
-            this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Ф.И.О. пациента:";
-            // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passLabel.Location = new System.Drawing.Point(12, 54);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(105, 15);
-            this.passLabel.TabIndex = 1;
-            this.passLabel.Text = "Пароль для входа:";
-            // 
-            // doctorLabel
-            // 
-            this.doctorLabel.AutoSize = true;
-            this.doctorLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorLabel.Location = new System.Drawing.Point(12, 86);
-            this.doctorLabel.Name = "doctorLabel";
-            this.doctorLabel.Size = new System.Drawing.Size(90, 15);
-            this.doctorLabel.TabIndex = 2;
-            this.doctorLabel.Text = "Лечащий врач:";
-            // 
-            // dataInLabel
-            // 
-            this.dataInLabel.AutoSize = true;
-            this.dataInLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataInLabel.Location = new System.Drawing.Point(12, 122);
-            this.dataInLabel.Name = "dataInLabel";
-            this.dataInLabel.Size = new System.Drawing.Size(110, 15);
-            this.dataInLabel.TabIndex = 3;
-            this.dataInLabel.Text = "Дата поступления:";
-            // 
-            // dataOutLabel
-            // 
-            this.dataOutLabel.AutoSize = true;
-            this.dataOutLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataOutLabel.Location = new System.Drawing.Point(12, 159);
-            this.dataOutLabel.Name = "dataOutLabel";
-            this.dataOutLabel.Size = new System.Drawing.Size(87, 15);
-            this.dataOutLabel.TabIndex = 4;
-            this.dataOutLabel.Text = "Дата выписки:";
+            this.numberLabel.AutoSize = true;
+            this.numberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberLabel.Location = new System.Drawing.Point(12, 226);
+            this.numberLabel.Name = "numberLabel";
+            this.numberLabel.Size = new System.Drawing.Size(96, 15);
+            this.numberLabel.TabIndex = 6;
+            this.numberLabel.Text = "Номер палаты:";
             // 
             // diseaseLabel
             // 
             this.diseaseLabel.AutoSize = true;
-            this.diseaseLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.diseaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.diseaseLabel.Location = new System.Drawing.Point(12, 192);
             this.diseaseLabel.Name = "diseaseLabel";
-            this.diseaseLabel.Size = new System.Drawing.Size(141, 15);
+            this.diseaseLabel.Size = new System.Drawing.Size(149, 15);
             this.diseaseLabel.TabIndex = 5;
             this.diseaseLabel.Text = "Наименование болезни:";
             // 
-            // editName
+            // dataOutLabel
             // 
-            this.editName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editName.Location = new System.Drawing.Point(14, 17);
-            this.editName.Name = "editName";
-            this.editName.Size = new System.Drawing.Size(296, 22);
-            this.editName.TabIndex = 0;
+            this.dataOutLabel.AutoSize = true;
+            this.dataOutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataOutLabel.Location = new System.Drawing.Point(12, 159);
+            this.dataOutLabel.Name = "dataOutLabel";
+            this.dataOutLabel.Size = new System.Drawing.Size(92, 15);
+            this.dataOutLabel.TabIndex = 4;
+            this.dataOutLabel.Text = "Дата выписки:";
             // 
-            // editPass
+            // dataInLabel
             // 
-            this.editPass.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editPass.Location = new System.Drawing.Point(14, 52);
-            this.editPass.Name = "editPass";
-            this.editPass.Size = new System.Drawing.Size(296, 22);
-            this.editPass.TabIndex = 1;
+            this.dataInLabel.AutoSize = true;
+            this.dataInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataInLabel.Location = new System.Drawing.Point(12, 122);
+            this.dataInLabel.Name = "dataInLabel";
+            this.dataInLabel.Size = new System.Drawing.Size(117, 15);
+            this.dataInLabel.TabIndex = 3;
+            this.dataInLabel.Text = "Дата поступления:";
             // 
-            // editDoctor
+            // doctorLabel
             // 
-            this.editDoctor.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editDoctor.FormattingEnabled = true;
-            this.editDoctor.Location = new System.Drawing.Point(14, 84);
-            this.editDoctor.Name = "editDoctor";
-            this.editDoctor.Size = new System.Drawing.Size(296, 23);
-            this.editDoctor.TabIndex = 2;
-            this.editDoctor.Text = "Выберите лечащего врача";
+            this.doctorLabel.AutoSize = true;
+            this.doctorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorLabel.Location = new System.Drawing.Point(12, 86);
+            this.doctorLabel.Name = "doctorLabel";
+            this.doctorLabel.Size = new System.Drawing.Size(91, 15);
+            this.doctorLabel.TabIndex = 2;
+            this.doctorLabel.Text = "Лечащий врач:";
             // 
-            // editDisease
+            // passLabel
             // 
-            this.editDisease.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editDisease.FormattingEnabled = true;
-            this.editDisease.Location = new System.Drawing.Point(14, 190);
-            this.editDisease.Name = "editDisease";
-            this.editDisease.Size = new System.Drawing.Size(296, 23);
-            this.editDisease.TabIndex = 3;
-            this.editDisease.Text = "Выберите болезнь пациента";
+            this.passLabel.AutoSize = true;
+            this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passLabel.Location = new System.Drawing.Point(12, 54);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(115, 15);
+            this.passLabel.TabIndex = 1;
+            this.passLabel.Text = "Пароль для входа:";
             // 
-            // monthIn
+            // nameLabel
             // 
-            this.monthIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.monthIn.FormattingEnabled = true;
-            this.monthIn.Items.AddRange(new object[] {
-            "Январь",
-            "Февраль",
-            "Март",
-            "Апрель",
-            "Май",
-            "Июнь",
-            "Июль",
-            "Август",
-            "Сентябрь",
-            "Октябрь",
-            "Ноябрь",
-            "Декабрь"});
-            this.monthIn.Location = new System.Drawing.Point(60, 120);
-            this.monthIn.Name = "monthIn";
-            this.monthIn.Size = new System.Drawing.Size(73, 23);
-            this.monthIn.TabIndex = 5;
-            this.monthIn.Text = "Январь";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(12, 19);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(107, 15);
+            this.nameLabel.TabIndex = 0;
+            this.nameLabel.Text = "Ф.И.О. пациента:";
             // 
-            // dayIn
+            // editNumber
             // 
-            this.dayIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dayIn.Location = new System.Drawing.Point(14, 121);
-            this.dayIn.Name = "dayIn";
-            this.dayIn.Size = new System.Drawing.Size(40, 22);
-            this.dayIn.TabIndex = 6;
-            this.dayIn.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // yearIn
-            // 
-            this.yearIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.yearIn.Location = new System.Drawing.Point(139, 120);
-            this.yearIn.Name = "yearIn";
-            this.yearIn.Size = new System.Drawing.Size(42, 22);
-            this.yearIn.TabIndex = 7;
-            this.yearIn.Text = "2014";
-            // 
-            // hourIn
-            // 
-            this.hourIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hourIn.Location = new System.Drawing.Point(213, 121);
-            this.hourIn.Name = "hourIn";
-            this.hourIn.Size = new System.Drawing.Size(46, 22);
-            this.hourIn.TabIndex = 8;
-            // 
-            // minuteIt
-            // 
-            this.minuteIt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minuteIt.Location = new System.Drawing.Point(268, 121);
-            this.minuteIt.Name = "minuteIt";
-            this.minuteIt.Size = new System.Drawing.Size(42, 22);
-            this.minuteIt.TabIndex = 9;
+            this.editNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editNumber.FormattingEnabled = true;
+            this.editNumber.Location = new System.Drawing.Point(14, 224);
+            this.editNumber.Name = "editNumber";
+            this.editNumber.Size = new System.Drawing.Size(296, 23);
+            this.editNumber.TabIndex = 16;
+            this.editNumber.Text = "Выберите палату";
             // 
             // minuteOut
             // 
-            this.minuteOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minuteOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minuteOut.Location = new System.Drawing.Point(268, 157);
             this.minuteOut.Name = "minuteOut";
-            this.minuteOut.Size = new System.Drawing.Size(42, 22);
+            this.minuteOut.Size = new System.Drawing.Size(42, 21);
             this.minuteOut.TabIndex = 15;
             // 
             // hourOut
             // 
-            this.hourOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hourOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.hourOut.Location = new System.Drawing.Point(215, 156);
             this.hourOut.Name = "hourOut";
-            this.hourOut.Size = new System.Drawing.Size(44, 22);
+            this.hourOut.Size = new System.Drawing.Size(44, 21);
             this.hourOut.TabIndex = 14;
             // 
             // yearOut
             // 
-            this.yearOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yearOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.yearOut.Location = new System.Drawing.Point(139, 156);
             this.yearOut.Name = "yearOut";
-            this.yearOut.Size = new System.Drawing.Size(42, 22);
+            this.yearOut.Size = new System.Drawing.Size(42, 21);
             this.yearOut.TabIndex = 13;
             this.yearOut.Text = "2014";
             // 
             // dayOut
             // 
-            this.dayOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dayOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dayOut.Location = new System.Drawing.Point(14, 157);
             this.dayOut.Name = "dayOut";
-            this.dayOut.Size = new System.Drawing.Size(40, 22);
+            this.dayOut.Size = new System.Drawing.Size(40, 21);
             this.dayOut.TabIndex = 12;
             this.dayOut.Value = new decimal(new int[] {
             1,
@@ -359,7 +239,7 @@
             // 
             // monthOut
             // 
-            this.monthOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.monthOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.monthOut.FormattingEnabled = true;
             this.monthOut.Items.AddRange(new object[] {
             "Январь",
@@ -380,25 +260,145 @@
             this.monthOut.TabIndex = 11;
             this.monthOut.Text = "Январь";
             // 
-            // numberLabel
+            // minuteIt
             // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberLabel.Location = new System.Drawing.Point(12, 226);
-            this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(93, 16);
-            this.numberLabel.TabIndex = 6;
-            this.numberLabel.Text = "Номер палаты:";
+            this.minuteIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minuteIt.Location = new System.Drawing.Point(268, 121);
+            this.minuteIt.Name = "minuteIt";
+            this.minuteIt.Size = new System.Drawing.Size(42, 21);
+            this.minuteIt.TabIndex = 9;
             // 
-            // editNumber
+            // hourIn
             // 
-            this.editNumber.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editNumber.FormattingEnabled = true;
-            this.editNumber.Location = new System.Drawing.Point(14, 224);
-            this.editNumber.Name = "editNumber";
-            this.editNumber.Size = new System.Drawing.Size(296, 23);
-            this.editNumber.TabIndex = 16;
-            this.editNumber.Text = "Выберите палату";
+            this.hourIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hourIn.Location = new System.Drawing.Point(213, 121);
+            this.hourIn.Name = "hourIn";
+            this.hourIn.Size = new System.Drawing.Size(46, 21);
+            this.hourIn.TabIndex = 8;
+            // 
+            // yearIn
+            // 
+            this.yearIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yearIn.Location = new System.Drawing.Point(139, 120);
+            this.yearIn.Name = "yearIn";
+            this.yearIn.Size = new System.Drawing.Size(42, 21);
+            this.yearIn.TabIndex = 7;
+            this.yearIn.Text = "2014";
+            // 
+            // dayIn
+            // 
+            this.dayIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dayIn.Location = new System.Drawing.Point(14, 121);
+            this.dayIn.Name = "dayIn";
+            this.dayIn.Size = new System.Drawing.Size(40, 21);
+            this.dayIn.TabIndex = 6;
+            this.dayIn.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // monthIn
+            // 
+            this.monthIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.monthIn.FormattingEnabled = true;
+            this.monthIn.Items.AddRange(new object[] {
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"});
+            this.monthIn.Location = new System.Drawing.Point(60, 120);
+            this.monthIn.Name = "monthIn";
+            this.monthIn.Size = new System.Drawing.Size(73, 23);
+            this.monthIn.TabIndex = 5;
+            this.monthIn.Text = "Январь";
+            // 
+            // editDisease
+            // 
+            this.editDisease.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editDisease.FormattingEnabled = true;
+            this.editDisease.Location = new System.Drawing.Point(14, 190);
+            this.editDisease.Name = "editDisease";
+            this.editDisease.Size = new System.Drawing.Size(296, 23);
+            this.editDisease.TabIndex = 3;
+            this.editDisease.Text = "Выберите болезнь пациента";
+            // 
+            // editDoctor
+            // 
+            this.editDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editDoctor.FormattingEnabled = true;
+            this.editDoctor.Location = new System.Drawing.Point(14, 84);
+            this.editDoctor.Name = "editDoctor";
+            this.editDoctor.Size = new System.Drawing.Size(296, 23);
+            this.editDoctor.TabIndex = 2;
+            this.editDoctor.Text = "Выберите лечащего врача";
+            // 
+            // editPass
+            // 
+            this.editPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editPass.Location = new System.Drawing.Point(14, 52);
+            this.editPass.Name = "editPass";
+            this.editPass.Size = new System.Drawing.Size(296, 21);
+            this.editPass.TabIndex = 1;
+            // 
+            // editName
+            // 
+            this.editName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editName.Location = new System.Drawing.Point(14, 17);
+            this.editName.Name = "editName";
+            this.editName.Size = new System.Drawing.Size(296, 21);
+            this.editName.TabIndex = 0;
+            // 
+            // footer
+            // 
+            this.footer.Controls.Add(this.footerFlowLayout);
+            this.footer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.footer.Location = new System.Drawing.Point(0, 265);
+            this.footer.Name = "footer";
+            this.footer.Size = new System.Drawing.Size(513, 50);
+            this.footer.TabIndex = 2;
+            // 
+            // footerFlowLayout
+            // 
+            this.footerFlowLayout.AutoSize = true;
+            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.Control;
+            this.footerFlowLayout.Controls.Add(this.save);
+            this.footerFlowLayout.Controls.Add(this.reset);
+            this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.footerFlowLayout.Location = new System.Drawing.Point(0, 0);
+            this.footerFlowLayout.Name = "footerFlowLayout";
+            this.footerFlowLayout.Size = new System.Drawing.Size(513, 50);
+            this.footerFlowLayout.TabIndex = 0;
+            // 
+            // save
+            // 
+            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save.Location = new System.Drawing.Point(10, 10);
+            this.save.Margin = new System.Windows.Forms.Padding(10);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(88, 30);
+            this.save.TabIndex = 0;
+            this.save.Text = "Сохранить";
+            this.save.UseVisualStyleBackColor = true;
+            // 
+            // reset
+            // 
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Location = new System.Drawing.Point(118, 10);
+            this.reset.Margin = new System.Windows.Forms.Padding(10);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(88, 30);
+            this.reset.TabIndex = 1;
+            this.reset.Text = "Отменить";
+            this.reset.UseVisualStyleBackColor = true;
             // 
             // EditPatientForm
             // 
@@ -416,15 +416,15 @@
             this.contentContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).EndInit();
             this.contentContainer.ResumeLayout(false);
-            this.footer.ResumeLayout(false);
-            this.footer.PerformLayout();
-            this.footerFlowLayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dayIn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourIn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minuteIt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minuteOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hourOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minuteIt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dayIn)).EndInit();
+            this.footer.ResumeLayout(false);
+            this.footer.PerformLayout();
+            this.footerFlowLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
