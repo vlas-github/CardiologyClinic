@@ -30,14 +30,14 @@
         {
             this.content = new System.Windows.Forms.Panel();
             this.contentContainer = new System.Windows.Forms.SplitContainer();
+            this.passLabel = new System.Windows.Forms.Label();
+            this.nameLable = new System.Windows.Forms.Label();
+            this.editPass = new System.Windows.Forms.TextBox();
+            this.editName = new System.Windows.Forms.TextBox();
             this.footer = new System.Windows.Forms.Panel();
             this.footerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.save = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
-            this.editName = new System.Windows.Forms.TextBox();
-            this.nameLable = new System.Windows.Forms.Label();
-            this.passLabel = new System.Windows.Forms.Label();
-            this.editPass = new System.Windows.Forms.TextBox();
             this.content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).BeginInit();
             this.contentContainer.Panel1.SuspendLayout();
@@ -64,17 +64,55 @@
             // 
             // contentContainer.Panel1
             // 
+            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.contentContainer.Panel1.Controls.Add(this.passLabel);
             this.contentContainer.Panel1.Controls.Add(this.nameLable);
             this.contentContainer.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.contentContainer_Panel1_Paint);
             // 
             // contentContainer.Panel2
             // 
+            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.contentContainer.Panel2.Controls.Add(this.editPass);
             this.contentContainer.Panel2.Controls.Add(this.editName);
             this.contentContainer.Size = new System.Drawing.Size(444, 168);
             this.contentContainer.SplitterDistance = 137;
             this.contentContainer.TabIndex = 0;
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passLabel.Location = new System.Drawing.Point(7, 81);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(114, 16);
+            this.passLabel.TabIndex = 1;
+            this.passLabel.Text = "Пароль для входа:";
+            // 
+            // nameLable
+            // 
+            this.nameLable.AutoSize = true;
+            this.nameLable.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLable.Location = new System.Drawing.Point(7, 39);
+            this.nameLable.Name = "nameLable";
+            this.nameLable.Size = new System.Drawing.Size(120, 16);
+            this.nameLable.TabIndex = 0;
+            this.nameLable.Text = "Ф.И.О. медсестры:";
+            // 
+            // editPass
+            // 
+            this.editPass.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editPass.Location = new System.Drawing.Point(14, 78);
+            this.editPass.Name = "editPass";
+            this.editPass.Size = new System.Drawing.Size(136, 23);
+            this.editPass.TabIndex = 1;
+            // 
+            // editName
+            // 
+            this.editName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editName.Location = new System.Drawing.Point(14, 36);
+            this.editName.Name = "editName";
+            this.editName.Size = new System.Drawing.Size(277, 23);
+            this.editName.TabIndex = 0;
             // 
             // footer
             // 
@@ -88,6 +126,7 @@
             // footerFlowLayout
             // 
             this.footerFlowLayout.AutoSize = true;
+            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.footerFlowLayout.Controls.Add(this.save);
             this.footerFlowLayout.Controls.Add(this.reset);
             this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -98,55 +137,25 @@
             // 
             // save
             // 
+            this.save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.save.Location = new System.Drawing.Point(10, 10);
             this.save.Margin = new System.Windows.Forms.Padding(10);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.Size = new System.Drawing.Size(88, 30);
             this.save.TabIndex = 0;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(105, 10);
+            this.reset.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Location = new System.Drawing.Point(118, 10);
             this.reset.Margin = new System.Windows.Forms.Padding(10);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(75, 23);
+            this.reset.Size = new System.Drawing.Size(88, 30);
             this.reset.TabIndex = 1;
             this.reset.Text = "Отменить";
             this.reset.UseVisualStyleBackColor = true;
-            // 
-            // editName
-            // 
-            this.editName.Location = new System.Drawing.Point(14, 22);
-            this.editName.Name = "editName";
-            this.editName.Size = new System.Drawing.Size(277, 20);
-            this.editName.TabIndex = 0;
-            // 
-            // nameLable
-            // 
-            this.nameLable.AutoSize = true;
-            this.nameLable.Location = new System.Drawing.Point(13, 25);
-            this.nameLable.Name = "nameLable";
-            this.nameLable.Size = new System.Drawing.Size(92, 13);
-            this.nameLable.TabIndex = 0;
-            this.nameLable.Text = "Имя медсестры:";
-            // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(13, 55);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(101, 13);
-            this.passLabel.TabIndex = 1;
-            this.passLabel.Text = "Пароль для входа:";
-            // 
-            // editPass
-            // 
-            this.editPass.Location = new System.Drawing.Point(14, 55);
-            this.editPass.Name = "editPass";
-            this.editPass.Size = new System.Drawing.Size(136, 20);
-            this.editPass.TabIndex = 1;
             // 
             // EditNurseForm
             // 

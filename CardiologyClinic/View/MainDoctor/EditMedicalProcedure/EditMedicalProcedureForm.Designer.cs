@@ -30,12 +30,18 @@
         {
             this.content = new System.Windows.Forms.Panel();
             this.contentContainer = new System.Windows.Forms.SplitContainer();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.editDescription = new System.Windows.Forms.TextBox();
+            this.editName = new System.Windows.Forms.TextBox();
             this.footer = new System.Windows.Forms.Panel();
             this.footerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.save = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
             this.content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).BeginInit();
+            this.contentContainer.Panel1.SuspendLayout();
+            this.contentContainer.Panel2.SuspendLayout();
             this.contentContainer.SuspendLayout();
             this.footer.SuspendLayout();
             this.footerFlowLayout.SuspendLayout();
@@ -55,9 +61,58 @@
             this.contentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentContainer.Location = new System.Drawing.Point(0, 0);
             this.contentContainer.Name = "contentContainer";
+            // 
+            // contentContainer.Panel1
+            // 
+            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel1.Controls.Add(this.descriptionLabel);
+            this.contentContainer.Panel1.Controls.Add(this.nameLabel);
+            // 
+            // contentContainer.Panel2
+            // 
+            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel2.Controls.Add(this.editDescription);
+            this.contentContainer.Panel2.Controls.Add(this.editName);
             this.contentContainer.Size = new System.Drawing.Size(484, 212);
             this.contentContainer.SplitterDistance = 150;
             this.contentContainer.TabIndex = 0;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.Location = new System.Drawing.Point(7, 67);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(136, 16);
+            this.descriptionLabel.TabIndex = 1;
+            this.descriptionLabel.Text = "Описание процедуры:";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(7, 30);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(133, 16);
+            this.nameLabel.TabIndex = 0;
+            this.nameLabel.Text = "Название процедуры:";
+            // 
+            // editDescription
+            // 
+            this.editDescription.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editDescription.Location = new System.Drawing.Point(15, 64);
+            this.editDescription.Multiline = true;
+            this.editDescription.Name = "editDescription";
+            this.editDescription.Size = new System.Drawing.Size(303, 128);
+            this.editDescription.TabIndex = 1;
+            // 
+            // editName
+            // 
+            this.editName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editName.Location = new System.Drawing.Point(15, 27);
+            this.editName.Name = "editName";
+            this.editName.Size = new System.Drawing.Size(303, 23);
+            this.editName.TabIndex = 0;
             // 
             // footer
             // 
@@ -71,6 +126,7 @@
             // footerFlowLayout
             // 
             this.footerFlowLayout.AutoSize = true;
+            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.footerFlowLayout.Controls.Add(this.save);
             this.footerFlowLayout.Controls.Add(this.reset);
             this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,20 +137,22 @@
             // 
             // save
             // 
+            this.save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.save.Location = new System.Drawing.Point(10, 10);
             this.save.Margin = new System.Windows.Forms.Padding(10);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.Size = new System.Drawing.Size(88, 30);
             this.save.TabIndex = 0;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(105, 10);
+            this.reset.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Location = new System.Drawing.Point(118, 10);
             this.reset.Margin = new System.Windows.Forms.Padding(10);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(75, 23);
+            this.reset.Size = new System.Drawing.Size(88, 30);
             this.reset.TabIndex = 1;
             this.reset.Text = "Отменить";
             this.reset.UseVisualStyleBackColor = true;
@@ -109,6 +167,10 @@
             this.Name = "EditMedicalProcedureForm";
             this.Text = "EditMedicalProcedureForm";
             this.content.ResumeLayout(false);
+            this.contentContainer.Panel1.ResumeLayout(false);
+            this.contentContainer.Panel1.PerformLayout();
+            this.contentContainer.Panel2.ResumeLayout(false);
+            this.contentContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).EndInit();
             this.contentContainer.ResumeLayout(false);
             this.footer.ResumeLayout(false);
@@ -126,5 +188,9 @@
         private System.Windows.Forms.FlowLayoutPanel footerFlowLayout;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox editDescription;
+        private System.Windows.Forms.TextBox editName;
     }
 }
