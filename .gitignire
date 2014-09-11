@@ -1,0 +1,5 @@
+CardiologyClinic.sln
+CardiologyClinic.suo
+/CardiologyClinic/bin
+/CardiologyClinic/obj
+/CardiologyClinic/hibernate.cfg
