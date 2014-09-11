@@ -15,5 +15,10 @@ namespace CardiologyClinic.View.MainDoctor.EditDoctor
         {
             InitializeComponent();
         }
+
+        private void footer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
