@@ -59,7 +59,7 @@
             // footerFlowLayout
             // 
             this.footerFlowLayout.AutoSize = true;
-            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.footerFlowLayout.BackColor = System.Drawing.SystemColors.Control;
             this.footerFlowLayout.Controls.Add(this.save);
             this.footerFlowLayout.Controls.Add(this.reset);
             this.footerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -70,7 +70,7 @@
             // 
             // save
             // 
-            this.save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.save.Location = new System.Drawing.Point(10, 10);
             this.save.Margin = new System.Windows.Forms.Padding(10);
             this.save.Name = "save";
@@ -81,7 +81,7 @@
             // 
             // reset
             // 
-            this.reset.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reset.Location = new System.Drawing.Point(118, 10);
             this.reset.Margin = new System.Windows.Forms.Padding(10);
             this.reset.Name = "reset";
@@ -107,13 +107,13 @@
             // 
             // contentContainer.Panel1
             // 
-            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel1.Controls.Add(this.passLabel);
             this.contentContainer.Panel1.Controls.Add(this.nameLabel);
             // 
             // contentContainer.Panel2
             // 
-            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.contentContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel2.Controls.Add(this.editPass);
             this.contentContainer.Panel2.Controls.Add(this.editName);
             this.contentContainer.Size = new System.Drawing.Size(455, 165);
@@ -123,37 +123,37 @@
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passLabel.Location = new System.Drawing.Point(12, 74);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(114, 16);
+            this.passLabel.Size = new System.Drawing.Size(115, 15);
             this.passLabel.TabIndex = 1;
             this.passLabel.Text = "Пароль для входа:";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.Location = new System.Drawing.Point(12, 35);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(89, 16);
+            this.nameLabel.Size = new System.Drawing.Size(85, 15);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Ф.И.О. врача:";
             // 
             // editPass
             // 
-            this.editPass.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.editPass.Location = new System.Drawing.Point(18, 71);
             this.editPass.Name = "editPass";
-            this.editPass.Size = new System.Drawing.Size(153, 23);
+            this.editPass.Size = new System.Drawing.Size(153, 21);
             this.editPass.TabIndex = 1;
             // 
             // editName
             // 
-            this.editName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.editName.Location = new System.Drawing.Point(18, 32);
             this.editName.Name = "editName";
-            this.editName.Size = new System.Drawing.Size(288, 23);
+            this.editName.Size = new System.Drawing.Size(288, 21);
             this.editName.TabIndex = 0;
             // 
             // EditDoctorForm
