@@ -15,5 +15,10 @@ namespace CardiologyClinic.View.MainDoctor.EditRoom
         {
             InitializeComponent();
         }
+
+        private void contentContainer_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }
