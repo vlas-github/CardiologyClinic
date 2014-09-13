@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDoctorForm));
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.mainDoctorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.purposeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicalProcMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diseaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.doctorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +72,7 @@
             // mainDoctorMenuItem
             // 
             this.mainDoctorMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.purposeMenuItem,
+            this.medicalProcMenuItem,
             this.diseaseMenuItem,
             this.toolStripMenuItem1,
             this.doctorMenuItem,
@@ -84,17 +84,19 @@
             this.mainDoctorMenuItem.Size = new System.Drawing.Size(75, 20);
             this.mainDoctorMenuItem.Text = "Глав-врач";
             // 
-            // purposeMenuItem
+            // medicalProcMenuItem
             // 
-            this.purposeMenuItem.Name = "purposeMenuItem";
-            this.purposeMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.purposeMenuItem.Text = "Список лечебных процедур";
+            this.medicalProcMenuItem.Name = "medicalProcMenuItem";
+            this.medicalProcMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.medicalProcMenuItem.Text = "Список лечебных процедур";
+            this.medicalProcMenuItem.Click += new System.EventHandler(this.medicalProcMenuItem_Click);
             // 
             // diseaseMenuItem
             // 
             this.diseaseMenuItem.Name = "diseaseMenuItem";
             this.diseaseMenuItem.Size = new System.Drawing.Size(228, 22);
             this.diseaseMenuItem.Text = "Список болезней";
+            this.diseaseMenuItem.Click += new System.EventHandler(this.diseaseMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -106,18 +108,21 @@
             this.doctorMenuItem.Name = "doctorMenuItem";
             this.doctorMenuItem.Size = new System.Drawing.Size(228, 22);
             this.doctorMenuItem.Text = "Список врачей";
+            this.doctorMenuItem.Click += new System.EventHandler(this.doctorMenuItem_Click);
             // 
             // nurseMenuItem
             // 
             this.nurseMenuItem.Name = "nurseMenuItem";
             this.nurseMenuItem.Size = new System.Drawing.Size(228, 22);
             this.nurseMenuItem.Text = "Список медсестер";
+            this.nurseMenuItem.Click += new System.EventHandler(this.nurseMenuItem_Click);
             // 
             // patientMenuItem
             // 
             this.patientMenuItem.Name = "patientMenuItem";
             this.patientMenuItem.Size = new System.Drawing.Size(228, 22);
             this.patientMenuItem.Text = "Список пациентов";
+            this.patientMenuItem.Click += new System.EventHandler(this.patientMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -129,12 +134,14 @@
             this.roomMenuItem.Name = "roomMenuItem";
             this.roomMenuItem.Size = new System.Drawing.Size(228, 22);
             this.roomMenuItem.Text = "Список больничных палат";
+            this.roomMenuItem.Click += new System.EventHandler(this.roomMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
             this.exitMenuItem.Text = "Выход";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // tools
             // 
@@ -265,7 +272,7 @@
 
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem mainDoctorMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem purposeMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicalProcMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diseaseMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem doctorMenuItem;

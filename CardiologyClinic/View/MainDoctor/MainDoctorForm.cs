@@ -19,15 +19,60 @@ namespace CardiologyClinic.View.MainDoctor
             InitializeComponent();
         }
 
-        public MainDoctorForm(MainDoctorController mainDoctorController)
+        public MainDoctorForm(MainDoctorController mainDoctorController) : this()
         {
-            // TODO: Complete member initialization
             this.mainDoctorController = mainDoctorController;
+        }
+
+        public void ShowMainDoctorName(String name)
+        {
+            this.Text = "Глав-врач: " + name;
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void medicalProcMenuItem_Click(object sender, EventArgs e)
+        {
+            titleLabel.Text = "Список лечебных процедур:";
+            mainDoctorController.ShowMedicalProcedureEvent();
+        }
+
+        private void diseaseMenuItem_Click(object sender, EventArgs e)
+        {
+            titleLabel.Text = "Список болезней:";
+            mainDoctorController.ShowDiseaseEvent();
+        }
+
+        private void doctorMenuItem_Click(object sender, EventArgs e)
+        {
+            titleLabel.Text = "Список докторов:";
+            mainDoctorController.ShowDoctorEvent();
+        }
+
+        private void nurseMenuItem_Click(object sender, EventArgs e)
+        {
+            titleLabel.Text = "Список медсестер:";
+            mainDoctorController.ShowNurseEvent();
+        }
+
+        private void patientMenuItem_Click(object sender, EventArgs e)
+        {
+            titleLabel.Text = "Список пациентов:";
+            mainDoctorController.ShowPatientEvent();
+        }
+
+        private void roomMenuItem_Click(object sender, EventArgs e)
+        {
+            titleLabel.Text = "Список больничных палат:";
+            mainDoctorController.ShowRoomEvent();
         }
     }
 }

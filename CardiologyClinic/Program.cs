@@ -18,20 +18,31 @@ namespace CardiologyClinic
         [STAThread]
         static void Main()
         {
+            // Create Bean Factory
             BeanFactory factory = BeanFactory.GetFactory();
 
+            // Create and configure connecor and add it in Bean Factory
             MySqlConnector connector = new MySqlConnector();
             connector.Configure();
-            // connector.CreateTables(); 
+            // connector.CreateTables();
             factory.PutBean("connector", connector);
 
-            MainDoctorDao mainDoctorDao = new MainDoctorDaoImpl();
-            factory.PutBean("mainDoctorDao", mainDoctorDao);
+            // Add Dao to Bean Factory
+            factory.PutBean("diseaseDao",           new DiseaseDaoImpl());
+            factory.PutBean("doctorDao",            new DoctorDaoImpl());
+            factory.PutBean("mainDoctorDao",        new MainDoctorDaoImpl());
+            factory.PutBean("medicalProcedureDao",  new MedicalProcedureDaoImpl());
+            factory.PutBean("nurseDao",             new NurseDaoImpl());
+            factory.PutBean("patientDao",           new PatientDaoImpl());
+            factory.PutBean("purposeDao",           new PurposeDaoImpl());
+            factory.PutBean("roomDao",              new RoomDaoImpl());
 
-            LoginService loginService = new LoginServiceImpl();
-            factory.PutBean("loginService", loginService);
-
-            
+            // Add Service to Bean Factory
+            factory.PutBean("doctorService", new DoctorServiceImpl());
+            factory.PutBean("loginService", new LoginServiceImpl());
+            factory.PutBean("mainDoctorService", new MainDoctorServiceImpl());
+            factory.PutBean("nurseService", new NurseServiceImpl());
+            factory.PutBean("patientService", new PatientServiceImpl());
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
