@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Базовая сущность приложения
      */
-    abstract class Entity
+    public abstract class Entity
     {
         /**
          * UUID Сущности

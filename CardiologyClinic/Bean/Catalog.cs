@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Сущность для хранения справочной информации
      */
-    abstract class Catalog : Entity
+    public abstract class Catalog : Entity
     {
         /**
          * Название сущности

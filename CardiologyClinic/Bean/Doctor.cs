@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Лечащий врач
      */
-    class Doctor : User
+    public class Doctor : User
     {
         /**
          * Список поциентов

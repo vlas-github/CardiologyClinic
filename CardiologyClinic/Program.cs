@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using CardiologyClinic.Help;
-using CardiologyClinic.View.MainDoctor;
+using CardiologyClinic.View.Login;
+using CardiologyClinic.Controller;
+using CardiologyClinic.Service;
+using CardiologyClinic.Dao;
 
 namespace CardiologyClinic
 {
@@ -22,9 +25,18 @@ namespace CardiologyClinic
             // connector.CreateTables(); 
             factory.PutBean("connector", connector);
 
+            MainDoctorDao mainDoctorDao = new MainDoctorDaoImpl();
+            factory.PutBean("mainDoctorDao", mainDoctorDao);
+
+            LoginService loginService = new LoginServiceImpl();
+            factory.PutBean("loginService", loginService);
+
+            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainDoctorForm());
+            LoginController loginController = new LoginController();
+            loginController.Start();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Медсестра
      */
-    class Nurse : User
+    public class Nurse : User
     {
         /**
          * Список комнат, обслужываемых медсестрой

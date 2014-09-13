@@ -21,13 +21,17 @@ namespace CardiologyClinic.Help
          */
         public void PutBean(String name, Object value)
         {
-            beans.Add(name, value);
+            Console.WriteLine("PUT");
+            Console.WriteLine(name);
+            beans[name] = value;
         }
         /**
          * Взять объект из хранилища
          */
         public Object GetBean(String name)
         {
+            Console.WriteLine("GET");
+            Console.WriteLine(name);
             return beans[name];
         }
         /**

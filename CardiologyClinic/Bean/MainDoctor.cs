@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Глав-врач больницы
      */
-    class MainDoctor : User
+    public class MainDoctor : User
     {
 
     }

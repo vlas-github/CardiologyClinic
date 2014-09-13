@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Пациент кардиалогического диспансера
      */
-    class Patient : User
+    public class Patient : User
     {
         /**
          * Список назначений пациента (прием лекарств и лечебные процедуры)

@@ -9,7 +9,7 @@ namespace CardiologyClinic.Bean
      * Назначение
      * (прием лекарств или медецинские процедуры)
      */
-    class Purpose : Entity
+    public class Purpose : Entity
     {
         /**
          * Пациент которому назначена данная процедура

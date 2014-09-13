@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Пользователь системы
      */
-    abstract class User : Entity
+    public abstract class User : Entity
     {
         /**
          * Имя пользователя

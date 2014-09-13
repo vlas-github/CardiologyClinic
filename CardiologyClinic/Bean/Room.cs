@@ -8,7 +8,7 @@ namespace CardiologyClinic.Bean
     /**
      * Больничная палата
      */
-    class Room : Entity
+    public class Room : Entity
     {
         /**
          * Номер палаты

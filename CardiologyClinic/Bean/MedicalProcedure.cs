@@ -9,7 +9,7 @@ namespace CardiologyClinic.Bean
      * Медецинская процедура
      * (Прием лекарств, поход на процедуры, операции) 
      */
-    class MedicalProcedure : Catalog
+    public class MedicalProcedure : Catalog
     {
 
     }

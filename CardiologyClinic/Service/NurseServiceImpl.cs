@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CardiologyClinic.Bean
+namespace CardiologyClinic.Service
 {
-    /**
-     * Болезнь
-     */
-    public class Disease : Catalog
+    class NurseServiceImpl : NurseService
     {
-
     }
 }
