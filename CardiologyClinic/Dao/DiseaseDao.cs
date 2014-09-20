@@ -9,5 +9,7 @@ namespace CardiologyClinic.Dao
     interface DiseaseDao
     {
         void Save(Disease disease);
+
+        IList<Disease> GetAllDiseases();
     }
 }

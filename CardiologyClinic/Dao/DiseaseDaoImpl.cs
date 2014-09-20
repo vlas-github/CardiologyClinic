@@ -21,5 +21,13 @@ namespace CardiologyClinic.Dao
                 session.Flush();
             }
         }
+
+        public IList<Disease> GetAllDiseases()
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Disease)).List<Disease>();
+            }
+        }
     }
 }

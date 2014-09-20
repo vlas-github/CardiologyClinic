@@ -24,7 +24,10 @@ namespace CardiologyClinic.Dao
 
         public IList<Patient> GetAllPatient()
         {
-            return null;
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Patient)).List<Patient>();
+            }
         }
     }
 }

@@ -33,6 +33,8 @@ namespace CardiologyClinic.Controller
             IList<MedicalProcedure> medicalProcedure =
                 mainDoctorService.GetAllMedicalProcedures();
 
+            if (medicalProcedure == null) medicalProcedure = new List<MedicalProcedure>();
+
             mainDoctorForm.ShowMedicalProcedure(medicalProcedure);
         }
 
@@ -40,6 +42,8 @@ namespace CardiologyClinic.Controller
         {
             IList<Disease> disease =
                 mainDoctorService.GetAllDiseases();
+
+            if (disease == null) disease = new List<Disease>();
 
             mainDoctorForm.ShowDisease(disease);
         }
@@ -49,6 +53,8 @@ namespace CardiologyClinic.Controller
             IList<Doctor> doctor =
                 mainDoctorService.GetAllDoctors();
 
+            if (doctor == null) doctor = new List<Doctor>();
+
             mainDoctorForm.ShowDoctor(doctor);
         }
 
@@ -56,6 +62,8 @@ namespace CardiologyClinic.Controller
         {
             IList<Nurse> nurse =
                 mainDoctorService.GetAllNurses();
+
+            if (nurse == null) nurse = new List<Nurse>();
 
             mainDoctorForm.ShowNurse(nurse);
         }

@@ -13,9 +13,9 @@ namespace CardiologyClinic.Bean
         /**
          * Список поциентов
          */
-        private IList<Patient> patients;
+        private ICollection<Patient> patients;
 
-        public IList<Patient> Patients
+        public ICollection<Patient> Patients
         {
             get { return patients; }
             set { patients = value; }

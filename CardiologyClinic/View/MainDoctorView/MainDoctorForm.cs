@@ -153,7 +153,7 @@ namespace CardiologyClinic.View.MainDoctorView
                 this.contentGridView.Rows.Add(
                     i + 1,
                     doctor[i].Name,
-                    doctor[i].Patients.Count);
+                    doctor[i].Patients == null ? 0 : doctor[i].Patients.Count);
             }
         }
 

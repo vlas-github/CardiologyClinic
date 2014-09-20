@@ -13,7 +13,7 @@ namespace CardiologyClinic.Bean
         /**
          * Список назначений пациента (прием лекарств и лечебные процедуры)
          */
-        private IList<Purpose> purposes;
+        private ICollection<Purpose> purposes;
         /**
          * Комната в которой проживает пациент (ID)
          */
@@ -35,7 +35,7 @@ namespace CardiologyClinic.Bean
          */
         private Disease disease;
 
-        public IList<Purpose> Purposes
+        public ICollection<Purpose> Purposes
         {
             get { return purposes; }
             set { purposes = value; }

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CardiologyClinic.Bean;
 
 namespace CardiologyClinic.Dao
 {
     interface MedicalProcedureDao
     {
-        void Save(Bean.MedicalProcedure medicalProcedure);
+        void Save(MedicalProcedure medicalProcedure);
+
+        IList<MedicalProcedure> GetAllMedicalProcedures();
     }
 }
