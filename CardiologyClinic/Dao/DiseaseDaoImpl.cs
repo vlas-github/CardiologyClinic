@@ -5,6 +5,7 @@ using System.Text;
 using CardiologyClinic.Bean;
 using CardiologyClinic.Help;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace CardiologyClinic.Dao
 {
@@ -27,6 +28,16 @@ namespace CardiologyClinic.Dao
             using (ISession session = connector.GetSession().OpenSession())
             {
                 return session.CreateCriteria(typeof(Disease)).List<Disease>();
+            }
+        }
+
+        public Disease GetDiseasByName(Disease disease)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Disease)session.CreateCriteria(typeof(Disease))
+                    .Add(Expression.Eq("Name", disease.Name))
+                    .UniqueResult();
             }
         }
     }

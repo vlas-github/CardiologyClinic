@@ -11,5 +11,7 @@ namespace CardiologyClinic.Dao
         void Save(Disease disease);
 
         IList<Disease> GetAllDiseases();
+
+        Disease GetDiseasByName(Disease disease);
     }
 }

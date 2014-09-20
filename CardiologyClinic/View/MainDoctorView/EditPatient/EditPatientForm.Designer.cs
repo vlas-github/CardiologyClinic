@@ -356,6 +356,7 @@
             this.MaximizeBox = false;
             this.Name = "EditPatientForm";
             this.Text = "EditPatientForm";
+            this.Load += new System.EventHandler(this.EditPatientForm_Load);
             this.content.ResumeLayout(false);
             this.contentContainer.Panel1.ResumeLayout(false);
             this.contentContainer.Panel1.PerformLayout();

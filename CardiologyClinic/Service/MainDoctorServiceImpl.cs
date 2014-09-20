@@ -76,13 +76,16 @@ namespace CardiologyClinic.Service
 
         public void SavePatient(Patient patient)
         {
+            patient.Doctor = doctorDao.GetDoctorByName(patient.Doctor);
+            patient.Disease = diseaseDao.GetDiseasByName(patient.Disease);
+            patient.Room = roomDao.GetRoomByNumber(patient.Room);
+
             patientDao.Save(patient);
         }
 
         public void SaveRoom(Room room)
         {
-            Nurse nurse = nurseDao.GetNurseByName(room.Nurse);
-            room.Nurse = nurse;
+            room.Nurse = nurseDao.GetNurseByName(room.Nurse);
             roomDao.Save(room);
         }
     }

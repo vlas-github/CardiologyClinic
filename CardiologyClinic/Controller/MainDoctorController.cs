@@ -113,9 +113,29 @@ namespace CardiologyClinic.Controller
             return mainDoctorService.GetAllNurses();
         }
 
-        internal void SaveRoomEvent(Room room)
+        public void SaveRoomEvent(Room room)
         {
             this.mainDoctorService.SaveRoom(room);
+        }
+
+        public void SavePatientEvent(Patient patient)
+        {
+            this.mainDoctorService.SavePatient(patient);
+        }
+
+        internal IList<Doctor> GetAllDoctors()
+        {
+            return mainDoctorService.GetAllDoctors();
+        }
+
+        internal IList<Disease> GetAllDiseases()
+        {
+            return mainDoctorService.GetAllDiseases();
+        }
+
+        internal IList<Room> GetAllRooms()
+        {
+            return mainDoctorService.GetAllRooms();
         }
     }
 }

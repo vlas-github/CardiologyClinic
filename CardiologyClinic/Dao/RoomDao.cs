@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CardiologyClinic.Bean;
 
 namespace CardiologyClinic.Dao
 {
     interface RoomDao
     {
-        void Save(Bean.Room room);
+        void Save(Room room);
 
-        IList<Bean.Room> GetAllRoom();
+        IList<Room> GetAllRoom();
+
+        Room GetRoomByNumber(Room room);
     }
 }

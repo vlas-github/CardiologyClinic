@@ -11,5 +11,7 @@ namespace CardiologyClinic.Dao
         void Save(Doctor doctor);
 
         IList<Doctor> GetAllDoctors();
+
+        Doctor GetDoctorByName(Doctor doctor);
     }
 }
