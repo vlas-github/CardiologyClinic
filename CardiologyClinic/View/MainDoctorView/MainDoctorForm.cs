@@ -15,7 +15,7 @@ using CardiologyClinic.View.MainDoctor.EditNurse;
 using CardiologyClinic.View.MainDoctor.EditPatient;
 using CardiologyClinic.View.MainDoctor.EditRoom;
 
-namespace CardiologyClinic.View.MainDoctor
+namespace CardiologyClinic.View.MainDoctorView
 {
     public partial class MainDoctorForm : Form
     {
@@ -215,6 +215,16 @@ namespace CardiologyClinic.View.MainDoctor
                     room[i].Size,
                     room[i].Size - room[i].Patients.Count);
             }
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

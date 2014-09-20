@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using CardiologyClinic.Help;
-using CardiologyClinic.View.Login;
+using CardiologyClinic.View.LoginView;
 using CardiologyClinic.Controller;
 using CardiologyClinic.Service;
 using CardiologyClinic.Dao;

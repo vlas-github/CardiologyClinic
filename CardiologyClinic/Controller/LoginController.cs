@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using CardiologyClinic.View.Login;
+using CardiologyClinic.View.LoginView;
 using CardiologyClinic.Service;
 using CardiologyClinic.Help;
 using CardiologyClinic.Bean;
