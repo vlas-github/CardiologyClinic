@@ -32,31 +32,48 @@ namespace CardiologyClinic.Controller
         {
             List<MedicalProcedure> medicalProcedure =
                 mainDoctorService.GetAllMedicalProcedures();
+
+            mainDoctorForm.ShowMedicalProcedure(medicalProcedure);
         }
 
         public void ShowDiseaseEvent()
         {
-            throw new NotImplementedException();
+            List<Disease> disease =
+                mainDoctorService.GetAllDiseases();
+
+            mainDoctorForm.ShowDisease(disease);
         }
 
         public void ShowDoctorEvent()
         {
-            throw new NotImplementedException();
+            List<Doctor> doctor =
+                mainDoctorService.GetAllDoctors();
+
+            mainDoctorForm.ShowDoctor(doctor);
         }
 
         public void ShowNurseEvent()
         {
-            throw new NotImplementedException();
+            List<Nurse> nurse =
+                mainDoctorService.GetAllNurses();
+
+            mainDoctorForm.ShowNurse(nurse);
         }
 
         public void ShowPatientEvent()
         {
-            throw new NotImplementedException();
+            List<Patient> patient =
+                mainDoctorService.GetAllPatients();
+
+            mainDoctorForm.ShowPatient(patient);
         }
 
         public void ShowRoomEvent()
         {
-            throw new NotImplementedException();
+            List<Room> room =
+                mainDoctorService.GetAllRooms();
+
+            mainDoctorForm.ShowRoom(room);
         }
     }
 }
