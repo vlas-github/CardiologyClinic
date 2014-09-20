@@ -7,5 +7,6 @@ namespace CardiologyClinic.Service
 {
     interface MainDoctorService
     {
+        List<Bean.MedicalProcedure> GetAllMedicalProcedures();
     }
 }
