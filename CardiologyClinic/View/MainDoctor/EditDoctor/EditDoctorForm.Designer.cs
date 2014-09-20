@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.footer = new System.Windows.Forms.Panel();
+            this.save = new System.Windows.Forms.Button();
+            this.reset = new System.Windows.Forms.Button();
             this.content = new System.Windows.Forms.Panel();
             this.contentContainer = new System.Windows.Forms.SplitContainer();
             this.passLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.editPass = new System.Windows.Forms.TextBox();
             this.editName = new System.Windows.Forms.TextBox();
-            this.save = new System.Windows.Forms.Button();
-            this.reset = new System.Windows.Forms.Button();
             this.footer.SuspendLayout();
             this.content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contentContainer)).BeginInit();
@@ -54,7 +54,30 @@
             this.footer.Name = "footer";
             this.footer.Size = new System.Drawing.Size(424, 50);
             this.footer.TabIndex = 0;
-            this.footer.Paint += new System.Windows.Forms.PaintEventHandler(this.footer_Paint);
+            // 
+            // save
+            // 
+            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.save.Location = new System.Drawing.Point(112, 8);
+            this.save.Margin = new System.Windows.Forms.Padding(8);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(88, 30);
+            this.save.TabIndex = 2;
+            this.save.Text = "Сохранить";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
+            // 
+            // reset
+            // 
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset.Location = new System.Drawing.Point(213, 8);
+            this.reset.Margin = new System.Windows.Forms.Padding(8);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(88, 30);
+            this.reset.TabIndex = 3;
+            this.reset.Text = "Отменить";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // content
             // 
@@ -122,28 +145,6 @@
             this.editName.Name = "editName";
             this.editName.Size = new System.Drawing.Size(288, 21);
             this.editName.TabIndex = 0;
-            // 
-            // save
-            // 
-            this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.save.Location = new System.Drawing.Point(112, 8);
-            this.save.Margin = new System.Windows.Forms.Padding(8);
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(88, 30);
-            this.save.TabIndex = 2;
-            this.save.Text = "Сохранить";
-            this.save.UseVisualStyleBackColor = true;
-            // 
-            // reset
-            // 
-            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reset.Location = new System.Drawing.Point(213, 8);
-            this.reset.Margin = new System.Windows.Forms.Padding(8);
-            this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(88, 30);
-            this.reset.TabIndex = 3;
-            this.reset.Text = "Отменить";
-            this.reset.UseVisualStyleBackColor = true;
             // 
             // EditDoctorForm
             // 

@@ -65,7 +65,6 @@
             this.contentContainer.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.contentContainer.Panel1.Controls.Add(this.passLabel);
             this.contentContainer.Panel1.Controls.Add(this.nameLable);
-            this.contentContainer.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.contentContainer_Panel1_Paint);
             // 
             // contentContainer.Panel2
             // 
@@ -132,6 +131,7 @@
             this.save.TabIndex = 2;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // reset
             // 

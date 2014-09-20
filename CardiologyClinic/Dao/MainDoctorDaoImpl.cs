@@ -20,9 +20,9 @@ namespace CardiologyClinic.Dao
         {
             using (ISession session = connector.GetSession().OpenSession())
             return (User)session.
-            CreateCriteria(typeof(MainDoctor)).
-            Add(Expression.Eq("Password", pass)).
-            UniqueResult();
+                CreateCriteria(typeof(MainDoctor)).
+                Add(Expression.Eq("Password", pass)).
+                UniqueResult();
         }
     }
 }

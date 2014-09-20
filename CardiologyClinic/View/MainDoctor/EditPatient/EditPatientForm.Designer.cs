@@ -332,6 +332,7 @@
             this.save.TabIndex = 2;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // reset
             // 

@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CardiologyClinic.Bean;
+using CardiologyClinic.Dao;
+using CardiologyClinic.Help;
 
 namespace CardiologyClinic.Service
 {
     class MainDoctorServiceImpl : MainDoctorService
     {
+        private DiseaseDao diseaseDao =
+            (DiseaseDao)BeanFactory.GetFactory().GetBean("diseaseDao");
+        private DoctorDao doctorDao =
+            (DoctorDao)BeanFactory.GetFactory().GetBean("doctorDao");
+        private MedicalProcedureDao medicalProcedureDao =
+            (MedicalProcedureDao)BeanFactory.GetFactory().GetBean("medicalProcedureDao");
+
         public List<MedicalProcedure> GetAllMedicalProcedures()
         {
             List<MedicalProcedure> result = new List<MedicalProcedure>();
@@ -194,6 +203,21 @@ namespace CardiologyClinic.Service
             result.Add(a);
 
             return result;
+        }
+
+        public void SaveDisease(Disease disease)
+        {
+            diseaseDao.Save(disease);
+        }
+
+        public void SaveDoctor(Doctor doctor)
+        {
+            doctorDao.Save(doctor);
+        }
+
+        private void SaveMedicalProcedure(MedicalProcedure medicalProcedure)
+        {
+            medicalProcedureDao.Save(medicalProcedure);
         }
     }
 }

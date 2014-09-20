@@ -14,5 +14,8 @@ namespace CardiologyClinic.Service
         List<Nurse> GetAllNurses();
         List<Patient> GetAllPatients();
         List<Room> GetAllRooms();
+        void SaveDisease(Disease disease);
+        void SaveDoctor(Doctor doctor);
+        void SaveMedicalProcedure(MedicalProcedure medicalProcedure);
     }
 }

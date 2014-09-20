@@ -4,7 +4,7 @@
                    namespace="CardiologyClinic.Bean">
   <class name="CardiologyClinic.Bean.Purpose" table="Purpose" lazy="false">
     <id name="Id" column="Id" type="string">
-      <generator class="guid" />
+      <generator class="uuid.hex" />
     </id>
     <many-to-one name="Patient" column="patient" not-null="true" class="CardiologyClinic.Bean.Patient" />
     <many-to-one name="MedicalProcedure" column="medicalProcedure" not-null="true" class="CardiologyClinic.Bean.MedicalProcedure" />

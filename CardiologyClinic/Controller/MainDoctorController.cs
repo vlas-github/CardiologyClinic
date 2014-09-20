@@ -75,5 +75,20 @@ namespace CardiologyClinic.Controller
 
             mainDoctorForm.ShowRoom(room);
         }
+
+        public void SaveDiseaseEvent(Disease disease)
+        {
+            this.mainDoctorService.SaveDisease(disease);
+        }
+
+        public void SaveDoctorEvent(Doctor doctor)
+        {
+            this.mainDoctorService.SaveDoctor(doctor);
+        }
+
+        public void SaveMedicalProcedureEvent(MedicalProcedure medicalProcedure)
+        {
+            this.mainDoctorService.SaveMedicalProcedure(medicalProcedure);
+        }
     }
 }

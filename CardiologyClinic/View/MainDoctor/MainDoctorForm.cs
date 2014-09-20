@@ -8,12 +8,18 @@ using System.Text;
 using System.Windows.Forms;
 using CardiologyClinic.Controller;
 using CardiologyClinic.Bean;
+using CardiologyClinic.View.MainDoctor.EditDisease;
+using CardiologyClinic.View.MainDoctor.EditMedicalProcedure;
+using CardiologyClinic.View.MainDoctor.EditDoctor;
+using CardiologyClinic.View.MainDoctor.EditNurse;
+using CardiologyClinic.View.MainDoctor.EditPatient;
+using CardiologyClinic.View.MainDoctor.EditRoom;
 
 namespace CardiologyClinic.View.MainDoctor
 {
     public partial class MainDoctorForm : Form
     {
-        private Controller.MainDoctorController mainDoctorController;
+        private MainDoctorController mainDoctorController;
 
         public MainDoctorForm()
         {
@@ -32,7 +38,34 @@ namespace CardiologyClinic.View.MainDoctor
 
         private void addButton_Click(object sender, EventArgs e)
         {
-
+            Form form;
+            switch (titleLabel.Text)
+            {
+                case "Список лечебных процедур:":
+                    form = new EditMedicalProcedureForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список болезней:":
+                    form = new EditDiseaseForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список докторов:":
+                    form = new EditDoctorForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список медсестер:":
+                    form = new EditNurseForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список пациентов:":
+                    form = new EditPatientForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список больничных палат:":
+                    form = new EditRoomForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+            }
         }
 
         private void exitMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +125,7 @@ namespace CardiologyClinic.View.MainDoctor
             }
         }
 
-        internal void ShowDisease(List<Disease> disease)
+        public void ShowDisease(List<Disease> disease)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -108,7 +141,7 @@ namespace CardiologyClinic.View.MainDoctor
             }
         }
 
-        internal void ShowDoctor(List<Doctor> doctor)
+        public void ShowDoctor(List<Doctor> doctor)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -124,7 +157,7 @@ namespace CardiologyClinic.View.MainDoctor
             }
         }
 
-        internal void ShowNurse(List<Nurse> nurse)
+        public void ShowNurse(List<Nurse> nurse)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -140,7 +173,7 @@ namespace CardiologyClinic.View.MainDoctor
             }
         }
 
-        internal void ShowPatient(List<Patient> patient)
+        public void ShowPatient(List<Patient> patient)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -164,7 +197,7 @@ namespace CardiologyClinic.View.MainDoctor
             }
         }
 
-        internal void ShowRoom(List<Room> room)
+        public void ShowRoom(List<Room> room)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
