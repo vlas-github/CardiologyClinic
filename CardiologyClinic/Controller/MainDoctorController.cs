@@ -90,5 +90,10 @@ namespace CardiologyClinic.Controller
         {
             this.mainDoctorService.SaveMedicalProcedure(medicalProcedure);
         }
+
+        internal void SaveNurseEvent(Nurse nurse)
+        {
+            this.mainDoctorService.SaveNurse(nurse);
+        }
     }
 }

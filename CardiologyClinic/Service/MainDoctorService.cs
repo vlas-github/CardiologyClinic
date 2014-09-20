@@ -17,5 +17,8 @@ namespace CardiologyClinic.Service
         void SaveDisease(Disease disease);
         void SaveDoctor(Doctor doctor);
         void SaveMedicalProcedure(MedicalProcedure medicalProcedure);
+        void SaveNurse(Nurse nurse);
+        void SavePatient(Patient patient);
+        void SaveRoom(Room room);
     }
 }

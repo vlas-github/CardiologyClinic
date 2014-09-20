@@ -143,6 +143,7 @@
             this.reset.TabIndex = 3;
             this.reset.Text = "Отменить";
             this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // EditNurseForm
             // 

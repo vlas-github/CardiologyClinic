@@ -7,5 +7,6 @@ namespace CardiologyClinic.Dao
 {
     interface RoomDao
     {
+        void Save(Bean.Room room);
     }
 }

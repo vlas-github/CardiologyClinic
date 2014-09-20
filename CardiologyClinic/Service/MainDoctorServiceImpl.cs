@@ -16,6 +16,13 @@ namespace CardiologyClinic.Service
             (DoctorDao)BeanFactory.GetFactory().GetBean("doctorDao");
         private MedicalProcedureDao medicalProcedureDao =
             (MedicalProcedureDao)BeanFactory.GetFactory().GetBean("medicalProcedureDao");
+        private NurseDao nurseDao =
+            (NurseDao)BeanFactory.GetFactory().GetBean("nurseDao");
+        private PatientDao patientDao =
+            (PatientDao)BeanFactory.GetFactory().GetBean("patientDao");
+        private RoomDao roomDao =
+            (RoomDao)BeanFactory.GetFactory().GetBean("roomDao");
+        
 
         public List<MedicalProcedure> GetAllMedicalProcedures()
         {
@@ -218,6 +225,21 @@ namespace CardiologyClinic.Service
         public void SaveMedicalProcedure(MedicalProcedure medicalProcedure)
         {
             medicalProcedureDao.Save(medicalProcedure);
+        }
+
+        public void SaveNurse(Nurse nurse)
+        {
+            nurseDao.Save(nurse);
+        }
+
+        public void SavePatient(Patient patient)
+        {
+            patientDao.Save(patient);
+        }
+
+        public void SaveRoom(Room room)
+        {
+            roomDao.Save(room);
         }
     }
 }

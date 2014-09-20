@@ -7,5 +7,6 @@ namespace CardiologyClinic.Dao
 {
     interface PatientDao
     {
+        void Save(Bean.Patient patient);
     }
 }
