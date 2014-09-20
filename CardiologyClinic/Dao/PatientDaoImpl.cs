@@ -21,5 +21,10 @@ namespace CardiologyClinic.Dao
                 session.Flush();
             }
         }
+
+        public IList<Patient> GetAllPatient()
+        {
+            return null;
+        }
     }
 }

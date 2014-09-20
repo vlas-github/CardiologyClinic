@@ -30,7 +30,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowMedicalProcedureEvent()
         {
-            List<MedicalProcedure> medicalProcedure =
+            IList<MedicalProcedure> medicalProcedure =
                 mainDoctorService.GetAllMedicalProcedures();
 
             mainDoctorForm.ShowMedicalProcedure(medicalProcedure);
@@ -38,7 +38,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowDiseaseEvent()
         {
-            List<Disease> disease =
+            IList<Disease> disease =
                 mainDoctorService.GetAllDiseases();
 
             mainDoctorForm.ShowDisease(disease);
@@ -46,7 +46,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowDoctorEvent()
         {
-            List<Doctor> doctor =
+            IList<Doctor> doctor =
                 mainDoctorService.GetAllDoctors();
 
             mainDoctorForm.ShowDoctor(doctor);
@@ -54,7 +54,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowNurseEvent()
         {
-            List<Nurse> nurse =
+            IList<Nurse> nurse =
                 mainDoctorService.GetAllNurses();
 
             mainDoctorForm.ShowNurse(nurse);
@@ -62,7 +62,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowPatientEvent()
         {
-            List<Patient> patient =
+            IList<Patient> patient =
                 mainDoctorService.GetAllPatients();
 
             mainDoctorForm.ShowPatient(patient);
@@ -70,8 +70,10 @@ namespace CardiologyClinic.Controller
 
         public void ShowRoomEvent()
         {
-            List<Room> room =
+            IList<Room> room =
                 mainDoctorService.GetAllRooms();
+
+            if (room == null) room = new List<Room>();
 
             mainDoctorForm.ShowRoom(room);
         }
@@ -91,9 +93,19 @@ namespace CardiologyClinic.Controller
             this.mainDoctorService.SaveMedicalProcedure(medicalProcedure);
         }
 
-        internal void SaveNurseEvent(Nurse nurse)
+        public void SaveNurseEvent(Nurse nurse)
         {
             this.mainDoctorService.SaveNurse(nurse);
+        }
+
+        public IList<Nurse> GetAllNurses()
+        {
+            return mainDoctorService.GetAllNurses();
+        }
+
+        internal void SaveRoomEvent(Room room)
+        {
+            this.mainDoctorService.SaveRoom(room);
         }
     }
 }

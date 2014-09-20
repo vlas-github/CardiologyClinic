@@ -13,9 +13,9 @@ namespace CardiologyClinic.Bean
         /**
          * Список комнат, обслужываемых медсестрой
          */
-        private IList<Room> rooms;
+        private ICollection<Room> rooms;
 
-        public IList<Room> Rooms
+        public ICollection<Room> Rooms
         {
             get { return rooms; }
             set { rooms = value; }

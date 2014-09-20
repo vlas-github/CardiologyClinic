@@ -109,7 +109,7 @@ namespace CardiologyClinic.View.MainDoctorView
             mainDoctorController.ShowRoomEvent();
         }
 
-        public void ShowMedicalProcedure(List<MedicalProcedure> medicalProcedure)
+        public void ShowMedicalProcedure(IList<MedicalProcedure> medicalProcedure)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -125,7 +125,7 @@ namespace CardiologyClinic.View.MainDoctorView
             }
         }
 
-        public void ShowDisease(List<Disease> disease)
+        public void ShowDisease(IList<Disease> disease)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -141,7 +141,7 @@ namespace CardiologyClinic.View.MainDoctorView
             }
         }
 
-        public void ShowDoctor(List<Doctor> doctor)
+        public void ShowDoctor(IList<Doctor> doctor)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -157,7 +157,7 @@ namespace CardiologyClinic.View.MainDoctorView
             }
         }
 
-        public void ShowNurse(List<Nurse> nurse)
+        public void ShowNurse(IList<Nurse> nurse)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -169,11 +169,11 @@ namespace CardiologyClinic.View.MainDoctorView
                 this.contentGridView.Rows.Add(
                     i + 1,
                     nurse[i].Name,
-                    nurse[i].Rooms.Count);
+                    nurse[i].Rooms == null ? 0 : nurse[i].Rooms.Count);
             }
         }
 
-        public void ShowPatient(List<Patient> patient)
+        public void ShowPatient(IList<Patient> patient)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
@@ -197,7 +197,7 @@ namespace CardiologyClinic.View.MainDoctorView
             }
         }
 
-        public void ShowRoom(List<Room> room)
+        public void ShowRoom(IList<Room> room)
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");

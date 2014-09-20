@@ -25,14 +25,14 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             this.mainDoctorController = mainDoctorController;
         }
 
-        private void contentContainer_Panel2_Paint(object sender, PaintEventArgs e)
+        private void save_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void save_Click(object sender, EventArgs e)
+        private void reset_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

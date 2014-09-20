@@ -8,12 +8,12 @@ namespace CardiologyClinic.Service
 {
     interface MainDoctorService
     {
-        List<MedicalProcedure> GetAllMedicalProcedures();
-        List<Disease> GetAllDiseases();
-        List<Doctor> GetAllDoctors();
-        List<Nurse> GetAllNurses();
-        List<Patient> GetAllPatients();
-        List<Room> GetAllRooms();
+        IList<MedicalProcedure> GetAllMedicalProcedures();
+        IList<Disease> GetAllDiseases();
+        IList<Doctor> GetAllDoctors();
+        IList<Nurse> GetAllNurses();
+        IList<Patient> GetAllPatients();
+        IList<Room> GetAllRooms();
         void SaveDisease(Disease disease);
         void SaveDoctor(Doctor doctor);
         void SaveMedicalProcedure(MedicalProcedure medicalProcedure);

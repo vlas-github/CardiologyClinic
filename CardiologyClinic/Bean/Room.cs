@@ -17,7 +17,7 @@ namespace CardiologyClinic.Bean
         /**
          * Список пациентов в палате
          */
-        private IList<Patient> patients;
+        private ICollection<Patient> patients;
         /**
          * Медсестра, ответственная за палатой
          */
@@ -33,7 +33,7 @@ namespace CardiologyClinic.Bean
             set { number = value; }
         }
 
-        public IList<Patient> Patients
+        public ICollection<Patient> Patients
         {
             get { return patients; }
             set { patients = value; }

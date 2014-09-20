@@ -78,7 +78,6 @@
             this.contentContainer.Size = new System.Drawing.Size(484, 91);
             this.contentContainer.SplitterDistance = 177;
             this.contentContainer.TabIndex = 0;
-            this.contentContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.contentContainer_SplitterMoved);
             // 
             // nurseLabel
             // 
@@ -168,6 +167,7 @@
             this.reset.TabIndex = 3;
             this.reset.Text = "Отменить";
             this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // EditRoomForm
             // 
@@ -180,6 +180,7 @@
             this.MaximizeBox = false;
             this.Name = "EditRoomForm";
             this.Text = "EditRoomForm";
+            this.Load += new System.EventHandler(this.EditRoomForm_Load);
             this.content.ResumeLayout(false);
             this.contentContainer.Panel1.ResumeLayout(false);
             this.contentContainer.Panel1.PerformLayout();

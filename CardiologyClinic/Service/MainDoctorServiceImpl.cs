@@ -24,7 +24,7 @@ namespace CardiologyClinic.Service
             (RoomDao)BeanFactory.GetFactory().GetBean("roomDao");
         
 
-        public List<MedicalProcedure> GetAllMedicalProcedures()
+        public IList<MedicalProcedure> GetAllMedicalProcedures()
         {
             List<MedicalProcedure> result = new List<MedicalProcedure>();
             MedicalProcedure a = new MedicalProcedure();
@@ -49,7 +49,7 @@ namespace CardiologyClinic.Service
             return result;
         }
 
-        public List<Disease> GetAllDiseases()
+        public IList<Disease> GetAllDiseases()
         {
             List<Disease> result = new List<Disease>();
             Disease a = new Disease();
@@ -74,7 +74,7 @@ namespace CardiologyClinic.Service
             return result;
         }
 
-        public List<Doctor> GetAllDoctors()
+        public IList<Doctor> GetAllDoctors()
         {
             List<Doctor> result = new List<Doctor>();
             Doctor a = new Doctor();
@@ -110,106 +110,19 @@ namespace CardiologyClinic.Service
             return result;
         }
 
-        public List<Nurse> GetAllNurses()
+        public IList<Nurse> GetAllNurses()
         {
-            List<Nurse> result = new List<Nurse>();
-            Nurse a = new Nurse();
-            a.Id = "266789f3-f36e-4a96-b577-7016249b1196";
-            a.Name = "Василий Васильевич Пупкин";
-            a.Rooms = new List<Room>();
-            a.Rooms.Add(new Room());
-            a.Rooms.Add(new Room());
-            a.Rooms.Add(new Room());
-
-            Nurse b = new Nurse();
-            b.Id = "e7b01943-54ad-4a36-97f6-aa29128131bb";
-            b.Name = "Петр Высильевич Пупкин";
-            b.Rooms = new List<Room>();
-            b.Rooms.Add(new Room());
-            b.Rooms.Add(new Room());
-            b.Rooms.Add(new Room());
-            b.Rooms.Add(new Room());
-            b.Rooms.Add(new Room());
-            b.Rooms.Add(new Room());
-
-            Nurse c = new Nurse();
-            c.Id = "faa73c03-3312-47d9-b724-905273b13cdf";
-            c.Name = "Федр Васильевич Пупкин";
-            c.Rooms = new List<Room>();
-            c.Rooms.Add(new Room());
-            c.Rooms.Add(new Room());
-
-            result.Add(a);
-            result.Add(b);
-            result.Add(c);
-
-            return result;
+            return nurseDao.GetAllNurse();
         }
 
-        public List<Patient> GetAllPatients()
+        public IList<Patient> GetAllPatients()
         {
-            Nurse d = new Nurse();
-            d.Id = "266789f3-f36e-4a96-b577-7016249b1196";
-            d.Name = "Василий Васильевич Пупкин";
-            d.Rooms = new List<Room>();
-            
-            Room a = new Room();
-            a.Id = "68d70e27-4db4-415a-99f4-b4ce57c26a95";
-            a.Number = 10;
-            a.Nurse = d;
-            a.Patients = new List<Patient>();
-            a.Size = 5;
-
-            Doctor b = new Doctor();
-            b.Id = "e7b01943-54ad-4a36-97f6-aa29128131bb";
-            b.Name = "Петр Высильевич Пупкин";
-            b.Patients = new List<Patient>();
-            b.Patients.Add(new Patient());
-            b.Patients.Add(new Patient());
-            b.Patients.Add(new Patient());
-            b.Patients.Add(new Patient());
-            b.Patients.Add(new Patient());
-            b.Patients.Add(new Patient());
-
-            Disease c = new Disease();
-            c.Id = "68d70e27-4db4-415a-99f4-b4ce57c26a95";
-            c.Name = "Волчанка";
-            c.Description = "Очень больно!!! ";
-
-            List<Patient> result = new List<Patient>();
-            Patient e = new Patient();
-            e.Id = "68d70e27-4db4-415a-99f4-b4ce57c26a95";
-            e.DateIn = new DateTime();
-            e.DateOut = new DateTime();
-            e.Disease = c;
-            e.Doctor = b;
-            e.Name = "Bob";
-            e.Purposes = new List<Purpose>();
-            e.Room = a;
-
-            result.Add(e);
-
-            return result;
+            return patientDao.GetAllPatient();
         }
 
-        public List<Room> GetAllRooms()
+        public IList<Room> GetAllRooms()
         {
-            Nurse d = new Nurse();
-            d.Id = "266789f3-f36e-4a96-b577-7016249b1196";
-            d.Name = "Василий Васильевич Пупкин";
-            d.Rooms = new List<Room>();
-
-            List<Room> result = new List<Room>();
-            Room a = new Room();
-            a.Id = "68d70e27-4db4-415a-99f4-b4ce57c26a95";
-            a.Number = 10;
-            a.Nurse = d;
-            a.Patients = new List<Patient>();
-            a.Size = 5;
-
-            result.Add(a);
-
-            return result;
+            return roomDao.GetAllRoom();
         }
 
         public void SaveDisease(Disease disease)
@@ -239,6 +152,8 @@ namespace CardiologyClinic.Service
 
         public void SaveRoom(Room room)
         {
+            Nurse nurse = nurseDao.GetNurseByName(room.Nurse);
+            room.Nurse = nurse;
             roomDao.Save(room);
         }
     }

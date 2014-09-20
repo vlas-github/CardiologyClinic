@@ -101,7 +101,6 @@
             this.contentContainer.Panel2.Controls.Add(this.editDoctor);
             this.contentContainer.Panel2.Controls.Add(this.editPass);
             this.contentContainer.Panel2.Controls.Add(this.editName);
-            this.contentContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.contentContainer_Panel2_Paint);
             this.contentContainer.Size = new System.Drawing.Size(503, 212);
             this.contentContainer.SplitterDistance = 188;
             this.contentContainer.TabIndex = 0;
@@ -344,6 +343,7 @@
             this.reset.TabIndex = 3;
             this.reset.Text = "Отменить";
             this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // EditPatientForm
             // 
