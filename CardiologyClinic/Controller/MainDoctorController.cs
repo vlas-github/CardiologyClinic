@@ -65,6 +65,8 @@ namespace CardiologyClinic.Controller
             IList<Patient> patient =
                 mainDoctorService.GetAllPatients();
 
+            if (patient == null) patient = new List<Patient>();
+
             mainDoctorForm.ShowPatient(patient);
         }
 
