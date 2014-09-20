@@ -1,4 +1,4 @@
-﻿namespace CardiologyClinic.View.MainDoctor
+﻿namespace CardiologyClinic.View.MainDoctorView
 {
     partial class MainDoctorForm
     {
@@ -204,6 +204,7 @@
             this.titleLabel.Size = new System.Drawing.Size(236, 35);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Список лечебных процедур";
+            this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
             // statusStrip1
             // 
@@ -238,6 +239,7 @@
             this.contentGridView.Name = "contentGridView";
             this.contentGridView.Size = new System.Drawing.Size(687, 298);
             this.contentGridView.TabIndex = 0;
+            this.contentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contentGridView_CellContentClick);
             // 
             // MainDoctorForm
             // 

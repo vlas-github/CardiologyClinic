@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CardiologyClinic.View.MainDoctor;
+using CardiologyClinic.View.MainDoctorView;
 using CardiologyClinic.Bean;
 using CardiologyClinic.Service;
 using CardiologyClinic.Help;

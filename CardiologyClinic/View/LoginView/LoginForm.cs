@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using CardiologyClinic.Controller;
 
-namespace CardiologyClinic.View.Login
+namespace CardiologyClinic.View.LoginView
 {
     public partial class LoginForm : Form
     {

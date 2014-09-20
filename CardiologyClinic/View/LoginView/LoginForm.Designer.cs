@@ -1,4 +1,4 @@
-﻿namespace CardiologyClinic.View.Login
+﻿namespace CardiologyClinic.View.LoginView
 {
     partial class LoginForm
     {
@@ -35,7 +35,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(12, 60);
+            this.loginButton.Location = new System.Drawing.Point(139, 53);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 0;
@@ -45,32 +45,31 @@
             // 
             // passLabel
             // 
-            this.passLabel.AutoSize = true;
             this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passLabel.Location = new System.Drawing.Point(9, 13);
+            this.passLabel.Location = new System.Drawing.Point(12, 9);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(239, 15);
+            this.passLabel.Size = new System.Drawing.Size(130, 41);
             this.passLabel.TabIndex = 1;
-            this.passLabel.Text = "Введите пароль для доступа к системе:";
+            this.passLabel.Text = "Введите пароль для входа в систему:";
             // 
             // passText
             // 
             this.passText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passText.Location = new System.Drawing.Point(12, 31);
+            this.passText.Location = new System.Drawing.Point(139, 14);
             this.passText.Name = "passText";
             this.passText.PasswordChar = '*';
-            this.passText.Size = new System.Drawing.Size(256, 23);
+            this.passText.Size = new System.Drawing.Size(169, 23);
             this.passText.TabIndex = 2;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 93);
+            this.ClientSize = new System.Drawing.Size(320, 85);
             this.Controls.Add(this.passText);
             this.Controls.Add(this.passLabel);
             this.Controls.Add(this.loginButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
