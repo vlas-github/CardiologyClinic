@@ -42,6 +42,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\MySql.Data.dll</HintPath>
@@ -174,6 +176,24 @@
     <Compile Include="View\NurseView\NurseForm.Designer.cs">
       <DependentUpon>NurseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PatientView\InfoDoctor\InfoDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PatientView\InfoDoctor\InfoDoctorForm.Designer.cs">
+      <DependentUpon>InfoDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientView\InfoNurse\InfoNurseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PatientView\InfoNurse\InfoNurseForm.Designer.cs">
+      <DependentUpon>InfoNurseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientView\InfoRoom\InfoRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PatientView\InfoRoom\InfoRoomForm.Designer.cs">
+      <DependentUpon>InfoRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PatientView\PatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +238,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\NurseView\NurseForm.resx">
       <DependentUpon>NurseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PatientView\InfoDoctor\InfoDoctorForm.resx">
+      <DependentUpon>InfoDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PatientView\InfoNurse\InfoNurseForm.resx">
+      <DependentUpon>InfoNurseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PatientView\InfoRoom\InfoRoomForm.resx">
+      <DependentUpon>InfoRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PatientView\PatientForm.resx">
       <DependentUpon>PatientForm.cs</DependentUpon>
