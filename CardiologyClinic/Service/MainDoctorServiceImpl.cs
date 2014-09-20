@@ -215,7 +215,7 @@ namespace CardiologyClinic.Service
             doctorDao.Save(doctor);
         }
 
-        private void SaveMedicalProcedure(MedicalProcedure medicalProcedure)
+        public void SaveMedicalProcedure(MedicalProcedure medicalProcedure)
         {
             medicalProcedureDao.Save(medicalProcedure);
         }

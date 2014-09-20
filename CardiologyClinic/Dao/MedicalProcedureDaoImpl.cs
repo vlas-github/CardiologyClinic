@@ -13,7 +13,7 @@ namespace CardiologyClinic.Dao
         private Connector connector =
             (Connector)BeanFactory.GetFactory().GetBean("connector");
 
-        private void Save(MedicalProcedure medicalProcedure)
+        public void Save(MedicalProcedure medicalProcedure)
         {
             using (ISession session = connector.GetSession().OpenSession())
             {
