@@ -233,6 +233,7 @@
             // 
             // contentGridView
             // 
+            this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentGridView.Location = new System.Drawing.Point(0, 0);
