@@ -122,6 +122,18 @@
     <Compile Include="View\DoctorView\DoctorForm.Designer.cs">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DoctorView\EditPatient\AddProcedure\AddProcedureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DoctorView\EditPatient\AddProcedure\AddProcedureForm.Designer.cs">
+      <DependentUpon>AddProcedureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DoctorView\EditPatient\PatientIEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DoctorView\EditPatient\PatientIEditForm.Designer.cs">
+      <DependentUpon>PatientIEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +223,12 @@
     </Compile>
     <EmbeddedResource Include="View\DoctorView\DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DoctorView\EditPatient\AddProcedure\AddProcedureForm.resx">
+      <DependentUpon>AddProcedureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DoctorView\EditPatient\PatientIEditForm.resx">
+      <DependentUpon>PatientIEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
