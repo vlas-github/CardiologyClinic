@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=localhost;user id=root;password=12345678;persistsecurityinfo=True;database=cardiology_clinic</Value>
     </Setting>
+    <Setting Name="createSchema" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

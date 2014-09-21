@@ -49,7 +49,6 @@ namespace CardiologyClinic.Help
             configuration.AddFile("Mapping\\MedicalProcedure.hbm.xml");
 
             SchemaExport schemaExport = new SchemaExport(configuration);
-
             schemaExport.Execute(false, true, false);
         }
     }

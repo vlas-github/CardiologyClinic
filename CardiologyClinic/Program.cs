@@ -24,7 +24,7 @@ namespace CardiologyClinic
             // Create and configure connecor and add it in Bean Factory
             MySqlConnector connector = new MySqlConnector();
             connector.Configure();
-            // connector.CreateTables();
+            //connector.CreateTables();
             factory.PutBean("connector", connector);
 
             // Add Dao to Bean Factory

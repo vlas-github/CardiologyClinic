@@ -33,5 +33,17 @@ namespace CardiologyClinic.Properties {
                 return ((string)(this["cardiology_clinic_ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        public string createSchema {
+            get {
+                return ((string)(this["createSchema"]));
+            }
+            set {
+                this["createSchema"] = value;
+            }
+        }
     }
 }
