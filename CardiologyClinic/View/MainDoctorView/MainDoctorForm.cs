@@ -176,24 +176,52 @@ namespace CardiologyClinic.View.MainDoctorView
         public void ShowPatient(IList<Patient> patient)
         {
             this.contentGridView.Columns.Clear();
+            this.contentGridView.ReadOnly = true;
             this.contentGridView.Columns.Add("index", "#");
             this.contentGridView.Columns.Add("name", "Имя");
+            this.contentGridView.Columns.Add("dateDoctor", "Лечащий врач");
+            this.contentGridView.Columns.Add("dateRoom", "Палата");
             this.contentGridView.Columns.Add("dateIn", "Дата поступления");
             this.contentGridView.Columns.Add("dateOut", "Дата выписки");
-            this.contentGridView.Columns.Add("dateDisease", "Диагноз");
-            this.contentGridView.Columns.Add("dateDoctor", "Лечащий врач");
-            this.contentGridView.Columns.Add("dateRoom", "Комната");
+            this.contentGridView.Columns.Add("dateDisease", "Диагноз");            
+            
+
+            this.contentGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[0].MinimumWidth = 30;
+            this.contentGridView.Columns[0].Width = 30;
+
+            this.contentGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[1].MinimumWidth = 180;
+            this.contentGridView.Columns[1].Width = 180;
+
+            this.contentGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[2].MinimumWidth = 180;
+            this.contentGridView.Columns[2].Width = 180;
+
+            this.contentGridView.Columns[3].MinimumWidth = 55;
+            this.contentGridView.Columns[3].Width = 55;
+
+            this.contentGridView.Columns[4].MinimumWidth = 50;
+            this.contentGridView.Columns[4].Width = 70;
+           
+
+            this.contentGridView.Columns[5].MinimumWidth = 50;
+            this.contentGridView.Columns[5].Width = 70;
+
+
+            this.contentGridView.Columns[6].MinimumWidth = 50;
+            this.contentGridView.Columns[6].Width = 70;
 
             for (int i = 0; i < patient.Count; i++)
             {
                 this.contentGridView.Rows.Add(
                     i + 1,
                     patient[i].Name,
-                    patient[i].DateIn,
-                    patient[i].DateOut,
-                    patient[i].Disease.Name,
                     patient[i].Doctor.Name,
-                    patient[i].Room.Number);
+                    patient[i].Room.Number,
+                    patient[i].DateIn.ToShortDateString(),
+                    patient[i].DateOut.ToShortDateString(),
+                    patient[i].Disease.Name);
             }
         }
 
@@ -201,10 +229,18 @@ namespace CardiologyClinic.View.MainDoctorView
         {
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
-            this.contentGridView.Columns.Add("number", "Номер");
+            this.contentGridView.Columns.Add("number", "Номер палаты");
             this.contentGridView.Columns.Add("nurse", "Медсестра");
             this.contentGridView.Columns.Add("size", "Количество мест");
             this.contentGridView.Columns.Add("free_size", "Количество свободных мест");
+
+            this.contentGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[0].MinimumWidth = 30;
+            this.contentGridView.Columns[0].Width = 30;
+            this.contentGridView.Columns[1].MinimumWidth = 50;
+            this.contentGridView.Columns[2].MinimumWidth = 180;
+            this.contentGridView.Columns[3].MinimumWidth = 50;
+            this.contentGridView.Columns[4].MinimumWidth = 50;
 
             for (int i = 0; i < room.Count; i++)
             {
@@ -225,6 +261,15 @@ namespace CardiologyClinic.View.MainDoctorView
         private void contentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void contentGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ((DataGridView)sender).SelectedCells[0].Selected = false;
+            }
+            catch { }
         }
     }
 }

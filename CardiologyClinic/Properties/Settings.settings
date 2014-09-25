@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CardiologyClinic.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="cardiology_clinic_ConnectionString" Type="(Connection string)" Scope="Application">
@@ -9,9 +9,6 @@
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=localhost;user id=root;password=12345678;persistsecurityinfo=True;database=cardiology_clinic</Value>
-    </Setting>
-    <Setting Name="createSchema" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -51,7 +51,7 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             patient.Room = room;
 
             mainDoctorController.SavePatientEvent(patient);
-
+            mainDoctorController.ShowPatientEvent();
             Close();
         }
 
