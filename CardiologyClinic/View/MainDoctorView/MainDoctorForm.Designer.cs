@@ -233,14 +233,22 @@
             // 
             // contentGridView
             // 
+            this.contentGridView.AllowUserToAddRows = false;
+            this.contentGridView.AllowUserToResizeRows = false;
+            this.contentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentGridView.Location = new System.Drawing.Point(0, 0);
+            this.contentGridView.MultiSelect = false;
             this.contentGridView.Name = "contentGridView";
+            this.contentGridView.ReadOnly = true;
+            this.contentGridView.RowHeadersVisible = false;
+            this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.contentGridView.Size = new System.Drawing.Size(687, 298);
             this.contentGridView.TabIndex = 0;
             this.contentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contentGridView_CellContentClick);
+            this.contentGridView.SelectionChanged += new System.EventHandler(this.contentGridView_SelectionChanged);
             // 
             // MainDoctorForm
             // 
