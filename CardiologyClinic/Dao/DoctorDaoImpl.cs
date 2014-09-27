@@ -40,5 +40,15 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public Doctor GetDoctorByPass(string pass)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Doctor)session.CreateCriteria(typeof(Doctor))
+                    .Add(Expression.Eq("Password", pass))
+                    .UniqueResult();
+            }
+        }
     }
 }

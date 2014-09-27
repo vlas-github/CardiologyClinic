@@ -83,6 +83,7 @@
     <Compile Include="Bean\Purpose.cs" />
     <Compile Include="Bean\Room.cs" />
     <Compile Include="Bean\User.cs" />
+    <Compile Include="Controller\DoctorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\MainDoctorController.cs" />
     <Compile Include="Dao\DiseaseDao.cs" />

@@ -77,7 +77,8 @@ namespace CardiologyClinic.Controller
 
         private void startDoctorController(User user)
         {
-            throw new NotImplementedException();
+            new DoctorController(user).Start();
+            loginForm.Hide();
         }
 
         private void startPatientController(User user)

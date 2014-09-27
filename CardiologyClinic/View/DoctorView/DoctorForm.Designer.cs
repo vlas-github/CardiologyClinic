@@ -33,7 +33,6 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.doctorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentGridView = new System.Windows.Forms.DataGridView();
             this.statusStrip1.SuspendLayout();
@@ -83,19 +82,12 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.doctorMenuItem,
             this.exitMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(483, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // doctorMenuItem
-            // 
-            this.doctorMenuItem.Name = "doctorMenuItem";
-            this.doctorMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.doctorMenuItem.Text = "Доктор";
             // 
             // exitMenuItem
             // 
@@ -126,7 +118,7 @@
             this.MaximizeBox = false;
             this.Name = "DoctorForm";
             this.Text = "DoctorForm";
-            this.Load += new System.EventHandler(this.DoctorForm_Load);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
@@ -146,7 +138,6 @@
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem doctorMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
         private System.Windows.Forms.DataGridView contentGridView;
     }

@@ -6,19 +6,28 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CardiologyClinic.Controller;
 
 namespace CardiologyClinic.View.DoctorView
 {
     public partial class DoctorForm : Form
     {
+        private DoctorController doctorController;
+
         public DoctorForm()
         {
             InitializeComponent();
         }
 
-        private void DoctorForm_Load(object sender, EventArgs e)
+        public DoctorForm(DoctorController doctorController)
+            : this()
         {
+            this.doctorController = doctorController;
+        }
 
+        public void ShowDoctorName(string name)
+        {
+            this.Text = name;
         }
     }
 }
