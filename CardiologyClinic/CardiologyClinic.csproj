@@ -86,6 +86,8 @@
     <Compile Include="Controller\DoctorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\MainDoctorController.cs" />
+    <Compile Include="Controller\NurseController.cs" />
+    <Compile Include="Controller\PatientController.cs" />
     <Compile Include="Dao\DiseaseDao.cs" />
     <Compile Include="Dao\DiseaseDaoImpl.cs" />
     <Compile Include="Dao\DoctorDao.cs" />

@@ -72,7 +72,8 @@ namespace CardiologyClinic.Controller
 
         private void startNurseController(User user)
         {
-            throw new NotImplementedException();
+            new NurseController(user).Start();
+            loginForm.Hide();
         }
 
         private void startDoctorController(User user)
@@ -83,7 +84,8 @@ namespace CardiologyClinic.Controller
 
         private void startPatientController(User user)
         {
-            throw new NotImplementedException();
+            new PatientController(user).Start();
+            loginForm.Hide();
         }
     }
 }

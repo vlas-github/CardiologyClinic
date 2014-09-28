@@ -11,5 +11,7 @@ namespace CardiologyClinic.Dao
         void Save(Patient patient);
 
         IList<Patient> GetAllPatient();
+
+        User GetPatientByPass(string pass);
     }
 }

@@ -41,5 +41,15 @@ namespace CardiologyClinic.Dao
                 return session.CreateCriteria(typeof(Nurse)).List<Nurse>();
             }
         }
+
+        public User GetNurseByPass(string pass)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Nurse)session.CreateCriteria(typeof(Nurse))
+                    .Add(Expression.Eq("Password", pass))
+                    .UniqueResult();
+            }
+        }
     }
 }

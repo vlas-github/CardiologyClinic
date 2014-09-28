@@ -5,6 +5,7 @@ using System.Text;
 using CardiologyClinic.Help;
 using NHibernate;
 using CardiologyClinic.Bean;
+using NHibernate.Criterion;
 
 namespace CardiologyClinic.Dao
 {
@@ -27,6 +28,16 @@ namespace CardiologyClinic.Dao
             using (ISession session = connector.GetSession().OpenSession())
             {
                 return session.CreateCriteria(typeof(Patient)).List<Patient>();
+            }
+        }
+
+        public User GetPatientByPass(string pass)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Patient)session.CreateCriteria(typeof(Patient))
+                    .Add(Expression.Eq("Password", pass))
+                    .UniqueResult();
             }
         }
     }

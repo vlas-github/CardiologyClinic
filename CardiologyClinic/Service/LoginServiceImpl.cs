@@ -14,10 +14,14 @@ namespace CardiologyClinic.Service
             (MainDoctorDao)BeanFactory.GetFactory().GetBean("mainDoctorDao");
         private DoctorDao doctorDao =
             (DoctorDao)BeanFactory.GetFactory().GetBean("doctorDao");
+        private PatientDao patientDao =
+            (PatientDao)BeanFactory.GetFactory().GetBean("patientDao");
+        private NurseDao nurseDao =
+            (NurseDao)BeanFactory.GetFactory().GetBean("nurseDao");
 
         public User GetPatientByPass(String pass)
         {
-            return null;
+            return patientDao.GetPatientByPass(pass);
         }
 
         public User GetDoctorByPass(string pass)
@@ -27,7 +31,7 @@ namespace CardiologyClinic.Service
 
         public User GetNurseByPass(string pass)
         {
-            return null;
+            return nurseDao.GetNurseByPass(pass);
         }
 
         public User GetMainDoctorByPass(string pass)

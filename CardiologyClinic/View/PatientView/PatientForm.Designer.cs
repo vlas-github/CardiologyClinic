@@ -79,7 +79,6 @@
             this.infoDoctorMenuItem.Name = "infoDoctorMenuItem";
             this.infoDoctorMenuItem.Size = new System.Drawing.Size(248, 22);
             this.infoDoctorMenuItem.Text = "Информация о лечащем враче";
-            this.infoDoctorMenuItem.Click += new System.EventHandler(this.узнатьОЛечащемВрачеToolStripMenuItem_Click);
             // 
             // infoRoomMenuItem
             // 
@@ -217,7 +216,6 @@
             this.MaximizeBox = false;
             this.Name = "PatientForm";
             this.Text = "PatientForm";
-            this.Load += new System.EventHandler(this.PatientForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);

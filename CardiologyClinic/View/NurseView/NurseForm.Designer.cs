@@ -103,7 +103,7 @@
             // roomNumberMenuItem
             // 
             this.roomNumberMenuItem.Name = "roomNumberMenuItem";
-            this.roomNumberMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.roomNumberMenuItem.Size = new System.Drawing.Size(80, 22);
             this.roomNumberMenuItem.Text = "1";
             // 
             // toolStripSeparator2
@@ -122,7 +122,7 @@
             // patientMenuItem
             // 
             this.patientMenuItem.Name = "patientMenuItem";
-            this.patientMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.patientMenuItem.Size = new System.Drawing.Size(98, 22);
             this.patientMenuItem.Text = "ывы";
             // 
             // exitMenuItem
@@ -199,7 +199,6 @@
             this.MaximizeBox = false;
             this.Name = "NurseForm";
             this.Text = "NurseForm";
-            this.Load += new System.EventHandler(this.NurseForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);

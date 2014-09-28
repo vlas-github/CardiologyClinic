@@ -6,29 +6,28 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CardiologyClinic.Controller;
 
 namespace CardiologyClinic.View.PatientView
 {
     public partial class PatientForm : Form
     {
+        private Controller.PatientController patientController;
+
         public PatientForm()
         {
             InitializeComponent();
         }
 
-        private void узнатьОЛечащемВрачеToolStripMenuItem_Click(object sender, EventArgs e)
+        public PatientForm(PatientController patientController)
+            : this()
         {
-
+            this.patientController = patientController;
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        public void ShowPatientName(string name)
         {
-
-        }
-
-        private void PatientForm_Load(object sender, EventArgs e)
-        {
-
+            this.Text = name;
         }
     }
 }
