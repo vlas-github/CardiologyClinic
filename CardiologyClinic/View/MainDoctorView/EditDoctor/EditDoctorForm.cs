@@ -33,7 +33,8 @@ namespace CardiologyClinic.View.MainDoctor.EditDoctor
         {
             this.doctor.Name = this.editName.Text;
             this.doctor.Password = this.editPass.Text;
-            mainDoctorController.SaveDoctorEvent(doctor);
+            this.mainDoctorController.SaveDoctorEvent(doctor);
+            this.mainDoctorController.ShowDoctorEvent();
             Close();
         }
 

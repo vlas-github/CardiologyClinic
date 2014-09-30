@@ -33,7 +33,8 @@ namespace CardiologyClinic.View.MainDoctor.EditMedicalProcedure
         {
             this.medicalProcedure.Name = this.editName.Text;
             this.medicalProcedure.Description = this.editDescription.Text;
-            mainDoctorController.SaveMedicalProcedureEvent(medicalProcedure);
+            this.mainDoctorController.SaveMedicalProcedureEvent(medicalProcedure);
+            this.mainDoctorController.ShowMedicalProcedureEvent();
             Close();
         }
 

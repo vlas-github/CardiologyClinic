@@ -35,6 +35,7 @@ namespace CardiologyClinic.View.MainDoctor.EditDisease
             disease.Name = this.editName.Text;
             disease.Description = this.editDescription.Text;
             this.mainDoctorController.SaveDiseaseEvent(disease);
+            this.mainDoctorController.ShowDiseaseEvent();
             this.Close();
         }
 
