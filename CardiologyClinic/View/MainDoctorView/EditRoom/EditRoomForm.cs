@@ -39,7 +39,8 @@ namespace CardiologyClinic.View.MainDoctor.EditRoom
 
             this.room.Nurse = nurse;
 
-            mainDoctorController.SaveRoomEvent(room);
+            this.mainDoctorController.SaveRoomEvent(room);
+            this.mainDoctorController.ShowRoomEvent();
 
             Close();
         }

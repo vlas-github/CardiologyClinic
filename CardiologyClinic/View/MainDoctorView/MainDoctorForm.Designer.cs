@@ -65,7 +65,7 @@
             this.exitMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(687, 24);
+            this.mainMenu.Size = new System.Drawing.Size(784, 24);
             this.mainMenu.TabIndex = 0;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -151,7 +151,7 @@
             this.removeButton});
             this.tools.Location = new System.Drawing.Point(0, 24);
             this.tools.Name = "tools";
-            this.tools.Size = new System.Drawing.Size(687, 25);
+            this.tools.Size = new System.Drawing.Size(784, 25);
             this.tools.TabIndex = 1;
             this.tools.Text = "toolStrip1";
             // 
@@ -190,7 +190,7 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 49);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(687, 35);
+            this.headerPanel.Size = new System.Drawing.Size(784, 35);
             this.headerPanel.TabIndex = 2;
             // 
             // titleLabel
@@ -212,15 +212,14 @@
             this.recordCountStatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 382);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(687, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // recordCountStatusLabel
             // 
             this.recordCountStatusLabel.Name = "recordCountStatusLabel";
-            this.recordCountStatusLabel.Size = new System.Drawing.Size(148, 17);
-            this.recordCountStatusLabel.Text = "Количество записей - 100";
+            this.recordCountStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // contentPanel
             // 
@@ -228,7 +227,7 @@
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 84);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(687, 298);
+            this.contentPanel.Size = new System.Drawing.Size(784, 298);
             this.contentPanel.TabIndex = 4;
             // 
             // contentGridView
@@ -245,7 +244,7 @@
             this.contentGridView.ReadOnly = true;
             this.contentGridView.RowHeadersVisible = false;
             this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.contentGridView.Size = new System.Drawing.Size(687, 298);
+            this.contentGridView.Size = new System.Drawing.Size(784, 298);
             this.contentGridView.TabIndex = 0;
             this.contentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contentGridView_CellContentClick);
             this.contentGridView.SelectionChanged += new System.EventHandler(this.contentGridView_SelectionChanged);
@@ -254,16 +253,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 404);
+            this.ClientSize = new System.Drawing.Size(784, 404);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.tools);
             this.Controls.Add(this.mainMenu);
             this.MainMenuStrip = this.mainMenu;
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "MainDoctorForm";
             this.Text = "Глав-врач - Фамилия Имя Отчество";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainDoctorForm_Load);
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
             this.tools.ResumeLayout(false);
