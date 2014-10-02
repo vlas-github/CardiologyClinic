@@ -48,5 +48,11 @@ namespace CardiologyClinic.View.LoginView
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.AcceptButton = loginButton;
+            passText.Select();
+        }
     }
 }
