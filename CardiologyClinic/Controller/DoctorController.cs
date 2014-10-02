@@ -27,5 +27,11 @@ namespace CardiologyClinic.Controller
             doctorForm.ShowDoctorName(user.Name);
             doctorForm.Show();
         }
+
+        public void ShowAllPatientEvent()
+        {
+            IList<Patient> patients = doctorService.GetPatientsByDoctor(user);
+            doctorForm.ShowAllPatients(patients);
+        }
     }
 }

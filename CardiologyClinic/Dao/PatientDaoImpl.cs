@@ -40,5 +40,15 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public IList<Patient> GetPatientByDoctor(User user)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Patient))
+                    .Add(Expression.Eq("Doctor", user))
+                    .List<Patient>();
+            }
+        }
     }
 }

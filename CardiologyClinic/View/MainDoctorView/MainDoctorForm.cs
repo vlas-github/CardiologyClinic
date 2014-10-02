@@ -68,11 +68,6 @@ namespace CardiologyClinic.View.MainDoctorView
             }
         }
 
-        private void exitMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void medicalProcMenuItem_Click(object sender, EventArgs e)
         {            
             mainDoctorController.ShowMedicalProcedureEvent();
