@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numberRoomLabel = new System.Windows.Forms.Label();
             this.sizeRoomLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.okButton = new System.Windows.Forms.Button();
             this.numberLabel = new System.Windows.Forms.Label();
             this.roomLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -65,14 +65,15 @@
             this.sizeRoomLabel.TabIndex = 2;
             this.sizeRoomLabel.Text = "Размер палаты:";
             // 
-            // button1
+            // okButton
             // 
-            this.button1.Location = new System.Drawing.Point(115, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.okButton.Location = new System.Drawing.Point(115, 81);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(75, 23);
+            this.okButton.TabIndex = 3;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // numberLabel
             // 
@@ -99,13 +100,14 @@
             this.ClientSize = new System.Drawing.Size(254, 116);
             this.Controls.Add(this.roomLabel);
             this.Controls.Add(this.numberLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.okButton);
             this.Controls.Add(this.sizeRoomLabel);
             this.Controls.Add(this.numberRoomLabel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InfoRoomForm";
             this.Text = "InfoRoomForm";
+            this.Load += new System.EventHandler(this.InfoRoomForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,7 +118,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label numberRoomLabel;
         private System.Windows.Forms.Label sizeRoomLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Label numberLabel;
         private System.Windows.Forms.Label roomLabel;
     }

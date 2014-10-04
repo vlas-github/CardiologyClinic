@@ -27,5 +27,56 @@ namespace CardiologyClinic.Controller
             patientForm.ShowPatientName(user.Name);
             patientForm.Show();
         }
+
+        public Doctor GetDoctor()
+        {
+            return ((Patient)user).Doctor;
+        }
+
+        public Room GetRoom()
+        {
+            return ((Patient)user).Room;
+        }
+
+        public Nurse GetNurse()
+        {
+            return ((Patient)user).Room.Nurse;
+        }
+
+        public void ShowAllPurpose()
+        {
+            ICollection<Purpose> result = ((Patient)user).Purposes;
+            patientForm.ShowPurpose(result);
+        }
+
+        public void ShowNewPurpose()
+        {
+            ICollection<Purpose> result = new LinkedList<Purpose>();
+            foreach (Purpose p in ((Patient)user).Purposes)
+            {
+                if (!p.IsComplete) result.Add(p);
+            }
+            patientForm.ShowPurpose(result);
+        }
+
+        public void ShowOldPurpose()
+        {
+            ICollection<Purpose> result = new LinkedList<Purpose>();
+            foreach (Purpose p in ((Patient)user).Purposes)
+            {
+                if (p.IsComplete) result.Add(p);
+            }
+            patientForm.ShowPurpose(result);
+        }
+
+        public DateTime GetDateIn()
+        {
+            return ((Patient)user).DateIn;
+        }
+
+        public DateTime GetDateOut()
+        {
+            return ((Patient)user).DateOut;
+        }
     }
 }

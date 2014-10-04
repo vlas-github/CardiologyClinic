@@ -41,7 +41,7 @@
             this.todayButton = new System.Windows.Forms.ToolStripButton();
             this.allButton = new System.Windows.Forms.ToolStripButton();
             this.oldButton = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contentGridView = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -49,7 +49,7 @@
             this.menuStrip1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contentGridView)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,18 +79,21 @@
             this.infoDoctorMenuItem.Name = "infoDoctorMenuItem";
             this.infoDoctorMenuItem.Size = new System.Drawing.Size(248, 22);
             this.infoDoctorMenuItem.Text = "Информация о лечащем враче";
+            this.infoDoctorMenuItem.Click += new System.EventHandler(this.infoDoctorMenuItem_Click);
             // 
             // infoRoomMenuItem
             // 
             this.infoRoomMenuItem.Name = "infoRoomMenuItem";
             this.infoRoomMenuItem.Size = new System.Drawing.Size(248, 22);
             this.infoRoomMenuItem.Text = "Информация о палате";
+            this.infoRoomMenuItem.Click += new System.EventHandler(this.infoRoomMenuItem_Click);
             // 
             // infoNurseMenuItem
             // 
             this.infoNurseMenuItem.Name = "infoNurseMenuItem";
             this.infoNurseMenuItem.Size = new System.Drawing.Size(248, 22);
             this.infoNurseMenuItem.Text = "Информация о медсестре";
+            this.infoNurseMenuItem.Click += new System.EventHandler(this.infoNurseMenuItem_Click);
             // 
             // exitMenuItem
             // 
@@ -140,6 +143,7 @@
             this.todayButton.Name = "todayButton";
             this.todayButton.Size = new System.Drawing.Size(152, 22);
             this.todayButton.Text = "Предстоящие процедуры";
+            this.todayButton.Click += new System.EventHandler(this.todayButton_Click);
             // 
             // allButton
             // 
@@ -149,6 +153,7 @@
             this.allButton.Name = "allButton";
             this.allButton.Size = new System.Drawing.Size(95, 22);
             this.allButton.Text = "Все процедуры";
+            this.allButton.Click += new System.EventHandler(this.allButton_Click);
             // 
             // oldButton
             // 
@@ -158,16 +163,17 @@
             this.oldButton.Name = "oldButton";
             this.oldButton.Size = new System.Drawing.Size(147, 22);
             this.oldButton.Text = "Пройденные процедуры";
+            this.oldButton.Click += new System.EventHandler(this.oldButton_Click);
             // 
-            // dataGridView1
+            // contentGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 247);
-            this.dataGridView1.TabIndex = 4;
+            this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentGridView.Location = new System.Drawing.Point(0, 84);
+            this.contentGridView.Name = "contentGridView";
+            this.contentGridView.Size = new System.Drawing.Size(607, 247);
+            this.contentGridView.TabIndex = 4;
             // 
             // statusStrip1
             // 
@@ -207,7 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 331);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.contentGridView);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuStrip1);
@@ -216,13 +222,14 @@
             this.MaximizeBox = false;
             this.Name = "PatientForm";
             this.Text = "PatientForm";
+            this.Load += new System.EventHandler(this.PatientForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contentGridView)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -244,7 +251,7 @@
         private System.Windows.Forms.ToolStripButton todayButton;
         private System.Windows.Forms.ToolStripButton allButton;
         private System.Windows.Forms.ToolStripButton oldButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView contentGridView;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
