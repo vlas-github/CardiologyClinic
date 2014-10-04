@@ -343,11 +343,7 @@ namespace CardiologyClinic.View.MainDoctorView
 
         private void contentGridView_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            {
-                ((DataGridView)sender).SelectedCells[0].Selected = false;
-            }
-            catch { }
+
         }
 
         private void MainDoctorForm_Load(object sender, EventArgs e)
