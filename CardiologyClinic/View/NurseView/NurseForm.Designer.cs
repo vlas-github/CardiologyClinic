@@ -80,6 +80,7 @@
             this.purposeMenuItem.Name = "purposeMenuItem";
             this.purposeMenuItem.Size = new System.Drawing.Size(188, 22);
             this.purposeMenuItem.Text = "Все процедуры";
+            this.purposeMenuItem.Click += new System.EventHandler(this.purposeMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -91,6 +92,7 @@
             this.allRoomsMenuItem.Name = "allRoomsMenuItem";
             this.allRoomsMenuItem.Size = new System.Drawing.Size(188, 22);
             this.allRoomsMenuItem.Text = "Показать все палаты";
+            this.allRoomsMenuItem.Click += new System.EventHandler(this.allRoomsMenuItem_Click);
             // 
             // roomMenuItem
             // 
@@ -103,8 +105,9 @@
             // roomNumberMenuItem
             // 
             this.roomNumberMenuItem.Name = "roomNumberMenuItem";
-            this.roomNumberMenuItem.Size = new System.Drawing.Size(80, 22);
+            this.roomNumberMenuItem.Size = new System.Drawing.Size(152, 22);
             this.roomNumberMenuItem.Text = "1";
+            this.roomNumberMenuItem.Click += new System.EventHandler(this.roomNumberMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -122,14 +125,16 @@
             // patientMenuItem
             // 
             this.patientMenuItem.Name = "patientMenuItem";
-            this.patientMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.patientMenuItem.Size = new System.Drawing.Size(152, 22);
             this.patientMenuItem.Text = "ывы";
+            this.patientMenuItem.Click += new System.EventHandler(this.patientMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
             this.exitMenuItem.Text = "Выход";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // headerPanel
             // 
@@ -199,6 +204,7 @@
             this.MaximizeBox = false;
             this.Name = "NurseForm";
             this.Text = "NurseForm";
+            this.Load += new System.EventHandler(this.NurseForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
