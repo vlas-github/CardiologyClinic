@@ -30,7 +30,6 @@
         {
             this.titleLable = new System.Windows.Forms.Label();
             this.nameDoctorLabel = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.okButton = new System.Windows.Forms.Button();
@@ -56,18 +55,6 @@
             this.nameDoctorLabel.TabIndex = 1;
             this.nameDoctorLabel.Text = "Петров Петр Петрович";
             this.nameDoctorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(254, 116);
-            this.shapeContainer1.TabIndex = 2;
-            this.shapeContainer1.TabStop = false;
             // 
             // lineShape2
             // 
@@ -109,7 +96,6 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.nameDoctorLabel);
             this.Controls.Add(this.titleLable);
-            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InfoDoctorForm";
             this.Text = "InfoDoctorForm";
@@ -122,7 +108,6 @@
 
         private System.Windows.Forms.Label titleLable;
         private System.Windows.Forms.Label nameDoctorLabel;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Button okButton;
