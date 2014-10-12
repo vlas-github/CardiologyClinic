@@ -105,7 +105,7 @@
             // roomNumberMenuItem
             // 
             this.roomNumberMenuItem.Name = "roomNumberMenuItem";
-            this.roomNumberMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.roomNumberMenuItem.Size = new System.Drawing.Size(80, 22);
             this.roomNumberMenuItem.Text = "1";
             this.roomNumberMenuItem.Click += new System.EventHandler(this.roomNumberMenuItem_Click);
             // 
@@ -125,7 +125,7 @@
             // patientMenuItem
             // 
             this.patientMenuItem.Name = "patientMenuItem";
-            this.patientMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.patientMenuItem.Size = new System.Drawing.Size(98, 22);
             this.patientMenuItem.Text = "ывы";
             this.patientMenuItem.Click += new System.EventHandler(this.patientMenuItem_Click);
             // 
