@@ -34,10 +34,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.allRoomsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.roomNumberMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.patientsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -96,18 +94,9 @@
             // 
             // roomMenuItem
             // 
-            this.roomMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.roomNumberMenuItem});
             this.roomMenuItem.Name = "roomMenuItem";
             this.roomMenuItem.Size = new System.Drawing.Size(188, 22);
             this.roomMenuItem.Text = "Номер палаты";
-            // 
-            // roomNumberMenuItem
-            // 
-            this.roomNumberMenuItem.Name = "roomNumberMenuItem";
-            this.roomNumberMenuItem.Size = new System.Drawing.Size(80, 22);
-            this.roomNumberMenuItem.Text = "1";
-            this.roomNumberMenuItem.Click += new System.EventHandler(this.roomNumberMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -116,18 +105,9 @@
             // 
             // patientsMenuItem
             // 
-            this.patientsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.patientMenuItem});
             this.patientsMenuItem.Name = "patientsMenuItem";
             this.patientsMenuItem.Size = new System.Drawing.Size(188, 22);
             this.patientsMenuItem.Text = "Пациенты";
-            // 
-            // patientMenuItem
-            // 
-            this.patientMenuItem.Name = "patientMenuItem";
-            this.patientMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.patientMenuItem.Text = "ывы";
-            this.patientMenuItem.Click += new System.EventHandler(this.patientMenuItem_Click);
             // 
             // exitMenuItem
             // 
@@ -225,10 +205,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem allRoomsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roomMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem roomNumberMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem patientsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label label1;

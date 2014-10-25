@@ -65,24 +65,46 @@ namespace CardiologyClinic.View.NurseView
             this.nurseController.ShowPurposesByPatient(patient);
         }
 
-        internal void ShowMenuRooms(ICollection<Room> iCollection)
+        public void ShowMenuRooms(ICollection<Room> iCollection)
         {
-            throw new NotImplementedException();
+            foreach (Room room in iCollection)
+            {
+                ToolStripItem tmp = new ToolStripMenuItem();
+                tmp.Text = room.Number.ToString();
+                tmp.Click += new EventHandler(room_Click);
+                roomMenuItem.DropDownItems.Add(tmp);
+            }
         }
 
-        internal void ShowMenuPatients(ICollection<Patient> result)
+        public void ShowMenuPatients(ICollection<Patient> result)
         {
-            throw new NotImplementedException();
+            foreach (Patient patient in result)
+            {
+                ToolStripItem tmp = new ToolStripMenuItem();
+                tmp.Text = patient.Name.ToString();
+                tmp.Click += new EventHandler(patient_Click);
+                patientsMenuItem.DropDownItems.Add(tmp);
+            }
         }
 
-        internal void ShowRooms(ICollection<Room> iCollection)
+        public void ShowRooms(ICollection<Room> iCollection)
         {
-            throw new NotImplementedException();
+            
         }
 
-        internal void ShowPurposes(List<Purpose> result)
+        void room_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+        void patient_Click(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void ShowPurposes(List<Purpose> result)
+        {
+            //throw new NotImplementedException();
         }
     }
 }
