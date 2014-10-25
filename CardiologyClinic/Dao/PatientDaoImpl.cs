@@ -50,5 +50,21 @@ namespace CardiologyClinic.Dao
                     .List<Patient>();
             }
         }
+
+        public void GetPatientByName(Patient patient)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                Patient tmp = (Patient)session.CreateCriteria(typeof(Patient))
+                    .Add(Expression.Eq("Name", patient.Name))
+                    .UniqueResult();
+
+                patient.Id = tmp.Id;
+                patient.Name = tmp.Name;
+                patient.Password = tmp.Password;
+                patient.Purposes = tmp.Purposes;
+                patient.Room = tmp.Room;
+            }
+        }
     }
 }

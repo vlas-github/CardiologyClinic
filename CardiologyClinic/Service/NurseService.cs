@@ -7,5 +7,7 @@ namespace CardiologyClinic.Service
 {
     interface NurseService
     {
+        void GetRoomByName(Bean.Room room);
+        void GetPatientByName(Bean.Patient patient);
     }
 }

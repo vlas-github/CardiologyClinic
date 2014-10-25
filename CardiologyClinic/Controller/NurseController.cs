@@ -119,5 +119,15 @@ namespace CardiologyClinic.Controller
                 }
             }
         }
+
+        public void GetPatientByName(Patient patient)
+        {
+            this.nurseService.GetPatientByName(patient);
+        }
+
+        public void GetRoomByNumber(Room room)
+        {
+            this.nurseService.GetRoomByName(room);
+        }
     }
 }

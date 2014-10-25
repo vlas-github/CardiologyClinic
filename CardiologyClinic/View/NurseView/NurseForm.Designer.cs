@@ -94,9 +94,11 @@
             // 
             // roomMenuItem
             // 
+            this.roomMenuItem.DoubleClickEnabled = true;
             this.roomMenuItem.Name = "roomMenuItem";
             this.roomMenuItem.Size = new System.Drawing.Size(188, 22);
             this.roomMenuItem.Text = "Номер палаты";
+            this.roomMenuItem.DoubleClick += new System.EventHandler(this.roomMenuItem_DoubleClick);
             // 
             // toolStripSeparator2
             // 
@@ -105,9 +107,11 @@
             // 
             // patientsMenuItem
             // 
+            this.patientsMenuItem.DoubleClickEnabled = true;
             this.patientsMenuItem.Name = "patientsMenuItem";
             this.patientsMenuItem.Size = new System.Drawing.Size(188, 22);
             this.patientsMenuItem.Text = "Пациенты";
+            this.patientsMenuItem.DoubleClick += new System.EventHandler(this.patientsMenuItem_DoubleClick);
             // 
             // exitMenuItem
             // 
