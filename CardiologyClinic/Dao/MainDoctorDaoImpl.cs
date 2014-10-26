@@ -23,6 +23,6 @@ namespace CardiologyClinic.Dao
                 CreateCriteria(typeof(MainDoctor)).
                 Add(Expression.Eq("Password", pass)).
                 UniqueResult();
-        }
+        }        
     }
 }

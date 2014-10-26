@@ -88,5 +88,10 @@ namespace CardiologyClinic.Service
             room.Nurse = nurseDao.GetNurseByName(room.Nurse);
             roomDao.Save(room);
         }
+
+        public Patient GetPatientById(String idPatient)
+        {
+            return patientDao.GetPatientById(idPatient);
+        }
     }
 }

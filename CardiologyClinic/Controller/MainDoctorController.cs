@@ -137,5 +137,13 @@ namespace CardiologyClinic.Controller
         {
             return mainDoctorService.GetAllRooms();
         }
+
+        public Patient GetPatientById(String idPatient)
+        {
+            Patient patient =
+                mainDoctorService.GetPatientById(idPatient);
+
+            return patient;
+        }
     }
 }
