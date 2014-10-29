@@ -14,6 +14,8 @@ namespace CardiologyClinic.Service
             (PatientDao)BeanFactory.GetFactory().GetBean("patientDao");
         private RoomDao roomDao =
             (RoomDao)BeanFactory.GetFactory().GetBean("roomDao");
+        private PurposeDao purposeDao =
+            (PurposeDao)BeanFactory.GetFactory().GetBean("purposeDao");
 
         public void GetRoomByName(Room room)
         {
@@ -23,6 +25,21 @@ namespace CardiologyClinic.Service
         public void GetPatientByName(Patient patient)
         {
             this.patientDao.GetPatientByName(patient);
+        }
+
+        public ICollection<Room> GetRoomsByNurse(Nurse nurse)
+        {
+            return this.roomDao.GetRoomsByNurse(nurse);
+        }
+
+        public ICollection<Patient> GetPatientByRoom(Room room)
+        {
+            return this.patientDao.GetPatientsByRoom(room);
+        }
+
+        public ICollection<Purpose> GetPurposesByPatient(Patient p)
+        {
+            return purposeDao.GetPurposesByPatient(p);
         }
     }
 }

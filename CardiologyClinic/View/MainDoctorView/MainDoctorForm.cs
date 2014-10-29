@@ -188,6 +188,7 @@ namespace CardiologyClinic.View.MainDoctorView
 
             for (int i = 0; i < doctor.Count; i++)
             {
+                doctor[i].Patients = mainDoctorController.GetPatientByDoctor(doctor[i]);
                 this.contentGridView.Rows.Add(
                     i + 1,
                     doctor[i].Name,
@@ -221,6 +222,7 @@ namespace CardiologyClinic.View.MainDoctorView
 
             for (int i = 0; i < nurse.Count; i++)
             {
+                nurse[i].Rooms = mainDoctorController.GetRoomsByNurse(nurse[i]);
                 this.contentGridView.Rows.Add(
                     i + 1,
                     nurse[i].Name,
@@ -320,6 +322,8 @@ namespace CardiologyClinic.View.MainDoctorView
 
             for (int i = 0; i < room.Count; i++)
             {
+                room[i].Nurse = mainDoctorController.GetNurseByRoom(room[i]);
+                room[i].Patients = mainDoctorController.GetPatientsByRoom(room[i]);
                 this.contentGridView.Rows.Add(
                     i + 1,
                     room[i].Number,

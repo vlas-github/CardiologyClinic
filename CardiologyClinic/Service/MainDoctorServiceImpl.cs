@@ -93,5 +93,25 @@ namespace CardiologyClinic.Service
         {
             return patientDao.GetPatientById(idPatient);
         }
+
+        public ICollection<Patient> GetPatientByDoctor(Doctor doctor)
+        {
+            return patientDao.GetPatientByDoctor(doctor);
+        }
+
+        public ICollection<Room> GetRoomsByNurse(Nurse nurse)
+        {
+            return roomDao.GetRoomsByNurse(nurse);
+        }
+
+        public Nurse GetNurseByRoom(Room room)
+        {
+            return nurseDao.GetNurseByRoom(room);
+        }
+
+        public ICollection<Patient> GetPatientsByRoom(Room room)
+        {
+            return patientDao.GetPatientsByRoom(room);
+        }
     }
 }

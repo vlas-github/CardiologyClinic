@@ -40,5 +40,15 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public ICollection<Room> GetRoomsByNurse(Nurse nurse)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Room))
+                    .Add(Expression.Eq("Nurse", nurse))
+                    .List<Room>();
+            }
+        }
     }
 }

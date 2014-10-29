@@ -73,6 +73,8 @@ namespace CardiologyClinic.View.DoctorView
 
             for (int i = 0; i < patients.Count; i++)
             {
+                patients[i].Purposes = doctorController.GetPurposesByPatient(patients[i]);
+
                 this.contentGridView.Rows.Add(
                     i + 1,
                     patients[i].Name,

@@ -9,5 +9,7 @@ namespace CardiologyClinic.Service
     interface DoctorService
     {
         IList<Patient> GetPatientsByDoctor(User user);
+
+        ICollection<Purpose> GetPurposesByPatient(Patient patient);
     }
 }

@@ -21,5 +21,9 @@ namespace CardiologyClinic.Service
         void SaveNurse(Nurse nurse);
         void SavePatient(Patient patient);
         void SaveRoom(Room room);
+        ICollection<Patient> GetPatientByDoctor(Doctor doctor);
+        ICollection<Room> GetRoomsByNurse(Nurse nurse);
+        Nurse GetNurseByRoom(Room room);
+        ICollection<Patient> GetPatientsByRoom(Room room);
     }
 }

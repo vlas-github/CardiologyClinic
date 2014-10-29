@@ -19,5 +19,7 @@ namespace CardiologyClinic.Dao
         void GetPatientByName(Patient patient);
 
         Patient GetPatientById(string id);
+
+        ICollection<Patient> GetPatientsByRoom(Room room);
     }
 }

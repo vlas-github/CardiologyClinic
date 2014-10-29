@@ -33,5 +33,10 @@ namespace CardiologyClinic.Controller
             IList<Patient> patients = doctorService.GetPatientsByDoctor(user);
             doctorForm.ShowAllPatients(patients);
         }
+
+        public ICollection<Purpose> GetPurposesByPatient(Patient patient)
+        {
+            return doctorService.GetPurposesByPatient(patient);
+        }
     }
 }

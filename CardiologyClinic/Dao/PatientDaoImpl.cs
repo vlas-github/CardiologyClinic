@@ -79,5 +79,15 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public ICollection<Patient> GetPatientsByRoom(Room room)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Patient))
+                    .Add(Expression.Eq("Room", room))
+                    .List<Patient>();
+            }
+        }
     }
 }

@@ -33,10 +33,18 @@ namespace CardiologyClinic.Controller
         {
             List<Purpose> result = new List<Purpose>();
 
+            ((Nurse)user).Rooms = nurseService.GetRoomsByNurse((Nurse)user);
+
             foreach (Room room in ((Nurse)user).Rooms)
             {
+
+                room.Patients = nurseService.GetPatientByRoom(room);
+
                 foreach (Patient p in room.Patients)
                 {
+
+                    p.Purposes = nurseService.GetPurposesByPatient(p);
+
                     foreach (Purpose purpose in p.Purposes)
                     {
                         result.Add(purpose);

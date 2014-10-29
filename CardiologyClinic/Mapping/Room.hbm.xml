@@ -7,7 +7,7 @@
       <generator class="uuid.hex" />
     </id>
     <property name="Number" column="number" type="int" />
-    <set name="Patients" table="Patient"  inverse="true" lazy="false" fetch="select">
+    <set name="Patients" table="Patient"  inverse="true" lazy="true" fetch="select">
       <key>
         <column name="room" not-null="true" />
       </key>

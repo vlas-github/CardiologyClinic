@@ -45,6 +45,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowAllPurpose()
         {
+            ((Patient)user).Purposes = patientService.GetPurposesByPatient((Patient)user);
             ICollection<Purpose> result = ((Patient)user).Purposes;
             patientForm.ShowPurpose(result);
         }
@@ -52,6 +53,9 @@ namespace CardiologyClinic.Controller
         public void ShowNewPurpose()
         {
             ICollection<Purpose> result = new LinkedList<Purpose>();
+
+            ((Patient)user).Purposes = patientService.GetPurposesByPatient((Patient)user);
+
             foreach (Purpose p in ((Patient)user).Purposes)
             {
                 if (!p.IsComplete) result.Add(p);
@@ -61,6 +65,7 @@ namespace CardiologyClinic.Controller
 
         public void ShowOldPurpose()
         {
+            ((Patient)user).Purposes = patientService.GetPurposesByPatient((Patient)user);
             ICollection<Purpose> result = new LinkedList<Purpose>();
             foreach (Purpose p in ((Patient)user).Purposes)
             {

@@ -8,7 +8,7 @@
     </id>
     <property name="Name" column="name" type="string" />
     <property name="Password" column="pass" type="string" />
-    <set name="Rooms" table="Rooms" inverse="true" lazy="false" fetch="select">
+    <set name="Rooms" table="Rooms" inverse="true" lazy="true" fetch="select">
       <key>
         <column name="nurse" not-null="true" />
       </key>

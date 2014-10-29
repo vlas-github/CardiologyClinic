@@ -145,5 +145,25 @@ namespace CardiologyClinic.Controller
 
             return patient;
         }
+
+        public ICollection<Patient> GetPatientByDoctor(Doctor doctor)
+        {
+            return mainDoctorService.GetPatientByDoctor(doctor);
+        }
+
+        public ICollection<Room> GetRoomsByNurse(Nurse nurse)
+        {
+            return mainDoctorService.GetRoomsByNurse(nurse);
+        }
+
+        public Nurse GetNurseByRoom(Room room)
+        {
+            return mainDoctorService.GetNurseByRoom(room);
+        }
+
+        public ICollection<Patient> GetPatientsByRoom(Room room)
+        {
+            return mainDoctorService.GetPatientsByRoom(room);
+        }
     }
 }

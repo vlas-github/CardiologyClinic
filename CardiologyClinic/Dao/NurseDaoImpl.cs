@@ -51,5 +51,16 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public Nurse GetNurseByRoom(Room room)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Nurse)session.CreateCriteria(typeof(Nurse))
+                    .CreateCriteria("Rooms")
+                    .Add(Expression.Eq("Id", room.Id))
+                    .UniqueResult();
+            }
+        }
     }
 }
