@@ -350,5 +350,39 @@ namespace CardiologyClinic.View.MainDoctorView
         {
             mainDoctorController.ShowPatientEvent();
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            Form form;
+
+            switch (titleLabel.Text)
+            {
+                case "Список лечебных процедур:":
+                    form = new EditMedicalProcedureForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список болезней:":
+                    form = new EditDiseaseForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список докторов:":
+                    form = new EditDoctorForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список медсестер:":
+                    form = new EditNurseForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+                case "Список пациентов:":         
+                    Patient patient = mainDoctorController.GetPatientById(contentGridView.CurrentRow.Cells[7].Value.ToString());
+                    form = new EditPatientForm(this.mainDoctorController,patient);
+                    form.ShowDialog();
+                    break;
+                case "Список больничных палат:":
+                    form = new EditRoomForm(this.mainDoctorController);
+                    form.ShowDialog();
+                    break;
+            }
+        }
     }
 }

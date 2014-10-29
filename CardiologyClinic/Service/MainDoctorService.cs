@@ -14,6 +14,7 @@ namespace CardiologyClinic.Service
         IList<Nurse> GetAllNurses();
         IList<Patient> GetAllPatients();
         IList<Room> GetAllRooms();
+        Patient GetPatientById(String idPatient);
         void SaveDisease(Disease disease);
         void SaveDoctor(Doctor doctor);
         void SaveMedicalProcedure(MedicalProcedure medicalProcedure);
