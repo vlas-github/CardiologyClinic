@@ -32,10 +32,12 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
         public EditPatientForm(MainDoctorController mainDoctorController, Patient editPatient)
             : this()
         {
+            this.mainDoctorController = mainDoctorController;
             this.Text = "Изменение пациента";
             this.editName.Text = editPatient.Name.ToString();
             this.editPass.Text = editPatient.Password.ToString();
-            this.editDoctor.SelectedValue = editPatient.Doctor.Name.ToString();
+            this.editDoctor.SelectedIndex = this.editDoctor.FindString(editPatient.Doctor.Name.ToString());
+            //this.editDoctor.SelectedValue = editPatient.Doctor.Name.ToString();
             this.dayIn.Value = editPatient.DateIn.Day;
             this.monthIn.SelectedIndex = editPatient.DateIn.Month - 1;
             this.yearIn.Text = editPatient.DateIn.Year.ToString();
@@ -44,7 +46,6 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             this.yearOut.Text = editPatient.DateOut.Year.ToString();
             this.editDisease.SelectedItem = editPatient.Disease.ToString();
             this.editNumber.SelectedItem = editPatient.Room.ToString();      
-            this.mainDoctorController = mainDoctorController;
             this.patient = editPatient;
         }
 
