@@ -6,6 +6,8 @@ using CardiologyClinic.Bean;
 using CardiologyClinic.View.DoctorView;
 using CardiologyClinic.Service;
 using CardiologyClinic.Help;
+using CardiologyClinic.View.DoctorView.EditPatient.EditProcedure;
+using CardiologyClinic.View.DoctorView.InfoEditPatient;
 
 namespace CardiologyClinic.Controller
 {
@@ -37,6 +39,21 @@ namespace CardiologyClinic.Controller
         public ICollection<Purpose> GetPurposesByPatient(Patient patient)
         {
             return doctorService.GetPurposesByPatient(patient);
+        }
+
+        public void AddProcedureEvent(Patient patient)
+        {
+            new AddProcedureForm(this, patient).ShowDialog();
+        }
+
+        public Patient GetPatientById(string p)
+        {
+            return doctorService.GetPatientById(p);
+        }
+
+        public void EditPatientEvent(Patient patient)
+        {
+            new PatientIEditForm(this, patient).ShowDialog();
         }
     }
 }

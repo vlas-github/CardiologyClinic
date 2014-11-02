@@ -32,22 +32,22 @@
             this.procedureComboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.labelDateReception = new System.Windows.Forms.Label();
-            this.dayReception = new System.Windows.Forms.NumericUpDown();
-            this.monthReception = new System.Windows.Forms.ComboBox();
-            this.yearReception = new System.Windows.Forms.NumericUpDown();
-            this.addReception = new System.Windows.Forms.Button();
-            this.cancelReception = new System.Windows.Forms.Button();
-            this.labelTimeReception = new System.Windows.Forms.Label();
-            this.hourReception = new System.Windows.Forms.NumericUpDown();
-            this.minuteReception = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dayReception)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yearReception)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourReception)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minuteReception)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 47);
+            this.panel1.Size = new System.Drawing.Size(332, 47);
             this.panel1.TabIndex = 0;
             // 
             // procedureComboBox
@@ -64,185 +64,124 @@
             this.procedureComboBox.FormattingEnabled = true;
             this.procedureComboBox.Location = new System.Drawing.Point(12, 12);
             this.procedureComboBox.Name = "procedureComboBox";
-            this.procedureComboBox.Size = new System.Drawing.Size(296, 21);
+            this.procedureComboBox.Size = new System.Drawing.Size(308, 21);
             this.procedureComboBox.TabIndex = 0;
             this.procedureComboBox.Text = "Выберите процедуру";
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.minuteReception);
-            this.panel2.Controls.Add(this.hourReception);
-            this.panel2.Controls.Add(this.labelTimeReception);
-            this.panel2.Controls.Add(this.yearReception);
-            this.panel2.Controls.Add(this.dayReception);
-            this.panel2.Controls.Add(this.monthReception);
-            this.panel2.Controls.Add(this.labelDateReception);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.numericUpDown3);
+            this.panel2.Controls.Add(this.numericUpDown2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(324, 114);
+            this.panel2.Size = new System.Drawing.Size(332, 136);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cancelReception);
-            this.panel3.Controls.Add(this.addReception);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 121);
+            this.panel3.Location = new System.Drawing.Point(0, 143);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(324, 40);
+            this.panel3.Size = new System.Drawing.Size(332, 40);
             this.panel3.TabIndex = 2;
             // 
-            // labelDateReception
+            // button1
             // 
-            this.labelDateReception.AutoSize = true;
-            this.labelDateReception.Location = new System.Drawing.Point(22, 14);
-            this.labelDateReception.Name = "labelDateReception";
-            this.labelDateReception.Size = new System.Drawing.Size(77, 13);
-            this.labelDateReception.TabIndex = 0;
-            this.labelDateReception.Text = "Дата приема:";
-            this.labelDateReception.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 40);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Сохранить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dayReception
+            // button2
             // 
-            this.dayReception.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dayReception.Location = new System.Drawing.Point(105, 10);
-            this.dayReception.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.dayReception.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.dayReception.Name = "dayReception";
-            this.dayReception.Size = new System.Drawing.Size(40, 21);
-            this.dayReception.TabIndex = 9;
-            this.dayReception.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.button2.Location = new System.Drawing.Point(193, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(139, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Отмена";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // monthReception
+            // numericUpDown1
             // 
-            this.monthReception.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.monthReception.FormattingEnabled = true;
-            this.monthReception.Items.AddRange(new object[] {
-            "Январь",
-            "Февраль",
-            "Март",
-            "Апрель",
-            "Май",
-            "Июнь",
-            "Июль",
-            "Август",
-            "Сентябрь",
-            "Октябрь",
-            "Ноябрь",
-            "Декабрь"});
-            this.monthReception.Location = new System.Drawing.Point(151, 9);
-            this.monthReception.Name = "monthReception";
-            this.monthReception.Size = new System.Drawing.Size(98, 23);
-            this.monthReception.TabIndex = 8;
-            this.monthReception.Text = "Январь";
+            this.numericUpDown1.Location = new System.Drawing.Point(104, 7);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(42, 20);
+            this.numericUpDown1.TabIndex = 0;
             // 
-            // yearReception
+            // label1
             // 
-            this.yearReception.Location = new System.Drawing.Point(255, 12);
-            this.yearReception.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.yearReception.Minimum = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
-            this.yearReception.Name = "yearReception";
-            this.yearReception.Size = new System.Drawing.Size(53, 20);
-            this.yearReception.TabIndex = 10;
-            this.yearReception.Value = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(152, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = ":";
             // 
-            // addReception
+            // numericUpDown2
             // 
-            this.addReception.Dock = System.Windows.Forms.DockStyle.Left;
-            this.addReception.Location = new System.Drawing.Point(0, 0);
-            this.addReception.Name = "addReception";
-            this.addReception.Size = new System.Drawing.Size(163, 40);
-            this.addReception.TabIndex = 0;
-            this.addReception.Text = "Добавить";
-            this.addReception.UseVisualStyleBackColor = true;
+            this.numericUpDown2.Location = new System.Drawing.Point(169, 6);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(39, 20);
+            this.numericUpDown2.TabIndex = 2;
             // 
-            // cancelReception
+            // numericUpDown3
             // 
-            this.cancelReception.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cancelReception.Location = new System.Drawing.Point(161, 0);
-            this.cancelReception.Name = "cancelReception";
-            this.cancelReception.Size = new System.Drawing.Size(163, 40);
-            this.cancelReception.TabIndex = 1;
-            this.cancelReception.Text = "Отмена";
-            this.cancelReception.UseVisualStyleBackColor = true;
+            this.numericUpDown3.Location = new System.Drawing.Point(105, 34);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(41, 20);
+            this.numericUpDown3.TabIndex = 3;
             // 
-            // labelTimeReception
+            // comboBox1
             // 
-            this.labelTimeReception.AutoSize = true;
-            this.labelTimeReception.Location = new System.Drawing.Point(15, 43);
-            this.labelTimeReception.Name = "labelTimeReception";
-            this.labelTimeReception.Size = new System.Drawing.Size(84, 13);
-            this.labelTimeReception.TabIndex = 11;
-            this.labelTimeReception.Text = "Время приема:";
-            this.labelTimeReception.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(155, 32);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(104, 21);
+            this.comboBox1.TabIndex = 4;
             // 
-            // hourReception
+            // textBox1
             // 
-            this.hourReception.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hourReception.Location = new System.Drawing.Point(105, 39);
-            this.hourReception.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.hourReception.Name = "hourReception";
-            this.hourReception.Size = new System.Drawing.Size(40, 21);
-            this.hourReception.TabIndex = 12;
-            this.hourReception.Value = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
+            this.textBox1.Location = new System.Drawing.Point(266, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(50, 20);
+            this.textBox1.TabIndex = 5;
             // 
-            // minuteReception
+            // label2
             // 
-            this.minuteReception.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minuteReception.Location = new System.Drawing.Point(151, 39);
-            this.minuteReception.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.minuteReception.Name = "minuteReception";
-            this.minuteReception.Size = new System.Drawing.Size(42, 21);
-            this.minuteReception.TabIndex = 13;
-            this.minuteReception.Value = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Время:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(63, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Дата:";
             // 
             // AddProcedureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 161);
+            this.ClientSize = new System.Drawing.Size(332, 183);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -250,14 +189,14 @@
             this.MaximizeBox = false;
             this.Name = "AddProcedureForm";
             this.Text = "AddProcedureForm";
+            this.Load += new System.EventHandler(this.AddProcedureForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dayReception)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yearReception)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hourReception)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minuteReception)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,14 +207,15 @@
         private System.Windows.Forms.ComboBox procedureComboBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label labelDateReception;
-        private System.Windows.Forms.NumericUpDown dayReception;
-        private System.Windows.Forms.ComboBox monthReception;
-        private System.Windows.Forms.NumericUpDown minuteReception;
-        private System.Windows.Forms.NumericUpDown hourReception;
-        private System.Windows.Forms.Label labelTimeReception;
-        private System.Windows.Forms.NumericUpDown yearReception;
-        private System.Windows.Forms.Button cancelReception;
-        private System.Windows.Forms.Button addReception;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -95,6 +95,7 @@
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(65, 22);
             this.editButton.Text = "Изменить";
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // headerPanel
             // 
