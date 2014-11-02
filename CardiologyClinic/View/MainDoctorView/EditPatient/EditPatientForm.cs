@@ -27,24 +27,26 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             this.Text = "Добавление пациента";
             this.patient = new Patient();
             this.mainDoctorController = mainDoctorController;
+            fillLists(this.mainDoctorController);
         }
 
         public EditPatientForm(MainDoctorController mainDoctorController, Patient editPatient)
             : this()
         {
-            this.Text = "Изменение пациента";
+            this.Text = "Изменение пациента";    
+            this.mainDoctorController = mainDoctorController;
+            fillLists(this.mainDoctorController);
             this.editName.Text = editPatient.Name.ToString();
             this.editPass.Text = editPatient.Password.ToString();
-            this.editDoctor.SelectedValue = editPatient.Doctor.Name.ToString();
+            this.editDoctor.SelectedIndex = this.editDoctor.FindString(editPatient.Doctor.Name.ToString());
             this.dayIn.Value = editPatient.DateIn.Day;
             this.monthIn.SelectedIndex = editPatient.DateIn.Month - 1;
             this.yearIn.Text = editPatient.DateIn.Year.ToString();
             this.dayOut.Value = editPatient.DateOut.Day;
             this.monthOut.SelectedIndex = editPatient.DateOut.Month - 1;
             this.yearOut.Text = editPatient.DateOut.Year.ToString();
-            this.editDisease.SelectedItem = editPatient.Disease.ToString();
-            this.editNumber.SelectedItem = editPatient.Room.ToString();      
-            this.mainDoctorController = mainDoctorController;
+            this.editDisease.SelectedIndex = this.editDisease.FindString(editPatient.Disease.Name.ToString());
+            this.editNumber.SelectedIndex = this.editNumber.FindString(editPatient.Room.Number.ToString());  
             this.patient = editPatient;
         }
 
@@ -79,7 +81,7 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             Close();
         }
 
-        private void EditPatientForm_Load(object sender, EventArgs e)
+        public void fillLists(MainDoctorController mainDoctorController)
         {
             IList<Doctor> doctors = this.mainDoctorController.GetAllDoctors();
             foreach (Doctor doctor in doctors)
@@ -97,7 +99,12 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             foreach (Room room in numbers)
             {
                 editNumber.Items.Add(room.Number);
-            }            
+            } 
+        }
+
+        private void EditPatientForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

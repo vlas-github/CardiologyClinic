@@ -18,7 +18,10 @@ namespace CardiologyClinic.Dao
         {
             using (ISession session = connector.GetSession().OpenSession())
             {
-                session.Save(disease);
+                if (disease.Id == null)
+                    session.Save(disease);
+                else
+                    session.Update(disease);
                 session.Flush();
             }
         }
@@ -37,6 +40,16 @@ namespace CardiologyClinic.Dao
             {
                 return (Disease)session.CreateCriteria(typeof(Disease))
                     .Add(Expression.Eq("Name", disease.Name))
+                    .UniqueResult();
+            }
+        }
+
+        public Disease GetDiseaseById(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Disease)session.CreateCriteria(typeof(Disease))
+                    .Add(Expression.Eq("Id", id))
                     .UniqueResult();
             }
         }

@@ -24,9 +24,23 @@ namespace CardiologyClinic.View.MainDoctor.EditRoom
         public EditRoomForm(MainDoctorController mainDoctorController)
             : this()
         {
-            this.Text = "Добавление комнаты";
+            this.Text = "Добавление комнаты";            
             this.room = new Room();
             this.mainDoctorController = mainDoctorController;
+            fillList(this.mainDoctorController);
+        }
+
+        public EditRoomForm(MainDoctorController mainDoctorController, Room editRoom)
+            : this()
+        {
+            this.Text = "Изменение комнаты";
+            this.mainDoctorController = mainDoctorController;
+            fillList(this.mainDoctorController);
+            this.editNumber.Text = editRoom.Number.ToString();
+            this.editSize.Text = editRoom.Size.ToString();
+            this.editNurse.SelectedIndex = this.editNurse.FindString(editRoom.Nurse.Name.ToString());
+            this.room = editRoom;
+
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -50,13 +64,18 @@ namespace CardiologyClinic.View.MainDoctor.EditRoom
             Close();
         }
 
-        private void EditRoomForm_Load(object sender, EventArgs e)
+        public void fillList(MainDoctorController mainDoctorController)
         {
             IList<Nurse> nurses = this.mainDoctorController.GetAllNurses();
             foreach (Nurse nurse in nurses)
             {
                 editNurse.Items.Add(nurse.Name);
             }
+        }
+
+        private void EditRoomForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

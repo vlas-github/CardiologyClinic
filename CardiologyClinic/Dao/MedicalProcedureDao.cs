@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using CardiologyClinic.Bean;
 
+
 namespace CardiologyClinic.Dao
 {
     interface MedicalProcedureDao
@@ -11,5 +12,7 @@ namespace CardiologyClinic.Dao
         void Save(MedicalProcedure medicalProcedure);
 
         IList<MedicalProcedure> GetAllMedicalProcedures();
+
+        MedicalProcedure GetMedicalProcedureById(string id);
     }
 }

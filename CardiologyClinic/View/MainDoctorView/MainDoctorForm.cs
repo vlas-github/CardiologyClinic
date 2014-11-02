@@ -362,19 +362,23 @@ namespace CardiologyClinic.View.MainDoctorView
             switch (titleLabel.Text)
             {
                 case "Список лечебных процедур:":
-                    form = new EditMedicalProcedureForm(this.mainDoctorController);
+                    MedicalProcedure medicalProcedure = mainDoctorController.GetMedicalProcedureById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    form = new EditMedicalProcedureForm(this.mainDoctorController,medicalProcedure);
                     form.ShowDialog();
                     break;
                 case "Список болезней:":
-                    form = new EditDiseaseForm(this.mainDoctorController);
+                    Disease disease = mainDoctorController.GetDiseaseById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    form = new EditDiseaseForm(this.mainDoctorController,disease);
                     form.ShowDialog();
                     break;
                 case "Список докторов:":
-                    form = new EditDoctorForm(this.mainDoctorController);
+                    Doctor doctor = mainDoctorController.GetDoctorById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    form = new EditDoctorForm(this.mainDoctorController, doctor);
                     form.ShowDialog();
                     break;
                 case "Список медсестер:":
-                    form = new EditNurseForm(this.mainDoctorController);
+                    Nurse nurse = mainDoctorController.GetNurseById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    form = new EditNurseForm(this.mainDoctorController, nurse);
                     form.ShowDialog();
                     break;
                 case "Список пациентов:":         
@@ -383,7 +387,8 @@ namespace CardiologyClinic.View.MainDoctorView
                     form.ShowDialog();
                     break;
                 case "Список больничных палат:":
-                    form = new EditRoomForm(this.mainDoctorController);
+                    Room room = mainDoctorController.GetRoomById(contentGridView.CurrentRow.Cells[5].Value.ToString());
+                    form = new EditRoomForm(this.mainDoctorController, room);
                     form.ShowDialog();
                     break;
             }
