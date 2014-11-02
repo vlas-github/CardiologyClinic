@@ -11,5 +11,7 @@ namespace CardiologyClinic.Service
         IList<Patient> GetPatientsByDoctor(User user);
 
         ICollection<Purpose> GetPurposesByPatient(Patient patient);
+
+        Patient GetPatientById(string p);
     }
 }

@@ -34,8 +34,8 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.exitButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.contentGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -107,16 +107,6 @@
             this.panel2.Size = new System.Drawing.Size(414, 33);
             this.panel2.TabIndex = 6;
             // 
-            // exitButton
-            // 
-            this.exitButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.exitButton.Location = new System.Drawing.Point(206, 0);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(208, 33);
-            this.exitButton.TabIndex = 0;
-            this.exitButton.Text = "Выход";
-            this.exitButton.UseVisualStyleBackColor = true;
-            // 
             // addButton
             // 
             this.addButton.Dock = System.Windows.Forms.DockStyle.Left;
@@ -126,6 +116,17 @@
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.exitButton.Location = new System.Drawing.Point(206, 0);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(208, 33);
+            this.exitButton.TabIndex = 0;
+            this.exitButton.Text = "Выход";
+            this.exitButton.UseVisualStyleBackColor = true;
             // 
             // contentGridView
             // 
@@ -150,6 +151,7 @@
             this.MaximizeBox = false;
             this.Name = "PatientIEditForm";
             this.Text = "PatientIEditForm";
+            this.Load += new System.EventHandler(this.PatientIEditForm_Load);
             this.panel1.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();

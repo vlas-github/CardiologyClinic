@@ -92,5 +92,11 @@ namespace CardiologyClinic.View.DoctorView
         {
             doctorController.ShowAllPatientEvent();
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            Patient patient = doctorController.GetPatientById(contentGridView.CurrentRow.Cells[7].Value.ToString());
+            doctorController.EditPatientEvent(patient);        
+        }
     }
 }

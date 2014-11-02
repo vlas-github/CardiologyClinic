@@ -24,5 +24,10 @@ namespace CardiologyClinic.Service
         {
             return purposeDao.GetPurposesByPatient(patient);
         }
+
+        public Patient GetPatientById(string p)
+        {
+            return patientDao.GetPatientById(p);
+        }
     }
 }
