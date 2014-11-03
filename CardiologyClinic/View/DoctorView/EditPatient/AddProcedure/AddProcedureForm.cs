@@ -30,7 +30,12 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
 
         private void AddProcedureForm_Load(object sender, EventArgs e)
         {
+            IList<MedicalProcedure> list = controller.GetAllMedicalProcedure();
 
+            foreach(MedicalProcedure mp in list)
+            {
+                procedureComboBox.Items.Add(mp.Name);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

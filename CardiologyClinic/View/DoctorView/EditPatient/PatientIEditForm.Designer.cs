@@ -150,7 +150,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PatientIEditForm";
-            this.Text = "PatientIEditForm";
+            this.Text = "Назначения пациента";
             this.Load += new System.EventHandler(this.PatientIEditForm_Load);
             this.panel1.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);

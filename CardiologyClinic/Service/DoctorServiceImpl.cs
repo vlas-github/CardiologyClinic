@@ -14,6 +14,8 @@ namespace CardiologyClinic.Service
             BeanFactory.GetFactory().GetBean("patientDao");
         PurposeDao purposeDao = (PurposeDao)
             BeanFactory.GetFactory().GetBean("purposeDao");
+        MedicalProcedureDao medicalProcedureDao = (MedicalProcedureDao)
+            BeanFactory.GetFactory().GetBean("medicalProcedureDao");
 
         public IList<Patient> GetPatientsByDoctor(User user)
         {
@@ -28,6 +30,11 @@ namespace CardiologyClinic.Service
         public Patient GetPatientById(string p)
         {
             return patientDao.GetPatientById(p);
+        }
+
+        public IList<MedicalProcedure> GetAllMedicalProcedure()
+        {
+            return medicalProcedureDao.GetAllMedicalProcedures();
         }
     }
 }

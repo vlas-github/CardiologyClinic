@@ -43,7 +43,25 @@ namespace CardiologyClinic.View.DoctorView.InfoEditPatient
 
         private void ShowPurposes(ICollection<Purpose> purposes)
         {
-            // to do отобразить все процедуры
+            this.contentGridView.Columns.Clear();
+            this.contentGridView.ReadOnly = true;
+            this.contentGridView.Columns.Add("index", "#");
+            this.contentGridView.Columns.Add("name", "Название");
+            this.contentGridView.Columns.Add("date", "Дата");
+            this.contentGridView.Columns.Add("complete", "Выполнение");
+            this.contentGridView.Columns.Add("id", "id");
+
+            int i = 0;
+
+            foreach (Purpose purpose in purposes)
+            {
+                this.contentGridView.Rows.Add(
+                    i++,
+                    purpose.MedicalProcedure.Name,
+                    purpose.DateOfProcedure,
+                    purpose.IsComplete ? "Выполнена" : "Не выполнена",
+                    purpose.Id);
+            }
         }
     }
 }

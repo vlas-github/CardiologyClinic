@@ -13,5 +13,7 @@ namespace CardiologyClinic.Service
         ICollection<Purpose> GetPurposesByPatient(Patient patient);
 
         Patient GetPatientById(string p);
+
+        IList<MedicalProcedure> GetAllMedicalProcedure();
     }
 }

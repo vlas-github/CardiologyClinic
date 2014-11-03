@@ -55,5 +55,10 @@ namespace CardiologyClinic.Controller
         {
             new PatientIEditForm(this, patient).ShowDialog();
         }
+
+        public IList<MedicalProcedure> GetAllMedicalProcedure()
+        {
+            return doctorService.GetAllMedicalProcedure();
+        }
     }
 }
