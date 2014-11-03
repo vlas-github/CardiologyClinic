@@ -18,7 +18,10 @@ namespace CardiologyClinic.Dao
         {
             using (ISession session = connector.GetSession().OpenSession())
             {
-                session.Save(room);
+                if (room.Id == null)
+                    session.Save(room);
+                else
+                    session.Update(room);
                 session.Flush();
             }
         }
@@ -48,6 +51,16 @@ namespace CardiologyClinic.Dao
                 return session.CreateCriteria(typeof(Room))
                     .Add(Expression.Eq("Nurse", nurse))
                     .List<Room>();
+            }
+        }
+
+        public Room GetRoomById(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (Room)session.CreateCriteria(typeof(Room))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult();
             }
         }
     }

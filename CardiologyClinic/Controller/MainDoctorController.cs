@@ -165,5 +165,45 @@ namespace CardiologyClinic.Controller
         {
             return mainDoctorService.GetPatientsByRoom(room);
         }
+
+        public MedicalProcedure GetMedicalProcedureById(String idMedProc)
+        {
+            MedicalProcedure medicalProcedure =
+                mainDoctorService.GetMedicalProcedureById(idMedProc);
+
+            return medicalProcedure;
+        }
+
+        public Disease GetDiseaseById(String idDisease)
+        {
+            Disease disease =
+                mainDoctorService.GetDiseaseById(idDisease);
+
+            return disease;
+        }
+
+        public Doctor GetDoctorById(String idDoctor)
+        {
+            Doctor doctor =
+                mainDoctorService.GetDoctorById(idDoctor);
+
+            return doctor;
+        }
+
+        public Nurse GetNurseById(String idNurse)
+        {
+            Nurse nurse =
+                mainDoctorService.GetNurseById(idNurse);
+
+            return nurse;
+        }
+
+        public Room GetRoomById(String idRoom)
+        {
+            Room room =
+                mainDoctorService.GetRoomById(idRoom);
+
+            return room;
+        }
     }
 }

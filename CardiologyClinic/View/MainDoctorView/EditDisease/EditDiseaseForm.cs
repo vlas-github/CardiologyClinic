@@ -30,6 +30,16 @@ namespace CardiologyClinic.View.MainDoctor.EditDisease
             this.mainDoctorController = mainDoctorController;
         }
 
+        public EditDiseaseForm(MainDoctorController mainDoctorController, Disease editDisease)
+            : this()
+        {
+            this.Text = "Изменение болезни";
+            this.mainDoctorController = mainDoctorController;
+            this.editName.Text = editDisease.Name.ToString();
+            this.editDescription.Text = editDisease.Description.ToString();
+            this.disease = editDisease;
+        }
+
         private void save_Click(object sender, EventArgs e)
         {
             disease.Name = this.editName.Text;

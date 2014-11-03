@@ -29,6 +29,16 @@ namespace CardiologyClinic.View.MainDoctor.EditNurse
             this.mainDoctorController = mainDoctorController;
         }
 
+        public EditNurseForm(MainDoctorController mainDoctorController, Nurse editNurse)
+            : this()
+        {
+            this.Text = "Изменение медсестры";
+            this.mainDoctorController = mainDoctorController;
+            this.editName.Text = editNurse.Name.ToString();
+            this.editPass.Text = editNurse.Password.ToString();
+            this.nurse = editNurse;
+        }
+
         private void save_Click(object sender, EventArgs e)
         {
             this.nurse.Name = this.editName.Text;

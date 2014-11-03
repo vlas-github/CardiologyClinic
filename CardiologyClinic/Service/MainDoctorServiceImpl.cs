@@ -94,6 +94,31 @@ namespace CardiologyClinic.Service
             return patientDao.GetPatientById(idPatient);
         }
 
+        public MedicalProcedure GetMedicalProcedureById(String idMedProc)
+        {
+            return medicalProcedureDao.GetMedicalProcedureById(idMedProc);
+        }
+
+        public Disease GetDiseaseById(String idDisease)
+        {
+            return diseaseDao.GetDiseaseById(idDisease);
+        }
+
+        public Doctor GetDoctorById(String idDoctor)
+        {
+            return doctorDao.GetDoctorById(idDoctor);
+        }
+
+        public Nurse GetNurseById(String idNurse)
+        {
+            return nurseDao.GetNurseById(idNurse);
+        }
+
+        public Room GetRoomById(String idRoom)
+        {
+            return roomDao.GetRoomById(idRoom);
+        }
+
         public ICollection<Patient> GetPatientByDoctor(Doctor doctor)
         {
             return patientDao.GetPatientByDoctor(doctor);

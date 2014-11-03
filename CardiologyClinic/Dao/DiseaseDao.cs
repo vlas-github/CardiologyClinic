@@ -13,5 +13,7 @@ namespace CardiologyClinic.Dao
         IList<Disease> GetAllDiseases();
 
         Disease GetDiseasByName(Disease disease);
+
+        Disease GetDiseaseById(string id);
     }
 }

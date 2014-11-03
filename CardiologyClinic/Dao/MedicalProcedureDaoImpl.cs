@@ -5,6 +5,7 @@ using System.Text;
 using CardiologyClinic.Help;
 using NHibernate;
 using CardiologyClinic.Bean;
+using NHibernate.Criterion;
 
 namespace CardiologyClinic.Dao
 {
@@ -17,7 +18,10 @@ namespace CardiologyClinic.Dao
         {
             using (ISession session = connector.GetSession().OpenSession())
             {
-                session.Save(medicalProcedure);
+                if (medicalProcedure.Id == null)
+                    session.Save(medicalProcedure);
+                else
+                    session.Update(medicalProcedure);
                 session.Flush();
             }
         }
@@ -27,6 +31,16 @@ namespace CardiologyClinic.Dao
             using (ISession session = connector.GetSession().OpenSession())
             {
                 return session.CreateCriteria(typeof(MedicalProcedure)).List<MedicalProcedure>();
+            }
+        }
+
+        public MedicalProcedure GetMedicalProcedureById(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (MedicalProcedure)session.CreateCriteria(typeof(MedicalProcedure))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult();
             }
         }
     }

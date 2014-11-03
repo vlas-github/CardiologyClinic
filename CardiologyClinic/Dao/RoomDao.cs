@@ -15,5 +15,7 @@ namespace CardiologyClinic.Dao
         Room GetRoomByNumber(Room room);
 
         ICollection<Room> GetRoomsByNurse(Nurse nurse);
+
+        Room GetRoomById(string id);
     }
 }

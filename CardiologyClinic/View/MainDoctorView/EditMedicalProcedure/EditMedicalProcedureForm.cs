@@ -29,6 +29,16 @@ namespace CardiologyClinic.View.MainDoctor.EditMedicalProcedure
             this.mainDoctorController = mainDoctorController;
         }
 
+        public EditMedicalProcedureForm(MainDoctorController mainDoctorController, MedicalProcedure editMedicalProcedure)
+            : this()
+        {
+            this.Text = "Изменение медецинской процедуры";
+            this.mainDoctorController = mainDoctorController;
+            this.editName.Text = editMedicalProcedure.Name.ToString();
+            this.editDescription.Text = editMedicalProcedure.Description.ToString();
+            this.medicalProcedure = editMedicalProcedure;
+        }
+
         private void save_Click(object sender, EventArgs e)
         {
             this.medicalProcedure.Name = this.editName.Text;

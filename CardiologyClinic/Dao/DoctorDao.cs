@@ -15,5 +15,7 @@ namespace CardiologyClinic.Dao
         Doctor GetDoctorByName(Doctor doctor);
 
         Doctor GetDoctorByPass(string pass);
+
+        Doctor GetDoctorById(string id);
     }
 }
