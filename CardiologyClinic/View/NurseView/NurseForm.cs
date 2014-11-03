@@ -50,7 +50,7 @@ namespace CardiologyClinic.View.NurseView
 
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void roomNumberMenuItem_Click(object sender, EventArgs e)

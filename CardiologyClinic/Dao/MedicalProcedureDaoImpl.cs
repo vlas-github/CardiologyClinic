@@ -43,5 +43,16 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public void DeleteMedProc(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                session.Delete((MedicalProcedure)session.CreateCriteria(typeof(MedicalProcedure))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult());
+                session.Flush();
+            }
+        }
     }
 }

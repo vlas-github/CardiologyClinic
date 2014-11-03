@@ -56,7 +56,7 @@
             this.exitMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(481, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,7 +127,7 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 24);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(481, 35);
+            this.headerPanel.Size = new System.Drawing.Size(484, 35);
             this.headerPanel.TabIndex = 3;
             // 
             // label1
@@ -144,12 +144,19 @@
             // 
             // contentGridView
             // 
+            this.contentGridView.AllowUserToAddRows = false;
+            this.contentGridView.AllowUserToResizeRows = false;
+            this.contentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentGridView.Location = new System.Drawing.Point(0, 59);
+            this.contentGridView.MultiSelect = false;
             this.contentGridView.Name = "contentGridView";
-            this.contentGridView.Size = new System.Drawing.Size(481, 223);
+            this.contentGridView.ReadOnly = true;
+            this.contentGridView.RowHeadersVisible = false;
+            this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.contentGridView.Size = new System.Drawing.Size(484, 223);
             this.contentGridView.TabIndex = 5;
             // 
             // statusStrip1
@@ -159,7 +166,7 @@
             this.todayLeastPurposeLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 260);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(481, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(484, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -179,15 +186,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 282);
+            this.ClientSize = new System.Drawing.Size(484, 282);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.contentGridView);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 320);
             this.Name = "NurseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NurseForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NurseForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

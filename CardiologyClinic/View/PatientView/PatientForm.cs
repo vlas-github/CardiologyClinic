@@ -93,5 +93,10 @@ namespace CardiologyClinic.View.PatientView
             this.toolStripStatusLabel2.Text = "Дата поступления: " + patientController.GetDateIn().ToString();
             this.toolStripStatusLabel3.Text = "Дата выписки: " + patientController.GetDateOut().ToString();
         }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

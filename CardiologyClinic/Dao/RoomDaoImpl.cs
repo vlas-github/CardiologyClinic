@@ -63,5 +63,16 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public void DeleteRoom(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                session.Delete((Room)session.CreateCriteria(typeof(Room))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult());
+                session.Flush();
+            }
+        }
     }
 }

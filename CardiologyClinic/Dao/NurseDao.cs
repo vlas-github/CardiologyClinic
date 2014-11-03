@@ -14,5 +14,6 @@ namespace CardiologyClinic.Dao
         User GetNurseByPass(string pass);
         Nurse GetNurseByRoom(Room room);
         Nurse GetNurseById(string id);
+        void DeleteNurse(string id);
     }
 }
