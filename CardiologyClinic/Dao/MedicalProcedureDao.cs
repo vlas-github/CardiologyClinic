@@ -14,5 +14,7 @@ namespace CardiologyClinic.Dao
         IList<MedicalProcedure> GetAllMedicalProcedures();
 
         MedicalProcedure GetMedicalProcedureById(string id);
+
+        void DeleteMedProc(string id);
     }
 }

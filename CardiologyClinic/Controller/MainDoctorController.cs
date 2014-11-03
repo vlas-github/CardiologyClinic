@@ -205,5 +205,35 @@ namespace CardiologyClinic.Controller
 
             return room;
         }
+
+        public void DeleteMedicalProcedure(String idMedProc)
+        {
+            mainDoctorService.DeleteMedProc(idMedProc);
+        }
+
+        public void DeleteDisease(String idDisease)
+        {
+            mainDoctorService.DeleteDisease(idDisease);
+        }
+
+        public void DeleteDoctor(String idDoctor)
+        {
+            mainDoctorService.DeleteDoctor(idDoctor);
+        }
+
+        public void DeleteNurse(String idNurse)
+        {
+            mainDoctorService.DeleteNurse(idNurse);
+        }
+
+        public void DeletePatient(String idPatient)
+        {
+            mainDoctorService.DeletePatient(idPatient);
+        }
+
+        public void DeleteRoom(String idRoom)
+        {
+            mainDoctorService.DeleteRoom(idRoom);
+        }
     }
 }

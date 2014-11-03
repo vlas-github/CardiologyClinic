@@ -355,6 +355,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "EditPatientForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditPatientForm";
             this.Load += new System.EventHandler(this.EditPatientForm_Load);
             this.content.ResumeLayout(false);

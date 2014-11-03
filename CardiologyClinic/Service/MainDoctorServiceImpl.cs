@@ -138,5 +138,35 @@ namespace CardiologyClinic.Service
         {
             return patientDao.GetPatientsByRoom(room);
         }
+
+        public void DeleteMedProc(String idMedProc)
+        {
+            medicalProcedureDao.DeleteMedProc(idMedProc);
+        }
+
+        public void DeleteDisease(String idDisease)
+        {
+            diseaseDao.DeleteDisease(idDisease);
+        }
+
+        public void DeleteDoctor(String idDoctor)
+        {
+            doctorDao.DeleteDoctor(idDoctor);
+        }
+
+        public void DeleteNurse(String idNurse)
+        {
+            nurseDao.DeleteNurse(idNurse);
+        }
+
+        public void DeletePatient(String idPatient)
+        {
+            patientDao.DeletePatient(idPatient);
+        }
+
+        public void DeleteRoom(String idRoom)
+        {
+            roomDao.DeleteRoom(idRoom);
+        }
     }
 }

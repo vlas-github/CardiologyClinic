@@ -74,6 +74,7 @@
             this.Controls.Add(this.titleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InfoNurseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "InfoNurseForm";
             this.Load += new System.EventHandler(this.InfoNurseForm_Load);
             this.ResumeLayout(false);

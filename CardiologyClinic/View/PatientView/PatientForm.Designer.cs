@@ -60,7 +60,7 @@
             this.exitMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(607, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,6 +100,7 @@
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
             this.exitMenuItem.Text = "Выход";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // headerPanel
             // 
@@ -108,7 +109,7 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 24);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(607, 35);
+            this.headerPanel.Size = new System.Drawing.Size(684, 35);
             this.headerPanel.TabIndex = 2;
             // 
             // label1
@@ -131,7 +132,7 @@
             this.oldButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 59);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(607, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(684, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -167,12 +168,18 @@
             // 
             // contentGridView
             // 
+            this.contentGridView.AllowUserToAddRows = false;
+            this.contentGridView.AllowUserToResizeRows = false;
+            this.contentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentGridView.Location = new System.Drawing.Point(0, 84);
+            this.contentGridView.MultiSelect = false;
             this.contentGridView.Name = "contentGridView";
-            this.contentGridView.Size = new System.Drawing.Size(607, 247);
+            this.contentGridView.ReadOnly = true;
+            this.contentGridView.RowHeadersVisible = false;
+            this.contentGridView.Size = new System.Drawing.Size(684, 328);
             this.contentGridView.TabIndex = 4;
             // 
             // statusStrip1
@@ -181,9 +188,9 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 309);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 390);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(607, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(684, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -211,15 +218,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 331);
+            this.ClientSize = new System.Drawing.Size(684, 412);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.contentGridView);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "PatientForm";
             this.Text = "PatientForm";
             this.Load += new System.EventHandler(this.PatientForm_Load);

@@ -106,6 +106,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InfoRoomForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "InfoRoomForm";
             this.Load += new System.EventHandler(this.InfoRoomForm_Load);
             this.ResumeLayout(false);

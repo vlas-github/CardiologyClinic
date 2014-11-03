@@ -75,5 +75,16 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public void DeleteNurse(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                session.Delete((Nurse)session.CreateCriteria(typeof(Nurse))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult());
+                session.Flush();
+            }
+        }
     }
 }

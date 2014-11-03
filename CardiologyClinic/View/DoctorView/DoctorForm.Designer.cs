@@ -49,9 +49,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.allPatientsLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 263);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 352);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(483, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(714, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -67,7 +67,7 @@
             this.exitMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(483, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(714, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,6 +76,7 @@
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
             this.exitMenuItem.Text = "Выход";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // tools
             // 
@@ -83,7 +84,7 @@
             this.editButton});
             this.tools.Location = new System.Drawing.Point(0, 24);
             this.tools.Name = "tools";
-            this.tools.Size = new System.Drawing.Size(483, 25);
+            this.tools.Size = new System.Drawing.Size(714, 25);
             this.tools.TabIndex = 8;
             this.tools.Text = "toolStrip1";
             // 
@@ -104,7 +105,7 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 49);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(483, 35);
+            this.headerPanel.Size = new System.Drawing.Size(714, 35);
             this.headerPanel.TabIndex = 9;
             // 
             // label1
@@ -121,19 +122,26 @@
             // 
             // contentGridView
             // 
+            this.contentGridView.AllowUserToAddRows = false;
+            this.contentGridView.AllowUserToResizeRows = false;
+            this.contentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentGridView.Location = new System.Drawing.Point(0, 84);
+            this.contentGridView.MultiSelect = false;
             this.contentGridView.Name = "contentGridView";
-            this.contentGridView.Size = new System.Drawing.Size(483, 179);
+            this.contentGridView.ReadOnly = true;
+            this.contentGridView.RowHeadersVisible = false;
+            this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.contentGridView.Size = new System.Drawing.Size(714, 268);
             this.contentGridView.TabIndex = 10;
             // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 285);
+            this.ClientSize = new System.Drawing.Size(714, 374);
             this.Controls.Add(this.contentGridView);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.tools);
@@ -141,7 +149,9 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "DoctorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DoctorForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DoctorForm_Load);
