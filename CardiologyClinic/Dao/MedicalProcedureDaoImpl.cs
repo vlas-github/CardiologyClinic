@@ -44,6 +44,7 @@ namespace CardiologyClinic.Dao
             }
         }
 
+<<<<<<< HEAD
         public MedicalProcedure GetMedicalProcedureByName(string p)
         {
             using (ISession session = connector.GetSession().OpenSession())
@@ -51,6 +52,16 @@ namespace CardiologyClinic.Dao
                 return (MedicalProcedure)session.CreateCriteria(typeof(MedicalProcedure))
                     .Add(Expression.Eq("Name", p))
                     .UniqueResult();
+=======
+        public void DeleteMedProc(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                session.Delete((MedicalProcedure)session.CreateCriteria(typeof(MedicalProcedure))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult());
+                session.Flush();
+>>>>>>> 74e54f6dcd562c07956d6ca0461fec3113f6414b
             }
         }
     }

@@ -17,5 +17,7 @@ namespace CardiologyClinic.Dao
         Doctor GetDoctorByPass(string pass);
 
         Doctor GetDoctorById(string id);
+
+        void DeleteDoctor(string id);
     }
 }

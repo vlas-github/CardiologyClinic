@@ -393,5 +393,47 @@ namespace CardiologyClinic.View.MainDoctorView
                     break;
             }
         }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            switch (titleLabel.Text)
+            {
+                case "Список лечебных процедур:":
+                    MedicalProcedure medicalProcedure = mainDoctorController.GetMedicalProcedureById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    mainDoctorController.DeleteMedicalProcedure(medicalProcedure.Id.ToString());
+                    mainDoctorController.ShowMedicalProcedureEvent();
+                    break;
+                case "Список болезней:":
+                    Disease disease = mainDoctorController.GetDiseaseById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    mainDoctorController.DeleteDisease(disease.Id.ToString());
+                    mainDoctorController.ShowDiseaseEvent();
+                    break;
+                case "Список докторов:":
+                    Doctor doctor = mainDoctorController.GetDoctorById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    mainDoctorController.DeleteDoctor(doctor.Id.ToString());
+                    mainDoctorController.ShowDoctorEvent();
+                    break;
+                case "Список медсестер:":
+                    Nurse nurse = mainDoctorController.GetNurseById(contentGridView.CurrentRow.Cells[3].Value.ToString());
+                    mainDoctorController.DeleteNurse(nurse.Id.ToString());
+                    mainDoctorController.ShowNurseEvent();
+                    break;
+                case "Список пациентов:":
+                    Patient patient = mainDoctorController.GetPatientById(contentGridView.CurrentRow.Cells[7].Value.ToString());
+                    mainDoctorController.DeletePatient(patient.Id.ToString());
+                    mainDoctorController.ShowPatientEvent();
+                    break;
+                case "Список больничных палат:":
+                    Room room = mainDoctorController.GetRoomById(contentGridView.CurrentRow.Cells[5].Value.ToString());
+                    mainDoctorController.DeleteRoom(room.Id.ToString());
+                    mainDoctorController.ShowRoomEvent();
+                    break;
+            }
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

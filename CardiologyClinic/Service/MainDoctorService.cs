@@ -22,6 +22,13 @@ namespace CardiologyClinic.Service
         Nurse GetNurseById(String idNurse);
         Room GetRoomById(String idRoom);
 
+        void DeleteMedProc(String idMedProc);
+        void DeleteDisease(String idDisease);
+        void DeleteDoctor(String idDoctor);
+        void DeleteNurse(String idNurse);
+        void DeletePatient(String idPatient);
+        void DeleteRoom(String idRoom);
+
         void SaveDisease(Disease disease);
         void SaveDoctor(Doctor doctor);
         void SaveMedicalProcedure(MedicalProcedure medicalProcedure);

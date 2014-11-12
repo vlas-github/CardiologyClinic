@@ -141,6 +141,7 @@
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.Size = new System.Drawing.Size(53, 20);
             this.exitMenuItem.Text = "Выход";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // tools
             // 
@@ -182,6 +183,7 @@
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(55, 22);
             this.removeButton.Text = "Удалить";
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // headerPanel
             // 

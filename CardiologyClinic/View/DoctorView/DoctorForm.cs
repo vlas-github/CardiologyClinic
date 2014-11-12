@@ -98,5 +98,10 @@ namespace CardiologyClinic.View.DoctorView
             Patient patient = doctorController.GetPatientById(contentGridView.CurrentRow.Cells[7].Value.ToString());
             doctorController.EditPatientEvent(patient);        
         }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

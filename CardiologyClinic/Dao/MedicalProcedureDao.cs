@@ -15,6 +15,10 @@ namespace CardiologyClinic.Dao
 
         MedicalProcedure GetMedicalProcedureById(string id);
 
+<<<<<<< HEAD
         MedicalProcedure GetMedicalProcedureByName(string p);
+=======
+        void DeleteMedProc(string id);
+>>>>>>> 74e54f6dcd562c07956d6ca0461fec3113f6414b
     }
 }

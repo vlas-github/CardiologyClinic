@@ -15,5 +15,7 @@ namespace CardiologyClinic.Dao
         Disease GetDiseasByName(Disease disease);
 
         Disease GetDiseaseById(string id);
+
+        void DeleteDisease(string id);
     }
 }
