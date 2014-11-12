@@ -40,7 +40,23 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Purpose purpose = new Purpose();
+            purpose.Patient = patient;
+            purpose.MedicalProcedure = controller
+                .GetMedicalProcedureByName(procedureComboBox.SelectedItem.ToString());
+            purpose.IsComplete = false;
+            int year = int.Parse(tbYear.Text);
+            int month = cbMounth.SelectedIndex + 1;
+            int day = (int)tbDay.Value;
+            int hour = (int)tbHour.Value;
+            int minute = (int)tbMinute.Value;
+            purpose.DateOfProcedure = new DateTime(year, month, day, hour, minute, 0);
 
+            patient.Purposes.Add(purpose);
+
+            controller.SavePurpose(purpose);
+
+            Close();
         }
     }
 }

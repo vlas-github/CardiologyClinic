@@ -23,5 +23,14 @@ namespace CardiologyClinic.Dao
                     .List<Purpose>();
             }
         }
+
+        public void Save(Purpose purpose)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                session.Save(purpose);
+                session.Flush();
+            }
+        }
     }
 }

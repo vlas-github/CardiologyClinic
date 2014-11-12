@@ -9,5 +9,7 @@ namespace CardiologyClinic.Dao
     interface PurposeDao
     {
         ICollection<Purpose> GetPurposesByPatient(Patient p);
+
+        void Save(Purpose purpose);
     }
 }

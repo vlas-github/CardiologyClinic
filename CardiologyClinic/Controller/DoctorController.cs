@@ -60,5 +60,15 @@ namespace CardiologyClinic.Controller
         {
             return doctorService.GetAllMedicalProcedure();
         }
+
+        public MedicalProcedure GetMedicalProcedureByName(string p)
+        {
+            return doctorService.GetMedicalProcedureByName(p);
+        }
+
+        public void SavePurpose(Purpose purpose)
+        {
+            doctorService.SavePurpose(purpose);
+        }
     }
 }

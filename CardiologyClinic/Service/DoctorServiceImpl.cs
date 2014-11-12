@@ -36,5 +36,15 @@ namespace CardiologyClinic.Service
         {
             return medicalProcedureDao.GetAllMedicalProcedures();
         }
+
+        public MedicalProcedure GetMedicalProcedureByName(string p)
+        {
+            return medicalProcedureDao.GetMedicalProcedureByName(p);
+        }
+
+        public void SavePurpose(Purpose purpose)
+        {
+            purposeDao.Save(purpose);
+        }
     }
 }

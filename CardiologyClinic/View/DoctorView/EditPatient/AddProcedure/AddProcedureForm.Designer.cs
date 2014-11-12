@@ -33,20 +33,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.tbYear = new System.Windows.Forms.TextBox();
+            this.cbMounth = new System.Windows.Forms.ComboBox();
+            this.tbDay = new System.Windows.Forms.NumericUpDown();
+            this.tbMinute = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.tbHour = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbMinute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHour)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,12 +73,12 @@
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.numericUpDown3);
-            this.panel2.Controls.Add(this.numericUpDown2);
+            this.panel2.Controls.Add(this.tbYear);
+            this.panel2.Controls.Add(this.cbMounth);
+            this.panel2.Controls.Add(this.tbDay);
+            this.panel2.Controls.Add(this.tbMinute);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.numericUpDown1);
+            this.panel2.Controls.Add(this.tbHour);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
@@ -103,17 +103,17 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Время:";
             // 
-            // textBox1
+            // tbYear
             // 
-            this.textBox1.Location = new System.Drawing.Point(266, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbYear.Location = new System.Drawing.Point(266, 33);
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(50, 20);
+            this.tbYear.TabIndex = 5;
             // 
-            // comboBox1
+            // cbMounth
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbMounth.FormattingEnabled = true;
+            this.cbMounth.Items.AddRange(new object[] {
             "Январь",
             "Февраль",
             "Март",
@@ -126,34 +126,34 @@
             "Октябрь",
             "Ноябрь",
             "Декабрь"});
-            this.comboBox1.Location = new System.Drawing.Point(155, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(104, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbMounth.Location = new System.Drawing.Point(155, 32);
+            this.cbMounth.Name = "cbMounth";
+            this.cbMounth.Size = new System.Drawing.Size(104, 21);
+            this.cbMounth.TabIndex = 4;
             // 
-            // numericUpDown3
+            // tbDay
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(105, 34);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.tbDay.Location = new System.Drawing.Point(105, 34);
+            this.tbDay.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(41, 20);
-            this.numericUpDown3.TabIndex = 3;
+            this.tbDay.Name = "tbDay";
+            this.tbDay.Size = new System.Drawing.Size(41, 20);
+            this.tbDay.TabIndex = 3;
             // 
-            // numericUpDown2
+            // tbMinute
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(169, 6);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.tbMinute.Location = new System.Drawing.Point(169, 6);
+            this.tbMinute.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown2.TabIndex = 2;
+            this.tbMinute.Name = "tbMinute";
+            this.tbMinute.Size = new System.Drawing.Size(39, 20);
+            this.tbMinute.TabIndex = 2;
             // 
             // label1
             // 
@@ -164,17 +164,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = ":";
             // 
-            // numericUpDown1
+            // tbHour
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(104, 7);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.tbHour.Location = new System.Drawing.Point(104, 7);
+            this.tbHour.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(42, 20);
-            this.numericUpDown1.TabIndex = 0;
+            this.tbHour.Name = "tbHour";
+            this.tbHour.Size = new System.Drawing.Size(42, 20);
+            this.tbHour.TabIndex = 0;
             // 
             // panel3
             // 
@@ -221,9 +221,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbMinute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHour)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -237,12 +237,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.TextBox tbYear;
+        private System.Windows.Forms.ComboBox cbMounth;
+        private System.Windows.Forms.NumericUpDown tbDay;
+        private System.Windows.Forms.NumericUpDown tbMinute;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown tbHour;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }

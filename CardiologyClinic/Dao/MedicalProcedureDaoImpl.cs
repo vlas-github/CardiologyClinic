@@ -43,5 +43,15 @@ namespace CardiologyClinic.Dao
                     .UniqueResult();
             }
         }
+
+        public MedicalProcedure GetMedicalProcedureByName(string p)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return (MedicalProcedure)session.CreateCriteria(typeof(MedicalProcedure))
+                    .Add(Expression.Eq("Name", p))
+                    .UniqueResult();
+            }
+        }
     }
 }
