@@ -137,6 +137,7 @@ namespace CardiologyClinic.View.NurseView
             this.contentGridView.Columns.Clear();
             this.contentGridView.Columns.Add("index", "#");
             this.contentGridView.Columns.Add("patient", "Пациент");
+            this.contentGridView.Columns.Add("complete", "Выполнение");
             this.contentGridView.Columns.Add("room", "Палата");
             this.contentGridView.Columns.Add("name", "Лечебная процедура");
             this.contentGridView.Columns.Add("time", "Время");
@@ -149,6 +150,7 @@ namespace CardiologyClinic.View.NurseView
                 this.contentGridView.Rows.Add(
                     ++i,
                     purpose.Patient.Name,
+                    purpose.IsComplete ? "Выполнено" : "Не выполнено",
                     purpose.Patient.Room.Number,
                     purpose.MedicalProcedure.Name,
                     purpose.DateOfProcedure,
@@ -180,6 +182,15 @@ namespace CardiologyClinic.View.NurseView
         private void patientsMenuItem_DoubleClick(object sender, EventArgs e)
         {
             this.nurseController.ShowAllPurposesEvent();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            String id = contentGridView.CurrentRow.Cells[6].Value.ToString();
+            Purpose p = nurseController.GetPurposeById(id);
+            p.IsComplete = true;
+            nurseController.SavePurpose(p);
+            contentGridView.CurrentRow.Cells[1].Value = "Выполнено";
         }
     }
 }

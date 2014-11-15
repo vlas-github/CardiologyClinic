@@ -13,5 +13,7 @@ namespace CardiologyClinic.Service
         ICollection<Bean.Room> GetRoomsByNurse(Nurse nurse);
         ICollection<Patient> GetPatientByRoom(Room room);
         ICollection<Purpose> GetPurposesByPatient(Patient p);
+        Purpose GetPurposesById(string id);
+        bool SavePurpose(Purpose p);
     }
 }

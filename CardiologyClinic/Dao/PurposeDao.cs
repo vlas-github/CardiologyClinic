@@ -10,6 +10,8 @@ namespace CardiologyClinic.Dao
     {
         ICollection<Purpose> GetPurposesByPatient(Patient p);
 
-        void Save(Purpose purpose);
+        bool Save(Purpose purpose);
+
+        Purpose GetPurposesById(string id);
     }
 }

@@ -41,5 +41,15 @@ namespace CardiologyClinic.Service
         {
             return purposeDao.GetPurposesByPatient(p);
         }
+
+        public Purpose GetPurposesById(string id)
+        {
+            return purposeDao.GetPurposesById(id);
+        }
+
+        public bool SavePurpose(Purpose p)
+        {
+            return purposeDao.Save(p);
+        }
     }
 }

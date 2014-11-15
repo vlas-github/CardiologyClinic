@@ -24,12 +24,32 @@ namespace CardiologyClinic.Dao
             }
         }
 
-        public void Save(Purpose purpose)
+        public bool Save(Purpose purpose)
         {
             using (ISession session = connector.GetSession().OpenSession())
             {
-                session.Save(purpose);
+                if (purpose.Id == null)
+                {
+                    session.Save(purpose);
+                }
+                else
+                {
+                    session.Update(purpose);
+                }
+
                 session.Flush();
+            }
+
+            return true;
+        }
+
+        public Purpose GetPurposesById(string id)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Purpose))
+                    .Add(Expression.Eq("Id", id))
+                    .UniqueResult<Purpose>();
             }
         }
     }

@@ -21,7 +21,6 @@ namespace CardiologyClinic.Controller
             this.user = user;
         }
 
-
         public void Start()
         {
             nurseForm = new NurseForm(this);
@@ -136,6 +135,16 @@ namespace CardiologyClinic.Controller
         public void GetRoomByNumber(Room room)
         {
             this.nurseService.GetRoomByName(room);
+        }
+
+        public Purpose GetPurposeById(string id)
+        {
+            return nurseService.GetPurposesById(id);
+        }
+
+        public bool SavePurpose(Purpose p)
+        {
+            return nurseService.SavePurpose(p);
         }
     }
 }
