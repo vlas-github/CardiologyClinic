@@ -64,6 +64,7 @@ namespace CardiologyClinic.Controller
         public void PutMenuAllPatients()
         {
             ICollection<Patient> result = new List<Patient>();
+
             foreach (Room room in ((Nurse)user).Rooms)
             {
                 foreach (Patient patient in room.Patients)
@@ -82,10 +83,17 @@ namespace CardiologyClinic.Controller
 
         public void ShowPurposesByRoom(Room room)
         {
+            room = nurseService.GetRoomByName(room);
+
             List<Purpose> result = new List<Purpose>();
+
+            room.Patients = nurseService.GetPatientByRoom(room);
 
             foreach (Patient p in room.Patients)
             {
+
+                p.Purposes = nurseService.GetPurposesByPatient(p);
+
                 foreach (Purpose purpose in p.Purposes)
                 {
                     result.Add(purpose);
@@ -100,6 +108,8 @@ namespace CardiologyClinic.Controller
         public void ShowPurposesByPatient(Patient patient)
         {
             List<Purpose> result = new List<Purpose>();
+
+            patient.Purposes = nurseService.GetPurposesByPatient(patient);
 
             foreach (Purpose purpose in patient.Purposes)
             {

@@ -8,8 +8,8 @@ namespace CardiologyClinic.Service
 {
     interface NurseService
     {
-        void GetRoomByName(Room room);
-        void GetPatientByName(Patient patient);
+        Room GetRoomByName(Room room);
+        Patient GetPatientByName(Patient patient);
         ICollection<Bean.Room> GetRoomsByNurse(Nurse nurse);
         ICollection<Patient> GetPatientByRoom(Room room);
         ICollection<Purpose> GetPurposesByPatient(Patient p);

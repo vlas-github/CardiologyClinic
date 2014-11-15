@@ -17,14 +17,16 @@ namespace CardiologyClinic.Service
         private PurposeDao purposeDao =
             (PurposeDao)BeanFactory.GetFactory().GetBean("purposeDao");
 
-        public void GetRoomByName(Room room)
+        public Room GetRoomByName(Room room)
         {
-            room = this.roomDao.GetRoomByNumber(room);
+            return this.roomDao.GetRoomByNumber(room);
         }
 
-        public void GetPatientByName(Patient patient)
+        public Patient GetPatientByName(Patient patient)
         {
             this.patientDao.GetPatientByName(patient);
+
+            return patient;
         }
 
         public ICollection<Room> GetRoomsByNurse(Nurse nurse)
