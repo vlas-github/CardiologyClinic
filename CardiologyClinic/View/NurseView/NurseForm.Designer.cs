@@ -42,10 +42,10 @@
             this.allPurposeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.todayLeastPurposeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.contentGridView = new System.Windows.Forms.DataGridView();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -157,6 +157,16 @@
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(73, 22);
+            this.toolStripButton1.Text = "Выполнить";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // contentGridView
             // 
             this.contentGridView.AllowUserToAddRows = false;
@@ -173,6 +183,7 @@
             this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.contentGridView.Size = new System.Drawing.Size(484, 176);
             this.contentGridView.TabIndex = 9;
+            this.contentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contentGridView_CellContentClick);
             // 
             // headerPanel
             // 
@@ -195,16 +206,6 @@
             this.label1.Size = new System.Drawing.Size(236, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Список лечебных процедур";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(73, 22);
-            this.toolStripButton1.Text = "Выполнить";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // NurseForm
             // 

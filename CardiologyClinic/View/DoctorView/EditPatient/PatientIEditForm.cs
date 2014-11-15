@@ -28,6 +28,7 @@ namespace CardiologyClinic.View.DoctorView.InfoEditPatient
         {
             this.controller = controller;
             this.patient = patient;
+            patientNameLabel.Text = patient.Name;
         }
 
         private void PatientIEditForm_Load(object sender, EventArgs e)
@@ -51,6 +52,22 @@ namespace CardiologyClinic.View.DoctorView.InfoEditPatient
             this.contentGridView.Columns.Add("complete", "Выполнение");
             this.contentGridView.Columns.Add("id", "id");
 
+            this.contentGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[0].MinimumWidth = 30;
+            this.contentGridView.Columns[0].Width = 30;
+
+            this.contentGridView.Columns[1].MinimumWidth = 100;
+            this.contentGridView.Columns[1].Width = 100;
+
+            this.contentGridView.Columns[2].MinimumWidth = 50;
+            this.contentGridView.Columns[2].Width = 50;
+
+            this.contentGridView.Columns[3].MinimumWidth = 70;
+            this.contentGridView.Columns[3].Width = 50;
+
+            this.contentGridView.Columns[4].Width = 0;
+            this.contentGridView.Columns[4].Visible = false; 
+
             int i = 0;
 
             foreach (Purpose purpose in purposes)
@@ -63,5 +80,16 @@ namespace CardiologyClinic.View.DoctorView.InfoEditPatient
                     purpose.Id);
             }
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PatientIEditForm_Activated(object sender, EventArgs e)
+        {
+            this.ShowPurposes(patient.Purposes);
+        }
+
     }
 }

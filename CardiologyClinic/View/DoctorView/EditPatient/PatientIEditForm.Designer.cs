@@ -127,14 +127,22 @@
             this.exitButton.TabIndex = 0;
             this.exitButton.Text = "Выход";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // contentGridView
             // 
+            this.contentGridView.AllowUserToAddRows = false;
+            this.contentGridView.AllowUserToResizeRows = false;
+            this.contentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.contentGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.contentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentGridView.Location = new System.Drawing.Point(0, 76);
+            this.contentGridView.MultiSelect = false;
             this.contentGridView.Name = "contentGridView";
+            this.contentGridView.ReadOnly = true;
+            this.contentGridView.RowHeadersVisible = false;
+            this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.contentGridView.Size = new System.Drawing.Size(414, 220);
             this.contentGridView.TabIndex = 7;
             // 
@@ -151,6 +159,7 @@
             this.MaximizeBox = false;
             this.Name = "PatientIEditForm";
             this.Text = "Назначения пациента";
+            this.Activated += new System.EventHandler(this.PatientIEditForm_Activated);
             this.Load += new System.EventHandler(this.PatientIEditForm_Load);
             this.panel1.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
