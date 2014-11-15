@@ -26,6 +26,7 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
         {
             this.controller = controller;
             this.patient = patient;
+            cbMounth.SelectedIndex = 0;
         }
 
         private void AddProcedureForm_Load(object sender, EventArgs e)
@@ -55,8 +56,14 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
             patient.Purposes.Add(purpose);
 
             controller.SavePurpose(purpose);
+            controller.ShowAllPatientEvent();
 
             Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

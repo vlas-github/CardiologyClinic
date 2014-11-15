@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbYear = new System.Windows.Forms.TextBox();
             this.cbMounth = new System.Windows.Forms.ComboBox();
             this.tbDay = new System.Windows.Forms.NumericUpDown();
             this.tbMinute = new System.Windows.Forms.NumericUpDown();
@@ -42,12 +41,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.tbYear = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMinute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHour)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbYear)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,9 +72,9 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.tbYear);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.tbYear);
             this.panel2.Controls.Add(this.cbMounth);
             this.panel2.Controls.Add(this.tbDay);
             this.panel2.Controls.Add(this.tbMinute);
@@ -82,13 +83,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 136);
+            this.panel2.Size = new System.Drawing.Size(332, 116);
             this.panel2.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 36);
+            this.label3.Location = new System.Drawing.Point(63, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 7;
@@ -97,18 +98,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 9);
+            this.label2.Location = new System.Drawing.Point(55, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Время:";
-            // 
-            // tbYear
-            // 
-            this.tbYear.Location = new System.Drawing.Point(266, 33);
-            this.tbYear.Name = "tbYear";
-            this.tbYear.Size = new System.Drawing.Size(50, 20);
-            this.tbYear.TabIndex = 5;
             // 
             // cbMounth
             // 
@@ -126,26 +120,36 @@
             "Октябрь",
             "Ноябрь",
             "Декабрь"});
-            this.cbMounth.Location = new System.Drawing.Point(155, 32);
+            this.cbMounth.Location = new System.Drawing.Point(155, 34);
             this.cbMounth.Name = "cbMounth";
             this.cbMounth.Size = new System.Drawing.Size(104, 21);
             this.cbMounth.TabIndex = 4;
             // 
             // tbDay
             // 
-            this.tbDay.Location = new System.Drawing.Point(105, 34);
+            this.tbDay.Location = new System.Drawing.Point(105, 36);
             this.tbDay.Maximum = new decimal(new int[] {
             31,
+            0,
+            0,
+            0});
+            this.tbDay.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.tbDay.Name = "tbDay";
             this.tbDay.Size = new System.Drawing.Size(41, 20);
             this.tbDay.TabIndex = 3;
+            this.tbDay.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // tbMinute
             // 
-            this.tbMinute.Location = new System.Drawing.Point(169, 6);
+            this.tbMinute.Location = new System.Drawing.Point(169, 8);
             this.tbMinute.Maximum = new decimal(new int[] {
             59,
             0,
@@ -158,7 +162,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 9);
+            this.label1.Location = new System.Drawing.Point(152, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(10, 13);
             this.label1.TabIndex = 1;
@@ -166,7 +170,7 @@
             // 
             // tbHour
             // 
-            this.tbHour.Location = new System.Drawing.Point(104, 7);
+            this.tbHour.Location = new System.Drawing.Point(104, 9);
             this.tbHour.Maximum = new decimal(new int[] {
             23,
             0,
@@ -181,41 +185,66 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 143);
+            this.panel3.Location = new System.Drawing.Point(0, 123);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(332, 40);
             this.panel3.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(193, 0);
+            this.button2.Location = new System.Drawing.Point(198, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 40);
+            this.button2.Size = new System.Drawing.Size(134, 40);
             this.button2.TabIndex = 1;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 40);
+            this.button1.Size = new System.Drawing.Size(200, 40);
             this.button1.TabIndex = 0;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tbYear
+            // 
+            this.tbYear.Location = new System.Drawing.Point(265, 36);
+            this.tbYear.Maximum = new decimal(new int[] {
+            2300,
+            0,
+            0,
+            0});
+            this.tbYear.Minimum = new decimal(new int[] {
+            2014,
+            0,
+            0,
+            0});
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(52, 20);
+            this.tbYear.TabIndex = 8;
+            this.tbYear.Value = new decimal(new int[] {
+            2014,
+            0,
+            0,
+            0});
+            // 
             // AddProcedureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 183);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(332, 163);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "AddProcedureForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddProcedureForm";
             this.Load += new System.EventHandler(this.AddProcedureForm_Load);
             this.panel1.ResumeLayout(false);
@@ -225,6 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbMinute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHour)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,7 +267,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbYear;
         private System.Windows.Forms.ComboBox cbMounth;
         private System.Windows.Forms.NumericUpDown tbDay;
         private System.Windows.Forms.NumericUpDown tbMinute;
@@ -245,5 +274,6 @@
         private System.Windows.Forms.NumericUpDown tbHour;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown tbYear;
     }
 }

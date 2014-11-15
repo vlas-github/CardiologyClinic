@@ -143,6 +143,29 @@ namespace CardiologyClinic.View.NurseView
             this.contentGridView.Columns.Add("time", "Время");
             this.contentGridView.Columns.Add("id", "id");
 
+            this.contentGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[0].MinimumWidth = 30;
+            this.contentGridView.Columns[0].Width = 30;
+
+            this.contentGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[1].MinimumWidth = 180;
+            this.contentGridView.Columns[1].Width = 180;
+
+            this.contentGridView.Columns[2].MinimumWidth = 50;
+            this.contentGridView.Columns[2].Width = 70;
+
+            this.contentGridView.Columns[3].MinimumWidth = 60;
+            this.contentGridView.Columns[3].Width = 70;
+
+            this.contentGridView.Columns[4].MinimumWidth = 100;
+            this.contentGridView.Columns[4].Width = 100;
+
+            this.contentGridView.Columns[5].MinimumWidth = 60;
+            this.contentGridView.Columns[5].Width = 100;
+
+            this.contentGridView.Columns[6].Width = 0;
+            this.contentGridView.Columns[6].Visible = false;
+
             int i = 0;
 
             foreach (Purpose purpose in result)
@@ -190,7 +213,12 @@ namespace CardiologyClinic.View.NurseView
             Purpose p = nurseController.GetPurposeById(id);
             p.IsComplete = true;
             nurseController.SavePurpose(p);
-            contentGridView.CurrentRow.Cells[1].Value = "Выполнено";
+            contentGridView.CurrentRow.Cells[2].Value = "Выполнено";
+        }
+
+        private void contentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
