@@ -128,12 +128,12 @@ namespace CardiologyClinic.Controller
             return mainDoctorService.GetAllDoctors();
         }
 
-        internal IList<Disease> GetAllDiseases()
+        public IList<Disease> GetAllDiseases()
         {
             return mainDoctorService.GetAllDiseases();
         }
 
-        internal IList<Room> GetAllRooms()
+        public IList<Room> GetAllRooms()
         {
             return mainDoctorService.GetAllRooms();
         }
@@ -234,6 +234,11 @@ namespace CardiologyClinic.Controller
         public void DeleteRoom(String idRoom)
         {
             mainDoctorService.DeleteRoom(idRoom);
+        }
+
+        public Room GetRoomByNumber(Room room)
+        {
+            return mainDoctorService.GetRoomByNumber(room);
         }
     }
 }

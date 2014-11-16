@@ -69,7 +69,18 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
 
             Room room = new Room();
             room.Number = int.Parse(editNumber.Text);
-            patient.Room = room;
+            room = mainDoctorController.GetRoomByNumber(room);
+            if (room.Size > room.Patients.Count)
+            {
+                patient.Room = room;
+            }
+            else
+            {
+                MessageBox.Show("В данной комнате нет свободных мест",
+                                "Заселение пациентов",
+                                MessageBoxButtons.OK);
+                return;
+            }
 
             mainDoctorController.SavePatientEvent(patient);
             mainDoctorController.ShowPatientEvent();

@@ -39,5 +39,7 @@ namespace CardiologyClinic.Service
         ICollection<Room> GetRoomsByNurse(Nurse nurse);
         Nurse GetNurseByRoom(Room room);
         ICollection<Patient> GetPatientsByRoom(Room room);
+
+        Room GetRoomByNumber(Room room);
     }
 }

@@ -168,5 +168,12 @@ namespace CardiologyClinic.Service
         {
             roomDao.DeleteRoom(idRoom);
         }
+
+        public Room GetRoomByNumber(Room room)
+        {
+            room = roomDao.GetRoomByNumber(room);
+            room.Patients = patientDao.GetPatientsByRoom(room);
+            return room; 
+        }
     }
 }
