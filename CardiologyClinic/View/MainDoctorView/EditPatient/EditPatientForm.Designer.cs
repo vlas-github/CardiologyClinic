@@ -229,6 +229,7 @@
             this.monthOut.Size = new System.Drawing.Size(73, 23);
             this.monthOut.TabIndex = 11;
             this.monthOut.Text = "Январь";
+            this.monthOut.SelectedIndexChanged += new System.EventHandler(this.monthOut_SelectedIndexChanged);
             // 
             // yearIn
             // 
@@ -274,6 +275,7 @@
             this.monthIn.Size = new System.Drawing.Size(73, 23);
             this.monthIn.TabIndex = 5;
             this.monthIn.Text = "Январь";
+            this.monthIn.SelectedIndexChanged += new System.EventHandler(this.monthIn_SelectedIndexChanged);
             // 
             // editDisease
             // 

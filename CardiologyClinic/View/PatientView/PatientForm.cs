@@ -76,7 +76,27 @@ namespace CardiologyClinic.View.PatientView
             this.contentGridView.Columns.Add("purpose", "Название процедуры");
             this.contentGridView.Columns.Add("description", "Описание процедуры");
             this.contentGridView.Columns.Add("date", "Дата");
-            this.contentGridView.Columns.Add("isComplete", "Выполнено");
+            this.contentGridView.Columns.Add("isComplete", "Выполнение");
+            this.contentGridView.Columns.Add("id", "id");
+
+            this.contentGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            this.contentGridView.Columns[0].MinimumWidth = 30;
+            this.contentGridView.Columns[0].Width = 30;
+
+            this.contentGridView.Columns[1].MinimumWidth = 180;
+            this.contentGridView.Columns[1].Width = 180;
+
+            this.contentGridView.Columns[2].MinimumWidth = 100;
+            this.contentGridView.Columns[2].Width = 200;
+
+            this.contentGridView.Columns[3].MinimumWidth = 40;
+            this.contentGridView.Columns[3].Width = 80;
+
+            this.contentGridView.Columns[4].MinimumWidth = 60;
+            this.contentGridView.Columns[4].Width = 100;
+
+            this.contentGridView.Columns[5].Width = 0;
+            this.contentGridView.Columns[5].Visible = false; 
 
             int i = 0;
 
@@ -87,7 +107,8 @@ namespace CardiologyClinic.View.PatientView
                     p.MedicalProcedure.Name,
                     p.MedicalProcedure.Description,
                     p.DateOfProcedure,
-                    p.IsComplete);
+                    p.IsComplete,
+                    p.Id);
             }
             this.toolStripStatusLabel1.Text = "Всего процедур: " + purposes.Count.ToString();
             this.toolStripStatusLabel2.Text = "Дата поступления: " + patientController.GetDateIn().ToString();

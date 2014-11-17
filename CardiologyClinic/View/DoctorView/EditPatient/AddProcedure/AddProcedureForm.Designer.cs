@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.procedureComboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbYear = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbMounth = new System.Windows.Forms.ComboBox();
@@ -41,14 +42,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbYear = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMinute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHour)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbYear)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,6 +85,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(332, 116);
             this.panel2.TabIndex = 1;
+            // 
+            // tbYear
+            // 
+            this.tbYear.Location = new System.Drawing.Point(265, 36);
+            this.tbYear.Maximum = new decimal(new int[] {
+            2300,
+            0,
+            0,
+            0});
+            this.tbYear.Minimum = new decimal(new int[] {
+            2014,
+            0,
+            0,
+            0});
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(52, 20);
+            this.tbYear.TabIndex = 8;
+            this.tbYear.Value = new decimal(new int[] {
+            2014,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -124,6 +146,7 @@
             this.cbMounth.Name = "cbMounth";
             this.cbMounth.Size = new System.Drawing.Size(104, 21);
             this.cbMounth.TabIndex = 4;
+            this.cbMounth.SelectedIndexChanged += new System.EventHandler(this.cbMounth_SelectedIndexChanged);
             // 
             // tbDay
             // 
@@ -210,28 +233,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tbYear
-            // 
-            this.tbYear.Location = new System.Drawing.Point(265, 36);
-            this.tbYear.Maximum = new decimal(new int[] {
-            2300,
-            0,
-            0,
-            0});
-            this.tbYear.Minimum = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
-            this.tbYear.Name = "tbYear";
-            this.tbYear.Size = new System.Drawing.Size(52, 20);
-            this.tbYear.TabIndex = 8;
-            this.tbYear.Value = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
-            // 
             // AddProcedureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,11 +251,11 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMinute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHour)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbYear)).EndInit();
             this.ResumeLayout(false);
 
         }
