@@ -158,6 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PatientIEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Назначения пациента";
             this.Activated += new System.EventHandler(this.PatientIEditForm_Activated);
             this.Load += new System.EventHandler(this.PatientIEditForm_Load);

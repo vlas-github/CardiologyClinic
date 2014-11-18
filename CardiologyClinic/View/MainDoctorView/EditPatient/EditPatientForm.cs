@@ -117,5 +117,97 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
         {
             
         }
+
+        private void monthIn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (monthIn.SelectedIndex)
+            {
+                case 0:
+                    dayIn.Maximum = 31;
+                    break;
+                case 1:
+                    if (yearIn.Text == "2016" || yearIn.Text == "2020" || yearIn.Text == "2024" || yearIn.Text == "2028" || yearIn.Text == "2032")
+                        dayIn.Maximum = 29;
+                    else
+                        dayIn.Maximum = 28;
+                    break;
+                case 2:
+                    dayIn.Maximum = 31;
+                    break;
+                case 3:
+                    dayIn.Maximum = 30;
+                    break;
+                case 4:
+                    dayIn.Maximum = 31;
+                    break;
+                case 5:
+                    dayIn.Maximum = 30;
+                    break;
+                case 6:
+                    dayIn.Maximum = 31;
+                    break;
+                case 7:
+                    dayIn.Maximum = 31;
+                    break;
+                case 8:
+                    dayIn.Maximum = 30;
+                    break;
+                case 9:
+                    dayIn.Maximum = 31;
+                    break;
+                case 10:
+                    dayIn.Maximum = 30;
+                    break;
+                case 11:
+                    dayIn.Maximum = 31;
+                    break;
+            }
+        }
+
+        private void monthOut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (monthIn.SelectedIndex)
+            {
+                case 0:
+                    dayOut.Maximum = 31;
+                    break;
+                case 1:
+                    if (yearOut.Text == "2016" || yearOut.Text == "2020" || yearOut.Text == "2024" || yearOut.Text == "2028" || yearOut.Text == "2032")
+                        dayOut.Maximum = 29;
+                    else
+                        dayOut.Maximum = 28;
+                    break;
+                case 2:
+                    dayOut.Maximum = 31;
+                    break;
+                case 3:
+                    dayOut.Maximum = 30;
+                    break;
+                case 4:
+                    dayOut.Maximum = 31;
+                    break;
+                case 5:
+                    dayOut.Maximum = 30;
+                    break;
+                case 6:
+                    dayOut.Maximum = 31;
+                    break;
+                case 7:
+                    dayOut.Maximum = 31;
+                    break;
+                case 8:
+                    dayOut.Maximum = 30;
+                    break;
+                case 9:
+                    dayOut.Maximum = 31;
+                    break;
+                case 10:
+                    dayOut.Maximum = 30;
+                    break;
+                case 11:
+                    dayOut.Maximum = 31;
+                    break;
+            }
+        }
     }
 }

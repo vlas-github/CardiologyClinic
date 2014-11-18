@@ -65,5 +65,51 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
         {
             this.Close();
         }
+
+        private void cbMounth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbMounth.SelectedIndex)
+            {
+                case 0:
+                    tbDay.Maximum = 31;
+                    break;
+                case 1:                    
+                    if (tbYear.Value == 2016 || tbYear.Value == 2020 || tbYear.Value == 2024 || tbYear.Value == 2028 || tbYear.Value == 2032)
+                        tbDay.Maximum = 29;
+                    else
+                        tbDay.Maximum = 28;
+                    break;
+                case 2:
+                    tbDay.Maximum = 31;
+                    break;
+                case 3:
+                    tbDay.Maximum = 30;
+                    break;
+                case 4:
+                    tbDay.Maximum = 31;
+                    break;
+                case 5:
+                    tbDay.Maximum = 30;
+                    break;
+                case 6:
+                    tbDay.Maximum = 31;
+                    break;
+                case 7:
+                    tbDay.Maximum = 31;
+                    break;
+                case 8:
+                    tbDay.Maximum = 30;
+                    break;
+                case 9:
+                    tbDay.Maximum = 31;
+                    break;
+                case 10:
+                    tbDay.Maximum = 30;
+                    break;
+                case 11:
+                    tbDay.Maximum = 31;
+                    break;  
+            }
+        }
     }
 }

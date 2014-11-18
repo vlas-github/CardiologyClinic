@@ -179,6 +179,7 @@
             this.contentGridView.Name = "contentGridView";
             this.contentGridView.ReadOnly = true;
             this.contentGridView.RowHeadersVisible = false;
+            this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.contentGridView.Size = new System.Drawing.Size(684, 328);
             this.contentGridView.TabIndex = 4;
             // 
