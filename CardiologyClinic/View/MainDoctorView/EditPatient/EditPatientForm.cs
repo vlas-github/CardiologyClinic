@@ -71,7 +71,11 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             room.Number = int.Parse(editNumber.Text);
             room = mainDoctorController.GetRoomByNumber(room);
 
-            if (patient.Room != room || room.Size > room.Patients.Count)
+            if (patient.Room.Number == room.Number)
+            {
+                patient.Room = room;
+            }
+            else if (room.Size > room.Patients.Count)
             {
                 patient.Room = room;
             }
