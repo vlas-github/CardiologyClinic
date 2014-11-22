@@ -107,9 +107,10 @@ namespace CardiologyClinic.View.PatientView
                     p.MedicalProcedure.Name,
                     p.MedicalProcedure.Description,
                     p.DateOfProcedure,
-                    p.IsComplete,
+                    p.IsComplete ? "Выполнено" : "Не выполнено",
                     p.Id);
             }
+
             this.toolStripStatusLabel1.Text = "Всего процедур: " + purposes.Count.ToString();
             this.toolStripStatusLabel2.Text = "Дата поступления: " + patientController.GetDateIn().ToString();
             this.toolStripStatusLabel3.Text = "Дата выписки: " + patientController.GetDateOut().ToString();
