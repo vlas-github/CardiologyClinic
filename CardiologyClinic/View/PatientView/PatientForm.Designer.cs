@@ -230,6 +230,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "PatientForm";
             this.Text = "PatientForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PatientForm_FormClosing);
             this.Load += new System.EventHandler(this.PatientForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

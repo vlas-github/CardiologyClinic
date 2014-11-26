@@ -435,5 +435,10 @@ namespace CardiologyClinic.View.MainDoctorView
         {
             Application.Exit();
         }
+
+        private void MainDoctorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -120,5 +120,10 @@ namespace CardiologyClinic.View.PatientView
         {
             Application.Exit();
         }
+
+        private void PatientForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -266,6 +266,7 @@
             this.Name = "MainDoctorForm";
             this.Text = "Глав-врач - Фамилия Имя Отчество";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainDoctorForm_FormClosing);
             this.Load += new System.EventHandler(this.MainDoctorForm_Load);
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();

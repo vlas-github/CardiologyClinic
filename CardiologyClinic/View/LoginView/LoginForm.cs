@@ -54,5 +54,10 @@ namespace CardiologyClinic.View.LoginView
             this.AcceptButton = loginButton;
             passText.Select();
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
