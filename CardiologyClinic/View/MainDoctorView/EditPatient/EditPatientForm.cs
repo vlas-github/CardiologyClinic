@@ -28,6 +28,13 @@ namespace CardiologyClinic.View.MainDoctor.EditPatient
             this.patient = new Patient();
             this.mainDoctorController = mainDoctorController;
             fillLists(this.mainDoctorController);
+            this.dayIn.Value = DateTime.Today.Day;
+            this.monthIn.SelectedIndex = DateTime.Today.Month-1;
+            this.yearIn.Text = DateTime.Today.Year.ToString();
+
+            this.dayOut.Value = DateTime.Today.Day;
+            this.monthOut.SelectedIndex = DateTime.Today.Month - 1;
+            this.yearOut.Text = DateTime.Today.Year.ToString();
         }
 
         public EditPatientForm(MainDoctorController mainDoctorController, Patient editPatient)

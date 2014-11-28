@@ -37,6 +37,12 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
             {
                 procedureComboBox.Items.Add(mp.Name);
             }
+
+            this.tbHour.Value = DateTime.Now.Hour;
+            this.tbMinute.Value = DateTime.Now.Minute;
+            this.tbDay.Value = DateTime.Now.Day;
+            this.cbMounth.SelectedIndex = DateTime.Today.Month - 1;
+            this.tbYear.Value = DateTime.Today.Year;
         }
 
         private void button1_Click(object sender, EventArgs e)

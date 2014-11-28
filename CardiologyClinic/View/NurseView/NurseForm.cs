@@ -220,5 +220,10 @@ namespace CardiologyClinic.View.NurseView
         {
 
         }
+
+        private void NurseForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.addButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
             this.contentGridView = new System.Windows.Forms.DataGridView();
+            this.exitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,32 +102,20 @@
             this.panel2.Controls.Add(this.addButton);
             this.panel2.Controls.Add(this.exitButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 296);
+            this.panel2.Location = new System.Drawing.Point(0, 289);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(414, 33);
+            this.panel2.Size = new System.Drawing.Size(414, 40);
             this.panel2.TabIndex = 6;
             // 
             // addButton
             // 
-            this.addButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.addButton.Location = new System.Drawing.Point(0, 0);
+            this.addButton.Location = new System.Drawing.Point(227, 5);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(208, 33);
+            this.addButton.Size = new System.Drawing.Size(88, 30);
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Добавить";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.exitButton.Location = new System.Drawing.Point(206, 0);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(208, 33);
-            this.exitButton.TabIndex = 0;
-            this.exitButton.Text = "Выход";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // contentGridView
             // 
@@ -143,8 +131,18 @@
             this.contentGridView.ReadOnly = true;
             this.contentGridView.RowHeadersVisible = false;
             this.contentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.contentGridView.Size = new System.Drawing.Size(414, 220);
+            this.contentGridView.Size = new System.Drawing.Size(414, 213);
             this.contentGridView.TabIndex = 7;
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(321, 5);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(88, 30);
+            this.exitButton.TabIndex = 0;
+            this.exitButton.Text = "Выход";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // PatientIEditForm
             // 
@@ -181,7 +179,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.DataGridView contentGridView;
+        private System.Windows.Forms.Button exitButton;
     }
 }

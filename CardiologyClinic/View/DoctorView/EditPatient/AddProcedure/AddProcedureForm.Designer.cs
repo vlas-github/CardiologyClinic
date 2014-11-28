@@ -208,16 +208,16 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 123);
+            this.panel3.Location = new System.Drawing.Point(0, 125);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(332, 40);
+            this.panel3.Size = new System.Drawing.Size(332, 38);
             this.panel3.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(198, 0);
+            this.button2.Location = new System.Drawing.Point(198, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 40);
+            this.button2.Size = new System.Drawing.Size(88, 30);
             this.button2.TabIndex = 1;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
@@ -225,9 +225,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Location = new System.Drawing.Point(104, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 40);
+            this.button1.Size = new System.Drawing.Size(88, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = true;
