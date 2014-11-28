@@ -188,6 +188,7 @@
             // yearOut
             // 
             this.yearOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yearOut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.yearOut.Location = new System.Drawing.Point(128, 127);
             this.yearOut.Name = "yearOut";
             this.yearOut.Size = new System.Drawing.Size(42, 21);
@@ -209,6 +210,7 @@
             // 
             // monthOut
             // 
+            this.monthOut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.monthOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.monthOut.FormattingEnabled = true;
             this.monthOut.Items.AddRange(new object[] {
@@ -228,23 +230,28 @@
             this.monthOut.Name = "monthOut";
             this.monthOut.Size = new System.Drawing.Size(73, 23);
             this.monthOut.TabIndex = 11;
-            this.monthOut.Text = "Январь";
             this.monthOut.SelectedIndexChanged += new System.EventHandler(this.monthOut_SelectedIndexChanged);
             // 
             // yearIn
             // 
+            this.yearIn.BackColor = System.Drawing.SystemColors.Window;
+            this.yearIn.Enabled = false;
             this.yearIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.yearIn.Location = new System.Drawing.Point(128, 99);
             this.yearIn.Name = "yearIn";
+            this.yearIn.ReadOnly = true;
             this.yearIn.Size = new System.Drawing.Size(42, 21);
             this.yearIn.TabIndex = 7;
             this.yearIn.Text = "2014";
             // 
             // dayIn
             // 
+            this.dayIn.BackColor = System.Drawing.SystemColors.Window;
+            this.dayIn.Enabled = false;
             this.dayIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dayIn.Location = new System.Drawing.Point(3, 100);
             this.dayIn.Name = "dayIn";
+            this.dayIn.ReadOnly = true;
             this.dayIn.Size = new System.Drawing.Size(40, 21);
             this.dayIn.TabIndex = 6;
             this.dayIn.Value = new decimal(new int[] {
@@ -255,8 +262,11 @@
             // 
             // monthIn
             // 
+            this.monthIn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monthIn.Enabled = false;
             this.monthIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.monthIn.FormattingEnabled = true;
+            this.monthIn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.monthIn.Items.AddRange(new object[] {
             "Январь",
             "Февраль",
@@ -274,7 +284,6 @@
             this.monthIn.Name = "monthIn";
             this.monthIn.Size = new System.Drawing.Size(73, 23);
             this.monthIn.TabIndex = 5;
-            this.monthIn.Text = "Январь";
             this.monthIn.SelectedIndexChanged += new System.EventHandler(this.monthIn_SelectedIndexChanged);
             // 
             // editDisease
