@@ -13,5 +13,7 @@ namespace CardiologyClinic.Dao
         bool Save(Purpose purpose);
 
         Purpose GetPurposesById(string id);
+
+        IList<Purpose> GetPurposesBetween(DateTime from, DateTime to);
     }
 }

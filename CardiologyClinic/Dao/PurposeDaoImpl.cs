@@ -52,5 +52,16 @@ namespace CardiologyClinic.Dao
                     .UniqueResult<Purpose>();
             }
         }
+
+        public IList<Purpose> GetPurposesBetween(DateTime from, DateTime to)
+        {
+            using (ISession session = connector.GetSession().OpenSession())
+            {
+                return session.CreateCriteria(typeof(Purpose))
+                    .Add(Restrictions.Ge("DateOfProcedure", from))
+                    .Add(Restrictions.Lt("DateOfProcedure", to))
+                    .List<Purpose>();
+            }
+        }
     }
 }

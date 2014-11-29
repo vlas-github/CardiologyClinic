@@ -107,6 +107,7 @@
     <Compile Include="Help\BeanFactory.cs" />
     <Compile Include="Help\Connector.cs" />
     <Compile Include="Help\MySqlConnector.cs" />
+    <Compile Include="Help\Validator\PurposeValidator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\DoctorService.cs" />

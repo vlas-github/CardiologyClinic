@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using CardiologyClinic.Bean;
 using CardiologyClinic.Controller;
+using CardiologyClinic.Help.Validator;
 
 namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
 {
@@ -58,6 +59,18 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
             int hour = (int)tbHour.Value;
             int minute = (int)tbMinute.Value;
             purpose.DateOfProcedure = new DateTime(year, month, day, hour, minute, 0);
+
+            PurposeValidator pv = new PurposeValidator();
+            
+            if (!pv.DatePurposeValidate(purpose))
+            {
+                MessageBox.Show("Назначить данную проедуру в данное время невозможно, пожалуйста выбирете другое время",
+                                "Время процедуры",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+
+                return;
+            }
 
             patient.Purposes.Add(purpose);
 
