@@ -53,5 +53,10 @@ namespace CardiologyClinic.Service
         {
             return diseaseDao.GetAllDiseases();
         }
+
+        public Purpose GetPurposeById(string p)
+        {
+            return purposeDao.GetPurposesById(p);
+        }
     }
 }

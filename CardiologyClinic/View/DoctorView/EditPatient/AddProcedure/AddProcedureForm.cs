@@ -25,26 +25,42 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
         public AddProcedureForm(DoctorController controller, Patient patient)
             : this()
         {
-            this.controller = controller;
-            this.patient = patient;
-            cbMounth.SelectedIndex = 0;
-        }
-
-        private void AddProcedureForm_Load(object sender, EventArgs e)
-        {
             IList<MedicalProcedure> list = controller.GetAllMedicalProcedure();
 
-            foreach(MedicalProcedure mp in list)
+            foreach (MedicalProcedure mp in list)
             {
                 procedureComboBox.Items.Add(mp.Name);
             }
-
+            this.controller = controller;
+            this.patient = patient;
+            this.Text = "Добавление назначения";
             this.tbHour.Value = DateTime.Now.Hour;
             this.tbMinute.Value = DateTime.Now.Minute;
             this.tbDay.Value = DateTime.Now.Day;
             this.cbMounth.SelectedIndex = DateTime.Today.Month - 1;
             this.tbYear.Value = DateTime.Today.Year;
         }
+        public AddProcedureForm(DoctorController controller, Purpose purpose, Patient patient)
+            : this()
+        {
+            IList<MedicalProcedure> list = controller.GetAllMedicalProcedure();
+
+            foreach (MedicalProcedure mp in list)
+            {
+                procedureComboBox.Items.Add(mp.Name);
+            }
+            this.controller = controller;
+            this.patient = patient;
+            this.Text = "Изменение назначения";
+            this.tbHour.Value = purpose.DateOfProcedure.Hour;
+            this.tbMinute.Value = purpose.DateOfProcedure.Minute;
+            this.tbDay.Value = purpose.DateOfProcedure.Date.Day;
+            this.cbMounth.SelectedIndex = purpose.DateOfProcedure.Month-1;
+            this.tbYear.Value = purpose.DateOfProcedure.Year;
+            this.procedureComboBox.SelectedIndex = this.procedureComboBox.FindString(purpose.MedicalProcedure.Name);
+            this.label4.Text = purpose.Id;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,6 +75,8 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
             int hour = (int)tbHour.Value;
             int minute = (int)tbMinute.Value;
             purpose.DateOfProcedure = new DateTime(year, month, day, hour, minute, 0);
+            
+            
 
             PurposeValidator pv = new PurposeValidator();
             
@@ -71,11 +89,12 @@ namespace CardiologyClinic.View.DoctorView.EditPatient.EditProcedure
 
                 return;
             }
-
-            patient.Purposes.Add(purpose);
-
+            if(this.Text=="Добавление назначения")
+                patient.Purposes.Add(purpose);
+            else
+                purpose.Id = label4.Text;
             controller.SavePurpose(purpose);
-            controller.ShowAllPatientEvent();
+            controller.ShowAllPatientEvent();            
 
             Close();
         }

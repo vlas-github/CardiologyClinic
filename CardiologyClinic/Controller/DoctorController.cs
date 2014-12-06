@@ -80,5 +80,15 @@ namespace CardiologyClinic.Controller
             }
             return result;
         }
+
+        public Purpose GetPurposeById(string p)
+        {
+            return doctorService.GetPurposeById(p);
+        }
+
+        public void EditPurposeEvent(Purpose purpose, Patient patient)
+        {
+            new AddProcedureForm(this, purpose, patient).ShowDialog();
+        }
     }
 }

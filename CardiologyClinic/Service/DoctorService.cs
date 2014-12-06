@@ -21,5 +21,7 @@ namespace CardiologyClinic.Service
         void SavePurpose(Purpose purpose);
 
         IList<Disease> GetAllDiseases();
+
+        Purpose GetPurposeById(string p);
     }
 }
