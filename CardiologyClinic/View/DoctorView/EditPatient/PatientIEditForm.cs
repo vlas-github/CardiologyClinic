@@ -91,5 +91,11 @@ namespace CardiologyClinic.View.DoctorView.InfoEditPatient
             this.ShowPurposes(patient.Purposes);
         }
 
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            Purpose purpose = controller.GetPurposeById(contentGridView.CurrentRow.Cells[4].Value.ToString());
+            controller.EditPurposeEvent(purpose, patient);
+        }
+
     }
 }
