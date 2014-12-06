@@ -19,5 +19,7 @@ namespace CardiologyClinic.Service
         MedicalProcedure GetMedicalProcedureByName(string p);
 
         void SavePurpose(Purpose purpose);
+
+        IList<Disease> GetAllDiseases();
     }
 }

@@ -91,6 +91,13 @@ namespace CardiologyClinic.View.DoctorView
         private void DoctorForm_Load(object sender, EventArgs e)
         {
             doctorController.ShowAllPatientEvent();
+            IList<String> diseases = doctorController.GetAllDiseases();
+            cbDisease.Items.Add("Показывать все");
+            foreach (string s in diseases)
+            {
+                cbDisease.Items.Add(s);
+            }
+            cbDisease.SelectedIndex = 0;
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -107,6 +114,24 @@ namespace CardiologyClinic.View.DoctorView
         private void DoctorForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cbDisease_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String like = cbDisease.Text.ToString();
+
+            for (int i = 0; i < contentGridView.RowCount; i++)
+            {
+                if (like.Equals("Показывать все") ||
+                    contentGridView.Rows[i].Cells[4].Value.ToString().Equals(like))
+                {
+                    contentGridView.Rows[i].Visible = true;
+                }
+                else
+                {
+                    contentGridView.Rows[i].Visible = false;
+                }
+            }
         }
     }
 }

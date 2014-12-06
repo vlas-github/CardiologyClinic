@@ -70,5 +70,15 @@ namespace CardiologyClinic.Controller
         {
             doctorService.SavePurpose(purpose);
         }
+
+        public IList<string> GetAllDiseases()
+        {
+            IList<string> result = new List<string>();
+            foreach (Disease d in doctorService.GetAllDiseases())
+            {
+                result.Add(d.Name);
+            }
+            return result;
+        }
     }
 }

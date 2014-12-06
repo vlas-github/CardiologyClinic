@@ -35,6 +35,9 @@
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tools = new System.Windows.Forms.ToolStrip();
             this.editButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.cbDisease = new System.Windows.Forms.ToolStripComboBox();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.contentGridView = new System.Windows.Forms.DataGridView();
@@ -81,7 +84,10 @@
             // tools
             // 
             this.tools.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editButton});
+            this.editButton,
+            this.toolStripSeparator1,
+            this.toolStripLabel1,
+            this.cbDisease});
             this.tools.Location = new System.Drawing.Point(0, 24);
             this.tools.Name = "tools";
             this.tools.Size = new System.Drawing.Size(714, 25);
@@ -97,6 +103,26 @@
             this.editButton.Size = new System.Drawing.Size(65, 22);
             this.editButton.Text = "Изменить";
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 22);
+            this.toolStripLabel1.Text = "Диагноз:";
+            // 
+            // cbDisease
+            // 
+            this.cbDisease.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.cbDisease.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDisease.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.cbDisease.Name = "cbDisease";
+            this.cbDisease.Size = new System.Drawing.Size(121, 25);
+            this.cbDisease.SelectedIndexChanged += new System.EventHandler(this.cbDisease_SelectedIndexChanged);
             // 
             // headerPanel
             // 
@@ -181,5 +207,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripStatusLabel allPatientsLabel;
         private System.Windows.Forms.DataGridView contentGridView;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox cbDisease;
     }
 }
